@@ -1,0 +1,35 @@
+{
+  "name": "pedreira",
+  "version": "1.0.0",
+  "description": "Live WhatsApp reader for the group 'só pedradas' using Baileys",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:debug": "LOG_LEVEL=info node src/index.js",
+    "list-groups": "node src/list-groups.js",
+    "fetch-history": "node src/fetch-history.js",
+    "parse-export": "node src/parse-export.js",
+    "extract-albums": "node src/extract-albums.js",
+    "build-web": "node scripts/build-web.js",
+    "serve-web": "node scripts/serve-web.js",
+    "web": "npm run build-web && npm run serve-web",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "pedreira"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc14",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.0",
+    "pino": "^10.3.1",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.5.0"
+  }
+}
