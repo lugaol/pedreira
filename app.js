@@ -47,6 +47,9 @@
 
   async function init() {
     try {
+      // Show loading state
+      elements.grid.innerHTML = '<p class="view-subtitle">Loading albums...</p>';
+      
       const res = await fetch('data.json');
       if (!res.ok) throw new Error('Could not load data.json');
       const data = await res.json();
@@ -59,6 +62,7 @@
       applySortAndFilter();
     } catch (err) {
       elements.grid.innerHTML = `<p class="view-subtitle">Failed to load albums: ${err.message}</p>`;
+      console.error('Failed to initialize app:', err);
     }
   }
 
@@ -102,14 +106,24 @@
     elements.playerView.classList.toggle('hidden', state.view !== 'player');
     elements.socialView.classList.toggle('hidden', state.view !== 'social');
 
+    // Show loading states for views that need data
+    if (state.view === 'albums' && !state.albums.length) {
+      elements.grid.innerHTML = '<p class="view-subtitle">Loading albums...</p>';
+    } else if (state.view === 'contributors' && !(state.stats.topContributors || []).length) {
+      elements.contributorsChart.innerHTML = '<p class="view-subtitle">Loading contributors...</p>';
+      elements.contributorsList.innerHTML = '';
+    } else if (state.view === 'social' && !(state.socialLinks || []).length) {
+      elements.socialList.innerHTML = '<p class="view-subtitle">Loading social links...</p>';
+    }
+
     // Player view transforms the bottom bar into a full-size player panel.
     elements.app.classList.toggle('player-view-active', state.view === 'player');
 
-    if (state.view === 'contributors') {
+    if (state.view === 'contributors' && (state.stats.topContributors || []).length) {
       renderContributors();
     } else if (state.view === 'player') {
       ensurePlayerFrameInBottomBar();
-    } else if (state.view === 'social') {
+    } else if (state.view === 'social' && (state.socialLinks || []).length) {
       renderSocial();
       ensurePlayerFrameInBottomBar();
     } else {
@@ -172,7 +186,11 @@
   function renderAlbums() {
     const { filtered } = state;
     if (!filtered.length) {
-      elements.grid.innerHTML = '<p class="view-subtitle">No albums match your search.</p>';
+      if (state.query) {
+        elements.grid.innerHTML = '<p class="view-subtitle">No albums match your search.</p>';
+      } else {
+        elements.grid.innerHTML = '<p class="view-subtitle">No albums found in the library.</p>';
+      }
       return;
     }
 
