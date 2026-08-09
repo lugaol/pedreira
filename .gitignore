@@ -10,6 +10,9 @@ pnpm-debug.log*
 .env.*
 !.env.example
 
+# Baileys authentication files (sensitive)
+baileys_auth/
+
 # Data files (may contain sensitive information)
 data/
 !data/.gitkeep
