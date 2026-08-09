@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedreira — Só Pedradas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.65 14.43a.62.62 0 0 1-.85.21c-2.33-1.42-5.27-1.74-8.72-.96a.62.62 0 0 1-.27-1.21c3.77-.88 7.04-.5 9.64 1.09.3.18.39.57.2.87zm1.24-2.76a.78.78 0 0 1-1.06.26c-2.67-1.64-6.74-2.12-9.9-1.16a.78.78 0 1 1-.46-1.49c3.62-1.1 8.1-.55 11.16 1.34.37.23.49.71.26 1.05zm.11-2.88c-3.2-1.9-8.48-2.08-11.54-1.15a.94.94 0 0 1-.56-1.79c3.5-1.06 9.34-.85 13.02 1.33a.94.94 0 0 1-.92 1.61z"/>
+        </svg>
+        <span>Pedreira</span>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="albums">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.134a2 2 0 0 1 2 0l7.5 4.33A2 2 0 0 1 21 8.462V20a2 2 0 0 1-2 2h-4.5a1 1 0 0 1-1-1v-6h-5v6a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V8.462a2 2 0 0 1 1-1.732l7.5-4.33z"/></svg>
+          All albums
+        </button>
+        <button class="nav-item" data-view="player">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.5 16.5v-9l7 4.5-7 4.5z"/></svg>
+          Player
+        </button>
+        <button class="nav-item" data-view="social">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.05 4.12c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+          Social media
+        </button>
+        <button class="nav-item" data-view="contributors">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          Contributors
+        </button>
+      </nav>
+      <div class="stats-mini">
+        <div><strong id="stat-albums">0</strong> albums</div>
+        <div><strong id="stat-senders">0</strong> senders</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="top-bar">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10.5 3a7.5 7.5 0 0 1 5.74 12.33l4.52 4.52a1 1 0 0 1-1.42 1.42l-4.52-4.52A7.5 7.5 0 1 1 10.5 3zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/></svg>
+          <input type="text" id="search-input" placeholder="Search albums, artists, or senders" />
+        </div>
+        <div class="sort-box">
+          <label for="sort-select">Sort by</label>
+          <select id="sort-select">
+            <option value="artist-asc">Artist A–Z</option>
+            <option value="artist-desc">Artist Z–A</option>
+            <option value="album-asc">Album A–Z</option>
+            <option value="album-desc">Album Z–A</option>
+            <option value="recent">Recently shared</option>
+          </select>
+        </div>
+      </header>
+
+      <section id="albums-view" class="view">
+        <h1 class="view-title">All albums</h1>
+        <p class="view-subtitle">Every album shared in <strong>🎵 Só Pedradas — Albuns</strong>, sorted alphabetically.</p>
+        <div id="album-grid" class="album-grid"></div>
+      </section>
+
+      <section id="social-view" class="view hidden">
+        <h1 class="view-title">Social media links</h1>
+        <p class="view-subtitle">Other links shared in the group that are not Spotify or YouTube.</p>
+        <div id="social-list" class="social-list"></div>
+      </section>
+
+      <section id="contributors-view" class="view hidden">
+        <h1 class="view-title">Top contributors</h1>
+        <p class="view-subtitle">Members who shared the most unique albums.</p>
+        <div class="contributors-layout">
+          <div id="contributors-chart" class="contributors-chart"></div>
+          <ol id="contributors-list" class="contributors-list"></ol>
+        </div>
+      </section>
+
+      <section id="player-view" class="view hidden">
+        <div class="player-view-layout">
+          <img src="stone.svg" alt="" class="player-view-cover" id="player-view-cover" />
+          <div class="player-view-meta">
+            <div class="player-view-label">Now playing</div>
+            <h1 class="player-view-title" id="player-view-title">Select an album</h1>
+            <p class="player-view-artist" id="player-view-artist">Choose an album from the library to start listening.</p>
+          </div>
+        </div>
+        <div class="player-view-frame" id="player-view-frame"></div>
+      </section>
+    </main>
+
+    <footer class="player-bar" id="player-bar">
+      <div class="player-info" id="player-info">
+        <img src="stone.svg" alt="" class="player-cover" id="player-cover" />
+        <div class="player-meta">
+          <div class="player-title" id="player-title">Select an album</div>
+          <div class="player-artist" id="player-artist"></div>
+        </div>
+      </div>
+      <div class="player-frame" id="player-frame">
+        <button class="player-expand" id="player-expand" aria-label="Expand player">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M5 5h6v2H7v4H5V5zm14 0v6h-2V7h-4V5h6zm0 14h-6v-2h4v-4h2v6zM5 19v-6h2v4h4v2H5z"/></svg>
+        </button>
+        <iframe id="spotify-embed" src="" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+    </footer>
+  </div>
+
+  <div class="player-overlay" id="player-overlay" aria-hidden="true">
+    <div class="player-overlay-backdrop" id="player-overlay-backdrop"></div>
+    <div class="player-overlay-content">
+      <button class="player-overlay-close" id="player-overlay-close" aria-label="Close expanded player">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+      <div class="player-overlay-info">
+        <img src="stone.svg" alt="" class="player-overlay-cover" id="player-overlay-cover" />
+        <div class="player-overlay-meta">
+          <div class="player-overlay-label">Now playing</div>
+          <h2 class="player-overlay-title" id="player-overlay-title">Select an album</h2>
+          <div class="player-overlay-artist" id="player-overlay-artist"></div>
+        </div>
+      </div>
+      <div class="player-overlay-frame" id="player-overlay-frame"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
