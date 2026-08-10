@@ -32,7 +32,6 @@
      playerCover: document.getElementById('player-cover'),
      playerTitle: document.getElementById('player-title'),
      playerArtist: document.getElementById('player-artist'),
-     playerFrame: document.getElementById('spotify-embed'),
      compactFrameContainer: document.getElementById('player-frame'),
      playerExpand: document.getElementById('player-expand'),
      playerOverlay: document.getElementById('player-overlay'),
@@ -170,8 +169,10 @@
   }
 
   function ensurePlayerFrameInBottomBar() {
-    if (state.expanded) return;
-    movePlayerFrame(elements.compactFrameContainer, 152);
+    if (state.expanded || !state.currentAlbum) return;
+    if (state.activeMount !== elements.compactFrameContainer) {
+      renderPlayer(elements.compactFrameContainer, compactPlayerHeight());
+    }
   }
 
   function applySortAndFilter() {
@@ -313,14 +314,9 @@
   function getYoutubeEmbedUrl(album, autoplay = true) {
     const autoplayParam = autoplay ? '1' : '0';
     if (album.youtubeId) {
-      return `https://www.youtube-nocookie.com/embed/${album.youtubeId}?autoplay=${autoplayParam}&rel=0`;
+      return `https://www.youtube-nocookie.com/embed/${album.youtubeId}?autoplay=${autoplayParam}&rel=0&enablejsapi=1`;
     }
-    return `https://www.youtube-nocookie.com/embed/videoseries?list=${album.youtubeList}&autoplay=${autoplayParam}&rel=0`;
-  }
-
-  function getAlbumEmbedUrl(album, autoplay = true) {
-    if (album.spotifyId) return getSpotifyEmbedUrl(album.spotifyId, autoplay);
-    return getYoutubeEmbedUrl(album, autoplay);
+    return `https://www.youtube-nocookie.com/embed/videoseries?list=${album.youtubeList}&autoplay=${autoplayParam}&rel=0&enablejsapi=1`;
   }
 
   function updatePlayerInfo(album) {
@@ -332,9 +328,168 @@
     elements.playerOverlayTitle.textContent = album.name;
     elements.playerOverlayArtist.textContent = album.artist;
 
+    // YouTube embeds are 16:9 videos; Spotify fills the bar horizontally.
+    elements.playerBar.classList.toggle('youtube', !album.spotifyId);
+
     // Show player bar when an album is selected
     elements.playerBar.classList.remove('hidden');
   }
+
+  // ---------- Playback engine ----------
+  // One player lives in the bottom bar or in the expanded overlay. Spotify
+  // uses the official IFrame API (playback events), YouTube a plain iframe
+  // with the JS API attached. Both report "ended" so a random album follows.
+
+  function compactPlayerHeight() {
+    return window.innerWidth <= 900 ? 152 : 200;
+  }
+
+  let spotifyApiPromise = null;
+  function loadSpotifyApi() {
+    if (spotifyApiPromise) return spotifyApiPromise;
+    spotifyApiPromise = new Promise((resolve) => {
+      const timeout = setTimeout(() => resolve(null), 8000);
+      window.onSpotifyIframeApiReady = (api) => {
+        clearTimeout(timeout);
+        resolve(api);
+      };
+      const s = document.createElement('script');
+      s.src = 'https://open.spotify.com/embed/iframe-api/v1';
+      s.onerror = () => { clearTimeout(timeout); resolve(null); };
+      document.head.appendChild(s);
+    });
+    return spotifyApiPromise;
+  }
+
+  let youtubeApiPromise = null;
+  function loadYoutubeApi() {
+    if (youtubeApiPromise) return youtubeApiPromise;
+    youtubeApiPromise = new Promise((resolve) => {
+      if (window.YT && window.YT.Player) return resolve(window.YT);
+      const timeout = setTimeout(() => resolve(null), 8000);
+      window.onYouTubeIframeAPIReady = () => {
+        clearTimeout(timeout);
+        resolve(window.YT);
+      };
+      const s = document.createElement('script');
+      s.src = 'https://www.youtube.com/iframe_api';
+      s.onerror = () => { clearTimeout(timeout); resolve(null); };
+      document.head.appendChild(s);
+    });
+    return youtubeApiPromise;
+  }
+
+  function clearEndTimer() {
+    if (state.endTimer) {
+      clearTimeout(state.endTimer);
+      state.endTimer = null;
+    }
+  }
+
+  // Debounced: at a track boundary the player briefly reports "ended" before
+  // advancing; only if nothing resumes within 3s is the album really over.
+  function scheduleAlbumEnd() {
+    clearEndTimer();
+    state.endTimer = setTimeout(playRandomAlbum, 3000);
+  }
+
+  function onSpotifyPlaybackUpdate(e) {
+    const { position = 0, duration = 0 } = (e && e.data) || {};
+    if (duration > 0 && position >= duration - 1) scheduleAlbumEnd();
+    else clearEndTimer();
+  }
+
+  function onYoutubeStateChange(e) {
+    if (window.YT && e.data === window.YT.PlayerState.ENDED) scheduleAlbumEnd();
+    else clearEndTimer();
+  }
+
+  function playRandomAlbum() {
+    clearEndTimer();
+    const currentId = state.currentAlbum ? state.currentAlbum.id : null;
+    const playable = state.albums.filter(
+      (a) => (a.spotifyId || a.youtubeId || a.youtubeList) && a.id !== currentId
+    );
+    if (!playable.length) return;
+    const next = playable[Math.floor(Math.random() * playable.length)];
+    playAlbum(next.id);
+  }
+
+  function destroyPlayer() {
+    clearEndTimer();
+    if (state.ytPlayer) {
+      try { state.ytPlayer.destroy(); } catch { /* ignore */ }
+      state.ytPlayer = null;
+    }
+    if (state.spotifyController) {
+      try { state.spotifyController.destroy(); } catch { /* ignore */ }
+      state.spotifyController = null;
+    }
+    [elements.compactFrameContainer, elements.playerOverlayFrame].forEach((c) => {
+      if (c) c.querySelectorAll('.player-mount').forEach((m) => m.remove());
+    });
+    state.activeMount = null;
+  }
+
+  function renderPlainIframe(mount, height, src) {
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.setAttribute('width', '100%');
+    if (height !== null) iframe.setAttribute('height', String(height));
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture');
+    mount.appendChild(iframe);
+    return iframe;
+  }
+
+  async function renderPlayer(container, height) {
+    const album = state.currentAlbum;
+    if (!album || !container) return;
+
+    destroyPlayer();
+    state.activeMount = container;
+    const seq = (state.renderSeq = (state.renderSeq || 0) + 1);
+
+    // The Spotify IFrame API replaces the element it is given, so never hand
+    // it a structural container — use a disposable mount inside it instead.
+    const mount = document.createElement('div');
+    mount.className = 'player-mount';
+    container.appendChild(mount);
+
+    if (album.spotifyId) {
+      const api = await loadSpotifyApi();
+      if (seq !== state.renderSeq) return;
+      if (!api) {
+        // API unavailable (blocked/offline): plain embed, no auto-advance.
+        renderPlainIframe(mount, height, getSpotifyEmbedUrl(album.spotifyId, true));
+        return;
+      }
+      api.createController(
+        mount,
+        { uri: `spotify:album:${album.spotifyId}`, width: '100%', height: height || compactPlayerHeight() },
+        (controller) => {
+          if (seq !== state.renderSeq) {
+            try { controller.destroy(); } catch { /* ignore */ }
+            return;
+          }
+          state.spotifyController = controller;
+          controller.addListener('playback_update', onSpotifyPlaybackUpdate);
+          controller.addListener('ready', () => controller.play());
+        }
+      );
+      return;
+    }
+
+    // YouTube video or album playlist.
+    const iframe = renderPlainIframe(mount, height, getYoutubeEmbedUrl(album, true));
+    const YT = await loadYoutubeApi();
+    if (!YT || seq !== state.renderSeq || !iframe.isConnected) return;
+    state.ytPlayer = new YT.Player(iframe, {
+      events: { onStateChange: onYoutubeStateChange },
+    });
+  }
+
+  // ---------- End playback engine ----------
 
   function playAlbum(id) {
     const album = state.albums.find((a) => a.id === id);
@@ -351,32 +506,16 @@
     state.currentAlbum = album;
     updatePlayerInfo(album);
 
-    // Load the album with autoplay. The active layout (bottom bar or overlay) decides the iframe size.
-    const target = state.expanded ? elements.playerOverlayFrame : elements.compactFrameContainer;
-    
+    // The active layout (bottom bar or overlay) decides the player size.
     if (state.expanded) {
-      movePlayerFrame(target, 380);
+      renderPlayer(elements.playerOverlayFrame, 380);
     } else {
-      // Use CSS-calculated height for compact player
-      movePlayerFrame(target, null);
+      renderPlayer(elements.compactFrameContainer, null); // CSS-sized compact player
     }
-    
-    elements.playerFrame.src = getAlbumEmbedUrl(album, true);
 
     // Scroll to player on mobile
     if (window.innerWidth <= 900 && state.view !== 'player') {
       elements.playerBar.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-  function movePlayerFrame(container, height) {
-    if (!elements.playerFrame || !container) return;
-    // Avoid DOM thrashing if the iframe is already in the target container.
-    if (elements.playerFrame.parentNode !== container) {
-      container.appendChild(elements.playerFrame);
-    }
-    if (height !== null) {
-      elements.playerFrame.setAttribute('height', String(height));
     }
   }
 
@@ -387,7 +526,7 @@
     elements.playerOverlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
 
-    movePlayerFrame(elements.playerOverlayFrame, 380);
+    renderPlayer(elements.playerOverlayFrame, 380);
   }
 
   function closePlayerOverlay() {
@@ -397,9 +536,9 @@
     elements.playerOverlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
 
-    // Return iframe to the compact bottom bar.
-    movePlayerFrame(elements.compactFrameContainer, null);
-    
+    // Return the player to the compact bottom bar.
+    renderPlayer(elements.compactFrameContainer, null);
+
     // If we're not in player view, ensure the player bar is visible
     if (state.view !== 'player') {
       elements.playerBar.classList.remove('hidden');
