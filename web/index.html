@@ -63,7 +63,7 @@
 
       <section id="albums-view" class="view">
         <h1 class="view-title">All albums</h1>
-        <p class="view-subtitle">Every album shared in <strong>🎵 Só Pedradas — Albuns</strong>, sorted alphabetically.</p>
+        <p class="view-subtitle">Every album shared in <strong>🎵 Só Pedradas — Albuns</strong><span id="albums-sort-note">, sorted by artist A–Z</span>.</p>
         <div id="album-grid" class="album-grid"></div>
       </section>
 
@@ -90,15 +90,19 @@
     <nav class="bottom-nav" id="bottom-nav">
       <button class="bottom-nav-item active" data-view="albums">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.134a2 2 0 0 1 2 0l7.5 4.33A2 2 0 0 1 21 8.462V20a2 2 0 0 1-2 2h-4.5a1 1 0 0 1-1-1v-6h-5v6a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V8.462a2 2 0 0 1 1-1.732l7.5-4.33z"/></svg>
+        <span>Albums</span>
       </button>
       <button class="bottom-nav-item" data-view="player">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.5 16.5v-9l7 4.5-7 4.5z"/></svg>
+        <span>Player</span>
       </button>
       <button class="bottom-nav-item" data-view="social">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.05 4.12c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+        <span>Social</span>
       </button>
       <button class="bottom-nav-item" data-view="contributors">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        <span>Charts</span>
       </button>
     </nav>
 

@@ -18,6 +18,7 @@ async function run() {
 
   const browser = await puppeteer.launch({ headless: 'new' });
   const page = await browser.newPage();
+  await page.setViewport({ width: 1440, height: 900 });
 
   const errors = [];
   page.on('console', (msg) => {
@@ -74,32 +75,32 @@ async function run() {
   await checkState('after album click');
 
   log('Clicking Player nav...');
-  await page.click('[data-view="player"]');
+  await page.click('.nav-item[data-view="player"]');
   await new Promise((r) => setTimeout(r, 2000));
   await checkState('after Player nav');
 
   log('Clicking All albums nav...');
-  await page.click('[data-view="albums"]');
+  await page.click('.nav-item[data-view="albums"]');
   await new Promise((r) => setTimeout(r, 2000));
   await checkState('after All albums nav');
 
   log('Clicking Social nav...');
-  await page.click('[data-view="social"]');
+  await page.click('.nav-item[data-view="social"]');
   await new Promise((r) => setTimeout(r, 2000));
   await checkState('after Social nav');
 
   log('Clicking Contributors nav...');
-  await page.click('[data-view="contributors"]');
+  await page.click('.nav-item[data-view="contributors"]');
   await new Promise((r) => setTimeout(r, 2000));
   await checkState('after Contributors nav');
 
   log('Clicking Player nav again...');
-  await page.click('[data-view="player"]');
+  await page.click('.nav-item[data-view="player"]');
   await new Promise((r) => setTimeout(r, 2000));
   await checkState('after Player nav 2');
 
   log('Switching back to All albums before expand test...');
-  await page.click('[data-view="albums"]');
+  await page.click('.nav-item[data-view="albums"]');
   await new Promise((r) => setTimeout(r, 2000));
 
   log('Clicking expand button...');
