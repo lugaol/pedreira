@@ -43,7 +43,9 @@ async function run() {
 
   async function checkState(label) {
     const state = await page.evaluate(() => {
-      const iframe = document.getElementById('spotify-embed');
+      const iframe =
+        document.querySelector('#player-overlay-frame iframe') ||
+        document.querySelector('#player-frame iframe');
       const playerBar = document.getElementById('player-bar');
       const app = document.querySelector('.app');
       return {
@@ -62,11 +64,13 @@ async function run() {
 
   await checkState('initial');
 
-  // Click the first album that has a Spotify ID (index 54 in the sorted list).
+  // Click the first album that can play in the embedded player.
   log('Clicking first playable album card...');
-  const cards = await page.$$('.album-card');
-  if (cards[54]) {
-    await cards[54].click();
+  const playable = await page.$('.play-button:not(.external)');
+  if (playable) {
+    await playable.evaluate((btn) => btn.scrollIntoView({ block: 'center' }));
+    await new Promise((r) => setTimeout(r, 300));
+    await playable.click();
   } else {
     log('No playable card found, clicking first card');
     await page.click('.album-card');

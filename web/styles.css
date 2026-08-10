@@ -10,7 +10,7 @@
   --radius: 8px;
   --radius-lg: 12px;
   --sidebar-width: 240px;
-  --player-height: 164px;
+  --player-height: 224px;
   --gap: 24px;
   --touch-target: 44px; /* Minimum touch target size */
 }
@@ -671,6 +671,21 @@ html, body {
   width: 100%;
   height: calc(var(--player-height) - 24px);
   border-radius: var(--radius);
+}
+
+/* Disposable mount the player APIs render into (display:contents keeps it
+   layout-invisible so the iframe keeps filling the player frame). */
+.player-mount {
+  display: contents;
+}
+
+/* YouTube videos are 16:9: size by height and center, instead of stretching a
+   letterboxed video across the full bar width. */
+.player-bar.youtube .player-frame iframe {
+  width: auto;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .player-expand {
