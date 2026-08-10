@@ -34,12 +34,19 @@ html, body {
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr;
   grid-template-rows: 1fr var(--player-height);
+  grid-template-areas:
+    "sidebar main"
+    "sidebar player";
   height: 100vh;
+}
+
+.app:not(.player-view-active) .main {
+  grid-row: 1 / -1;
 }
 
 /* Sidebar */
 .sidebar {
-  grid-row: 1 / -1;
+  grid-area: sidebar;
   background: #000;
   padding: 24px 16px;
   display: flex;
@@ -111,12 +118,56 @@ html, body {
   color: var(--text);
 }
 
+/* Bottom navigation for mobile */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 8px 0;
+  z-index: 50;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  min-width: var(--touch-target);
+  min-height: var(--touch-target);
+}
+
+.bottom-nav-item.active {
+  color: var(--text);
+  background: var(--bg-elevated-2);
+}
+
+.bottom-nav-item svg {
+  opacity: 0.7;
+}
+
+.bottom-nav-item.active svg {
+  opacity: 1;
+}
+
 /* Main */
 .main {
-  grid-row: 1 / 2;
+  grid-area: main;
   background: linear-gradient(180deg, #1a1a1a 0%, var(--bg) 220px);
   overflow-y: auto;
   padding: 0 var(--gap) var(--gap);
+  min-height: 0;
 }
 
 .top-bar {
@@ -598,7 +649,7 @@ html, body {
 }
 
 .player-bar {
-  grid-column: 1 / -1;
+  grid-area: player;
   background: #000;
   border-top: 1px solid rgba(255,255,255,0.08);
   display: grid;
@@ -794,13 +845,102 @@ html, body {
 }
 
 @media (max-width: 900px) {
-  .player-expand {
-    opacity: 1;
-    top: -32px;
+  :root {
+    --sidebar-width: 64px;
+    --gap: 16px;
+    --player-height: 140px;
+  }
+
+  .bottom-nav {
+    display: flex;
+  }
+
+  .app {
+    grid-template-rows: 1fr calc(var(--player-height) + 60px);
+    padding-bottom: 60px;
+  }
+
+  .logo span,
+  .nav-item span,
+  .stats-mini {
+    display: none;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: 14px;
+    min-height: var(--touch-target);
+  }
+
+  .contributors-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .player-bar {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    height: auto;
+    padding: 12px;
+    gap: 12px;
   }
 
   .player-frame iframe {
     height: 152px;
+  }
+
+  .top-bar {
+    padding: 16px var(--gap);
+  }
+
+  .search-box {
+    max-width: 100%;
+    padding: 12px 16px;
+  }
+
+  .album-grid {
+    gap: 16px;
+  }
+
+  .album-card {
+    padding: 16px;
+  }
+
+  .view-title {
+    font-size: 24px;
+  }
+
+  .view-subtitle {
+    font-size: 14px;
+  }
+
+  .player-view-layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 24px 0 32px;
+  }
+
+  .player-view-cover {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .player-view-meta {
+    text-align: center;
+  }
+
+  .player-view-title {
+    font-size: 32px;
+  }
+
+  .player-view-artist {
+    font-size: 16px;
+  }
+
+  .player-view-frame {
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .player-overlay {
@@ -808,7 +948,8 @@ html, body {
   }
 
   .player-overlay-content {
-    max-width: 100%;
+    gap: 20px;
+    padding-top: 32px;
   }
 
   .player-overlay-info {
@@ -826,7 +967,12 @@ html, body {
   }
 
   .player-overlay iframe {
-    height: 340px;
+    height: 300px;
+  }
+
+  .player-overlay-close {
+    width: 36px;
+    height: 36px;
   }
 }
 
@@ -974,12 +1120,6 @@ html, body {
     height: 300px;
   }
 
-  .player-overlay-close {
-    width: 36px;
-    height: 36px;
-  }
-}
-
 @media (max-width: 600px) {
   .album-grid {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -996,10 +1136,10 @@ html, body {
     width: 100%;
   }
 
-    .sort-box {
-      justify-content: flex-end;
-    }
+  .sort-box {
+    justify-content: flex-end;
   }
+}
 
 /* Focus styles for accessibility */
 .search-box input:focus {

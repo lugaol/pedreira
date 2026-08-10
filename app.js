@@ -71,6 +71,19 @@
     elements.statSenders.textContent = (state.stats.topContributors?.length || 0).toLocaleString();
   }
 
+  function updateNavState() {
+    // Update sidebar nav
+    elements.navItems.forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.view === state.view);
+    });
+    
+    // Update bottom nav
+    const bottomNavItems = document.querySelectorAll('.bottom-nav-item');
+    bottomNavItems.forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.view === state.view);
+    });
+  }
+
   function bindEvents() {
     elements.search.addEventListener('input', (e) => {
       state.query = e.target.value.trim().toLowerCase();
@@ -85,8 +98,17 @@
     elements.navItems.forEach((btn) => {
       btn.addEventListener('click', () => {
         state.view = btn.dataset.view;
-        elements.navItems.forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
+        updateNavState();
+        renderView();
+      });
+    });
+
+    // Bottom navigation for mobile
+    const bottomNavItems = document.querySelectorAll('.bottom-nav-item');
+    bottomNavItems.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        state.view = btn.dataset.view;
+        updateNavState();
         renderView();
       });
     });
@@ -117,7 +139,13 @@
     }
 
     // Player view transforms the bottom bar into a full-size player panel.
-    elements.app.classList.toggle('player-view-active', state.view === 'player');
+    const isPlayerView = state.view === 'player';
+    elements.app.classList.toggle('player-view-active', isPlayerView);
+
+    // Reset player state when leaving player view
+    if (!isPlayerView && state.expanded) {
+      closePlayerOverlay();
+    }
 
     if (state.view === 'contributors' && (state.stats.topContributors || []).length) {
       renderContributors();
@@ -323,6 +351,11 @@
 
     // Return iframe to the compact bottom bar.
     movePlayerFrame(elements.compactFrameContainer, 152);
+    
+    // If we're not in player view, ensure the player bar is visible
+    if (state.view !== 'player') {
+      elements.playerBar.classList.remove('hidden');
+    }
   }
 
   function renderSocial() {
