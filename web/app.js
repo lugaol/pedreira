@@ -10,40 +10,37 @@
     expanded: false,
   };
 
-  const elements = {
-    app: document.querySelector('.app'),
-    grid: document.getElementById('album-grid'),
-    search: document.getElementById('search-input'),
-    sort: document.getElementById('sort-select'),
-    albumsView: document.getElementById('albums-view'),
-    contributorsView: document.getElementById('contributors-view'),
-    playerView: document.getElementById('player-view'),
-    socialView: document.getElementById('social-view'),
-    socialList: document.getElementById('social-list'),
-    contributorsChart: document.getElementById('contributors-chart'),
-    contributorsList: document.getElementById('contributors-list'),
-    navItems: document.querySelectorAll('.nav-item'),
-    statAlbums: document.getElementById('stat-albums'),
-    statSenders: document.getElementById('stat-senders'),
-    playerBar: document.getElementById('player-bar'),
-    playerCover: document.getElementById('player-cover'),
-    playerTitle: document.getElementById('player-title'),
-    playerArtist: document.getElementById('player-artist'),
-    playerFrame: document.getElementById('spotify-embed'),
-    compactFrameContainer: document.getElementById('player-frame'),
-    playerExpand: document.getElementById('player-expand'),
-    playerOverlay: document.getElementById('player-overlay'),
-    playerOverlayBackdrop: document.getElementById('player-overlay-backdrop'),
-    playerOverlayClose: document.getElementById('player-overlay-close'),
-    playerOverlayFrame: document.getElementById('player-overlay-frame'),
-    playerOverlayCover: document.getElementById('player-overlay-cover'),
-    playerOverlayTitle: document.getElementById('player-overlay-title'),
-    playerOverlayArtist: document.getElementById('player-overlay-artist'),
-    playerViewCover: document.getElementById('player-view-cover'),
-    playerViewTitle: document.getElementById('player-view-title'),
-    playerViewArtist: document.getElementById('player-view-artist'),
-    playerViewFrame: document.getElementById('player-view-frame'),
-  };
+ const elements = {
+     app: document.querySelector('.app'),
+     main: document.querySelector('.main'),
+     grid: document.getElementById('album-grid'),
+     search: document.getElementById('search-input'),
+     sort: document.getElementById('sort-select'),
+     albumsView: document.getElementById('albums-view'),
+     contributorsView: document.getElementById('contributors-view'),
+     playerView: document.getElementById('player-view'),
+     socialView: document.getElementById('social-view'),
+     socialList: document.getElementById('social-list'),
+     contributorsChart: document.getElementById('contributors-chart'),
+     contributorsList: document.getElementById('contributors-list'),
+     navItems: document.querySelectorAll('.nav-item'),
+     statAlbums: document.getElementById('stat-albums'),
+     statSenders: document.getElementById('stat-senders'),
+     playerBar: document.getElementById('player-bar'),
+     playerCover: document.getElementById('player-cover'),
+     playerTitle: document.getElementById('player-title'),
+     playerArtist: document.getElementById('player-artist'),
+     playerFrame: document.getElementById('spotify-embed'),
+     compactFrameContainer: document.getElementById('player-frame'),
+     playerExpand: document.getElementById('player-expand'),
+     playerOverlay: document.getElementById('player-overlay'),
+     playerOverlayBackdrop: document.getElementById('player-overlay-backdrop'),
+     playerOverlayClose: document.getElementById('player-overlay-close'),
+     playerOverlayFrame: document.getElementById('player-overlay-frame'),
+     playerOverlayCover: document.getElementById('player-overlay-cover'),
+     playerOverlayTitle: document.getElementById('player-overlay-title'),
+     playerOverlayArtist: document.getElementById('player-overlay-artist'),
+   };
 
   async function init() {
     try {
@@ -127,6 +124,9 @@
     elements.contributorsView.classList.toggle('hidden', state.view !== 'contributors');
     elements.playerView.classList.toggle('hidden', state.view !== 'player');
     elements.socialView.classList.toggle('hidden', state.view !== 'social');
+
+    // Reset scroll to top when switching sections
+    if (elements.main) elements.main.scrollTop = 0;
 
     // Show loading states for views that need data
     if (state.view === 'albums' && !state.albums.length) {
@@ -293,14 +293,10 @@
     elements.playerArtist.textContent = album.artist;
     elements.playerCover.src = album.image || 'stone.svg';
 
-    elements.playerViewCover.src = album.image || 'stone.svg';
-    elements.playerViewTitle.textContent = album.name;
-    elements.playerViewArtist.textContent = album.artist || 'Choose an album from the library to start listening.';
-
     elements.playerOverlayCover.src = album.image || 'stone.svg';
     elements.playerOverlayTitle.textContent = album.name;
     elements.playerOverlayArtist.textContent = album.artist;
-    
+
     // Show player bar when an album is selected
     elements.playerBar.classList.remove('hidden');
   }
