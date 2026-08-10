@@ -458,49 +458,6 @@ html, body {
 }
 
 /* Player view */
-.player-view-layout {
-  display: flex;
-  align-items: flex-end;
-  gap: 32px;
-  padding: 32px 0 40px;
-  margin-bottom: 24px;
-}
-
-.player-view-cover {
-  width: 260px;
-  height: 260px;
-  border-radius: var(--radius-lg);
-  object-fit: cover;
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
-}
-
-.player-view-meta {
-  flex: 1;
-  padding-bottom: 8px;
-}
-
-.player-view-label {
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: var(--text);
-  margin-bottom: 10px;
-}
-
-.player-view-title {
-  font-size: 56px;
-  font-weight: 800;
-  margin: 0 0 16px;
-  letter-spacing: -1.5px;
-  line-height: 1.05;
-}
-
-.player-view-artist {
-  font-size: 18px;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
 .player-view-frame {
   width: 100%;
   max-width: 720px;
@@ -520,10 +477,6 @@ html, body {
   flex-direction: column;
   height: 100%;
   min-height: 0;
-}
-
-#player-view .player-view-layout {
-  flex: 0 0 auto;
 }
 
 #player-view .player-view-frame {
@@ -849,42 +802,36 @@ html, body {
 
 @media (max-width: 900px) {
   :root {
-    --sidebar-width: 0px;
     --gap: 16px;
     --player-height: 140px;
+    --bottom-nav-height: 60px;
   }
 
   .bottom-nav {
     display: flex;
+    height: var(--bottom-nav-height);
   }
 
   .app {
-    grid-template-rows: 1fr calc(var(--player-height) + 60px);
-    padding-bottom: 60px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "main"
+      "player";
+    height: 100vh;
+    overflow: hidden;
   }
 
   .sidebar {
     display: none;
   }
 
-  .logo span,
-  .nav-item span,
-  .stats-mini {
-    display: none;
-  }
-
-  .nav-item {
-    justify-content: center;
-    padding: 14px;
-    min-height: var(--touch-target);
+  .main {
+    padding: 0 var(--gap) calc(var(--player-height) + var(--bottom-nav-height) + var(--gap));
   }
 
   .contributors-layout {
     grid-template-columns: 1fr;
-  }
-
-  .main {
-    padding-bottom: calc(var(--player-height) + var(--gap) + 60px);
   }
 
   .player-bar {
@@ -924,34 +871,45 @@ html, body {
     font-size: 14px;
   }
 
-  .player-view-layout {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
-    padding: 24px 0 32px;
+  /* Player view on mobile: full-screen panel above bottom-nav */
+  .app.player-view-active {
+    grid-template-rows: 1fr var(--bottom-nav-height);
+    grid-template-areas:
+      "main"
+      "player";
   }
 
-  .player-view-cover {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto;
+  .app.player-view-active .player-bar {
+    position: fixed;
+    inset: var(--bottom-nav-height) 0 0 0;
+    height: auto;
+    bottom: var(--bottom-nav-height);
+    padding: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+    z-index: 5;
   }
 
-  .player-view-meta {
-    text-align: center;
+  .app.player-view-active .main {
+    display: none;
   }
 
-  .player-view-title {
-    font-size: 32px;
+  .app.player-view-active .top-bar {
+    display: none;
   }
 
-  .player-view-artist {
-    font-size: 16px;
+  .app.player-view-active .player-info {
+    display: flex;
   }
 
-  .player-view-frame {
-    margin: 0 auto;
-    max-width: 100%;
+  .app.player-view-active .player-frame {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .app.player-view-active .player-frame iframe {
+    height: 100% !important;
   }
 
   .player-overlay {
@@ -1013,124 +971,7 @@ html, body {
   background: rgba(255,255,255,0.3);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  :root {
-    --sidebar-width: 64px;
-    --gap: 16px;
-    --player-height: 140px;
-  }
-
-  .logo span,
-  .nav-item span,
-  .stats-mini {
-    display: none;
-  }
-
-  .nav-item {
-    justify-content: center;
-    padding: 14px;
-    min-height: 56px; /* Better touch target */
-  }
-
-  .contributors-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .player-bar {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    height: auto;
-    padding: 12px;
-    gap: 12px;
-  }
-
-  .player-frame iframe {
-    height: 152px;
-  }
-
-  .top-bar {
-    padding: 16px var(--gap);
-  }
-
-  .search-box {
-    max-width: 100%;
-    padding: 12px 16px;
-  }
-
-  .album-grid {
-    gap: 16px;
-  }
-
-  .album-card {
-    padding: 16px;
-  }
-
-  .view-title {
-    font-size: 24px;
-  }
-
-  .view-subtitle {
-    font-size: 14px;
-  }
-
-  .player-view-layout {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
-    padding: 24px 0 32px;
-  }
-
-  .player-view-cover {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto;
-  }
-
-  .player-view-meta {
-    text-align: center;
-  }
-
-  .player-view-title {
-    font-size: 32px;
-  }
-
-  .player-view-artist {
-    font-size: 16px;
-  }
-
-  .player-view-frame {
-    margin: 0 auto;
-    max-width: 100%;
-  }
-
-  .player-overlay {
-    padding: 16px;
-  }
-
-  .player-overlay-content {
-    gap: 20px;
-    padding-top: 32px;
-  }
-
-  .player-overlay-info {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .player-overlay-cover {
-    width: 140px;
-    height: 140px;
-  }
-
-  .player-overlay-title {
-    font-size: 24px;
-  }
-
-  .player-overlay iframe {
-    height: 300px;
-  }
-
+/* Narrow phones */
 @media (max-width: 600px) {
   .album-grid {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
