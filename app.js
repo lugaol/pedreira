@@ -321,8 +321,14 @@
 
     // Load the album with autoplay. The active layout (bottom bar or overlay) decides the iframe size.
     const target = state.expanded ? elements.playerOverlayFrame : elements.compactFrameContainer;
-    const height = state.expanded ? 380 : 152;
-    movePlayerFrame(target, height);
+    
+    if (state.expanded) {
+      movePlayerFrame(target, 380);
+    } else {
+      // Use CSS-calculated height for compact player
+      movePlayerFrame(target, null);
+    }
+    
     elements.playerFrame.src = getSpotifyEmbedUrl(album.spotifyId, true);
 
     // Scroll to player on mobile
@@ -337,7 +343,9 @@
     if (elements.playerFrame.parentNode !== container) {
       container.appendChild(elements.playerFrame);
     }
-    elements.playerFrame.setAttribute('height', String(height));
+    if (height !== null) {
+      elements.playerFrame.setAttribute('height', String(height));
+    }
   }
 
   function openPlayerOverlay() {
@@ -358,7 +366,7 @@
     document.body.style.overflow = '';
 
     // Return iframe to the compact bottom bar.
-    movePlayerFrame(elements.compactFrameContainer, 152);
+    movePlayerFrame(elements.compactFrameContainer, null);
     
     // If we're not in player view, ensure the player bar is visible
     if (state.view !== 'player') {
