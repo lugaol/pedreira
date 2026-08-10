@@ -40,10 +40,6 @@ html, body {
   height: 100vh;
 }
 
-.app:not(.player-view-active) .main {
-  grid-row: 1 / -1;
-}
-
 /* Sidebar */
 .sidebar {
   grid-area: sidebar;
