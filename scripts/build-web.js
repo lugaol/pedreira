@@ -43,6 +43,46 @@ function extractSpotifyId(url) {
   }
 }
 
+function extractYoutubeId(url) {
+  try {
+    const u = new URL(url);
+    const host = u.hostname.toLowerCase();
+    if (host === 'youtu.be' || host.endsWith('.youtu.be')) {
+      return u.pathname.split('/').filter(Boolean)[0] || null;
+    }
+    if (host.includes('youtube.com')) {
+      const v = u.searchParams.get('v');
+      if (v) return v;
+      const match = u.pathname.match(/\/(embed|shorts|live)\/([\w-]+)/);
+      if (match) return match[2];
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function extractYoutubeList(url) {
+  try {
+    const u = new URL(url);
+    if (!u.hostname.toLowerCase().includes('youtube.com')) return null;
+    if (!u.pathname.startsWith('/playlist')) return null;
+    return u.searchParams.get('list');
+  } catch {
+    return null;
+  }
+}
+
+// Only albums actually shared via Spotify or YouTube belong in the album grid.
+// Anything else (Instagram, Facebook, Deezer, share links...) goes to Social media.
+function hasDirectMusicSource(album) {
+  return (album.sources || []).some(
+    (s) =>
+      !String(s.title).startsWith('Search:') &&
+      (s.platform === 'spotify' || s.platform === 'youtube')
+  );
+}
+
 function parseArtistTitle(raw) {
   const title = String(raw).trim();
   // Try "Artist - Title" convention first.
@@ -101,7 +141,9 @@ function buildWebData() {
   const messages = loadMessages(MESSAGES_FILE);
 
   // Enrich albums and build URL -> album index.
-  const albums = rawAlbums.map((album) => ({
+  // Albums whose shared links are not Spotify/YouTube are excluded from the
+  // grid; their URLs still show up in the Social Media section below.
+  const albums = rawAlbums.filter(hasDirectMusicSource).map((album) => ({
     ...album,
     spotifyId: extractSpotifyId(album.spotifyUrl),
     senders: new Set(),
@@ -234,7 +276,18 @@ function buildWebData() {
         }
       }
 
-      // External link to open for albums that cannot be played in the Spotify embed.
+      // YouTube video/playlist IDs for in-app playback and thumbnail fallback.
+      const youtubeId = extractYoutubeId(directYoutube?.url || album.youtubeUrl || '');
+      const youtubeList = youtubeId
+        ? null
+        : extractYoutubeList(directYoutube?.url || album.youtubeUrl || '');
+
+      // Fall back to the YouTube thumbnail when there is no Spotify cover.
+      if (!image && youtubeId) {
+        image = `https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`;
+      }
+
+      // External link to open for albums that cannot be played in the embed player.
       const externalUrl =
         directYoutube?.url ||
         directApple?.url ||
@@ -249,6 +302,8 @@ function buildWebData() {
         artist,
         spotifyUrl,
         spotifyId,
+        youtubeId,
+        youtubeList,
         externalUrl,
         youtubeUrl: album.youtubeUrl,
         appleMusicUrl: album.appleMusicUrl,
@@ -290,6 +345,7 @@ function buildWebData() {
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
   console.log(`Wrote ${enrichedAlbums.length} albums to ${OUTPUT_FILE}`);
+  console.log(`Moved ${rawAlbums.length - albums.length} non-Spotify/YouTube entries to Social media.`);
   console.log(`Total senders: ${totalSenders}`);
   console.log(`Top contributor: ${topContributors[0]?.name || 'none'} (${topContributors[0]?.uniqueAlbums || 0} albums)`);
 }

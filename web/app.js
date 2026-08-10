@@ -245,7 +245,7 @@
 
     const html = filtered
       .map((album) => {
-        const canPlay = !!album.spotifyId;
+        const canPlay = !!(album.spotifyId || album.youtubeId || album.youtubeList);
         const cover = album.image || 'stone.svg';
         const actionLabel = canPlay ? `Play ${escapeHtml(album.name)}` : `Open ${escapeHtml(album.name)}`;
         const actionIcon = canPlay
@@ -310,6 +310,19 @@
     return url;
   }
 
+  function getYoutubeEmbedUrl(album, autoplay = true) {
+    const autoplayParam = autoplay ? '1' : '0';
+    if (album.youtubeId) {
+      return `https://www.youtube-nocookie.com/embed/${album.youtubeId}?autoplay=${autoplayParam}&rel=0`;
+    }
+    return `https://www.youtube-nocookie.com/embed/videoseries?list=${album.youtubeList}&autoplay=${autoplayParam}&rel=0`;
+  }
+
+  function getAlbumEmbedUrl(album, autoplay = true) {
+    if (album.spotifyId) return getSpotifyEmbedUrl(album.spotifyId, autoplay);
+    return getYoutubeEmbedUrl(album, autoplay);
+  }
+
   function updatePlayerInfo(album) {
     elements.playerTitle.textContent = album.name;
     elements.playerArtist.textContent = album.artist;
@@ -327,7 +340,8 @@
     const album = state.albums.find((a) => a.id === id);
     if (!album) return;
 
-    if (!album.spotifyId) {
+    const canPlay = !!(album.spotifyId || album.youtubeId || album.youtubeList);
+    if (!canPlay) {
       if (album.externalUrl) {
         window.open(album.externalUrl, '_blank', 'noopener,noreferrer');
       }
@@ -347,7 +361,7 @@
       movePlayerFrame(target, null);
     }
     
-    elements.playerFrame.src = getSpotifyEmbedUrl(album.spotifyId, true);
+    elements.playerFrame.src = getAlbumEmbedUrl(album, true);
 
     // Scroll to player on mobile
     if (window.innerWidth <= 900 && state.view !== 'player') {

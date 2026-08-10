@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
 
 const INPUT_FILE = process.env.EXPORT_FILE || './data/exported/chat.txt';
 const OUTPUT_FILE = process.env.MESSAGES_FILE || './data/messages.jsonl';
@@ -163,11 +164,79 @@ function parseNewMessage(line) {
   };
 }
 
+// Minimal ZIP reader (no external deps). WhatsApp "Export chat" zips contain
+// a single chat .txt; entry filenames may have mangled encodings, so we match
+// on the ".txt" suffix (ASCII) from the central directory instead of relying
+// on the system unzip, which chokes on those names.
+function readZipTextEntry(filePath) {
+  const buf = fs.readFileSync(filePath);
+
+  // Locate the End of Central Directory record (signature 0x06054b50),
+  // scanning backwards through the largest possible comment area.
+  let eocd = -1;
+  const min = Math.max(0, buf.length - 22 - 65536);
+  for (let i = buf.length - 22; i >= min; i--) {
+    if (buf.readUInt32LE(i) === 0x06054b50) {
+      eocd = i;
+      break;
+    }
+  }
+  if (eocd === -1) return null;
+
+  const entryCount = buf.readUInt16LE(eocd + 10);
+  let offset = buf.readUInt32LE(eocd + 16);
+
+  const entries = [];
+  for (let n = 0; n < entryCount; n++) {
+    if (buf.readUInt32LE(offset) !== 0x02014b50) break;
+    const nameLen = buf.readUInt16LE(offset + 28);
+    const extraLen = buf.readUInt16LE(offset + 30);
+    const commentLen = buf.readUInt16LE(offset + 32);
+    entries.push({
+      method: buf.readUInt16LE(offset + 10),
+      compressedSize: buf.readUInt32LE(offset + 20),
+      size: buf.readUInt32LE(offset + 24),
+      localOffset: buf.readUInt32LE(offset + 42),
+      name: buf.subarray(offset + 46, offset + 46 + nameLen).toString('utf8'),
+    });
+    offset += 46 + nameLen + extraLen + commentLen;
+  }
+
+  const entry = entries
+    .filter((e) => e.name.toLowerCase().endsWith('.txt'))
+    .sort((a, b) => b.size - a.size)[0];
+  if (!entry) return null;
+
+  // Local file header: name/extra lengths live in the local header too.
+  const nameLen = buf.readUInt16LE(entry.localOffset + 26);
+  const extraLen = buf.readUInt16LE(entry.localOffset + 28);
+  const dataStart = entry.localOffset + 30 + nameLen + extraLen;
+  const data = buf.subarray(dataStart, dataStart + entry.compressedSize);
+
+  if (entry.method === 0) return data.toString('utf8');
+  if (entry.method === 8) return zlib.inflateRawSync(data).toString('utf8');
+  return null; // unsupported compression method
+}
+
+function readExportText(filePath) {
+  if (/\.zip$/i.test(filePath)) {
+    const text = readZipTextEntry(filePath);
+    if (text === null) {
+      console.error(`No readable .txt chat file found inside ${path.resolve(filePath)}`);
+      process.exit(1);
+    }
+    console.log('Extracted chat text from zip.');
+    return text;
+  }
+
+  return fs.readFileSync(filePath, 'utf8');
+}
+
 function parseExport() {
   if (!fs.existsSync(INPUT_FILE)) {
     console.error(`Export file not found: ${path.resolve(INPUT_FILE)}`);
-    console.error('Place your WhatsApp exported chat .txt file here and run:');
-    console.error(`EXPORT_FILE=./data/exported/chat.txt node src/parse-export.js`);
+    console.error('Place your WhatsApp exported chat .txt or .zip file here and run:');
+    console.error(`EXPORT_FILE=./data/exported/chat.zip node src/parse-export.js`);
     process.exit(1);
   }
 
@@ -178,7 +247,7 @@ function parseExport() {
     fs.rmSync(OUTPUT_FILE);
   }
 
-  const raw = fs.readFileSync(INPUT_FILE, 'utf8');
+  const raw = readExportText(INPUT_FILE);
   const lines = raw.split(/\r?\n/);
 
   let parsedCount = 0;

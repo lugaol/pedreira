@@ -137,15 +137,15 @@ This is the official way and gives you the complete text history (with optional 
 1. Open the group in WhatsApp on your phone.
 2. Group info → **Export chat**.
 3. Choose **Without media** (fastest) or **Include media**.
-4. Save or send the `.txt` (or ZIP) file to your computer.
-5. Place the file in `data/exported/`, for example as `data/exported/chat.txt`.
+4. Save or send the `.zip` (or extracted `.txt`) file to your computer.
+5. Place the file in `data/exported/`, for example as `data/exported/chat.zip`.
 6. Run:
 
 ```bash
-EXPORT_FILE=./data/exported/chat.txt GROUP_NAME="🎵 Só Pedradas — Albuns 🎷🎹🎸🥁🎧" npm run parse-export
+EXPORT_FILE=./data/exported/chat.zip GROUP_NAME="🎵 Só Pedradas — Albuns 🎷🎹🎸🥁🎧" npm run parse-export
 ```
 
-This converts the `.txt` into the same `messages.jsonl` format.
+Both `.zip` and plain `.txt` exports are accepted (`.zip` is what WhatsApp produces by default). This converts the chat into the same `messages.jsonl` format.
 
 ### Option B — Decrypt an Android WhatsApp backup (most complete)
 
