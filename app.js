@@ -13,7 +13,9 @@
  const elements = {
      app: document.querySelector('.app'),
      main: document.querySelector('.main'),
+     topBar: document.querySelector('.top-bar'),
      grid: document.getElementById('album-grid'),
+     albumsSortNote: document.getElementById('albums-sort-note'),
      search: document.getElementById('search-input'),
      sort: document.getElementById('sort-select'),
      albumsView: document.getElementById('albums-view'),
@@ -125,6 +127,9 @@
     elements.playerView.classList.toggle('hidden', state.view !== 'player');
     elements.socialView.classList.toggle('hidden', state.view !== 'social');
 
+    // Search and sort only apply to the albums view
+    elements.topBar.classList.toggle('hidden', state.view !== 'albums');
+
     // Reset scroll to top when switching sections
     if (elements.main) elements.main.scrollTop = 0;
 
@@ -173,12 +178,23 @@
     const q = state.query;
     let list = state.albums;
 
+    const sortLabels = {
+      'artist-asc': 'sorted by artist A–Z',
+      'artist-desc': 'sorted by artist Z–A',
+      'album-asc': 'sorted by album A–Z',
+      'album-desc': 'sorted by album Z–A',
+      'recent': 'sorted by recently shared',
+    };
+    if (elements.albumsSortNote) {
+      elements.albumsSortNote.textContent = `, ${sortLabels[state.sort] || sortLabels['artist-asc']}`;
+    }
+
     if (q) {
       list = list.filter(
         (a) =>
           (a.name || '').toLowerCase().includes(q) ||
           (a.artist || '').toLowerCase().includes(q) ||
-          a.senders.some((s) => s.toLowerCase().includes(q))
+          (a.senders || []).some((s) => s.toLowerCase().includes(q))
       );
     }
 
@@ -236,7 +252,7 @@
           ? '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'
           : '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>';
         return `
-      <article class="album-card" data-id="${album.id}">
+      <article class="album-card" data-id="${album.id}" tabindex="0" role="button" aria-label="${actionLabel}">
         <div class="album-cover-wrap">
           <img class="album-cover" src="${cover}" alt="${escapeHtml(album.name)}" loading="lazy" />
           <button class="play-button ${canPlay ? '' : 'external'}" data-id="${album.id}" aria-label="${actionLabel}">
@@ -267,6 +283,12 @@
         } else {
           const id = card.dataset.id;
           playAlbum(id);
+        }
+      });
+      card.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter' || e.key === ' ') && !e.target.closest('.play-button')) {
+          e.preventDefault();
+          playAlbum(card.dataset.id);
         }
       });
     });
@@ -392,16 +414,16 @@
     elements.socialList.innerHTML = links
       .map(
         (link) => `
-      <article class="social-item">
+      <a class="social-item" href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" title="${escapeHtml(link.platform)}">${platformIcon(link.platform)}</div>
         <div class="social-info">
-          <a class="social-url" href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(link.url)}">${escapeHtml(link.url)}</a>
+          <span class="social-url" title="${escapeHtml(link.url)}">${escapeHtml(link.url)}</span>
           <div class="social-meta">Shared by ${escapeHtml(link.sender)}${link.sharedAt ? ' · ' + formatDate(link.sharedAt) : ''}</div>
         </div>
         <div class="social-arrow">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
         </div>
-      </article>
+      </a>
     `
       )
       .join('');
