@@ -38,6 +38,7 @@ html, body {
     "sidebar main"
     "sidebar player";
   height: 100vh;
+  height: 100dvh; /* dynamic viewport: keeps the bottom nav visible on mobile Safari */
 }
 
 /* Sidebar */
@@ -839,6 +840,7 @@ html, body {
       "player"
       "nav";
     height: 100vh;
+    height: 100dvh;
     overflow: hidden;
   }
 
