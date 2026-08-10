@@ -146,6 +146,11 @@
     if (!isPlayerView && state.expanded) {
       closePlayerOverlay();
     }
+    
+    // Hide player bar when no album is selected and not in player view
+    if (!isPlayerView && !state.currentAlbum) {
+      elements.playerBar.classList.add('hidden');
+    }
 
     if (state.view === 'contributors' && (state.stats.topContributors || []).length) {
       renderContributors();
@@ -295,6 +300,9 @@
     elements.playerOverlayCover.src = album.image || 'stone.svg';
     elements.playerOverlayTitle.textContent = album.name;
     elements.playerOverlayArtist.textContent = album.artist;
+    
+    // Show player bar when an album is selected
+    elements.playerBar.classList.remove('hidden');
   }
 
   function playAlbum(id) {

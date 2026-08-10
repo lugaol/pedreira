@@ -166,7 +166,7 @@ html, body {
   grid-area: main;
   background: linear-gradient(180deg, #1a1a1a 0%, var(--bg) 220px);
   overflow-y: auto;
-  padding: 0 var(--gap) var(--gap);
+  padding: 0 var(--gap) calc(var(--player-height) + var(--gap));
   min-height: 0;
 }
 
@@ -846,7 +846,7 @@ html, body {
 
 @media (max-width: 900px) {
   :root {
-    --sidebar-width: 64px;
+    --sidebar-width: 0px;
     --gap: 16px;
     --player-height: 140px;
   }
@@ -858,6 +858,10 @@ html, body {
   .app {
     grid-template-rows: 1fr calc(var(--player-height) + 60px);
     padding-bottom: 60px;
+  }
+
+  .sidebar {
+    display: none;
   }
 
   .logo span,
@@ -874,6 +878,10 @@ html, body {
 
   .contributors-layout {
     grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding-bottom: calc(var(--player-height) + var(--gap) + 60px);
   }
 
   .player-bar {
