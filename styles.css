@@ -1031,6 +1031,119 @@ html, body {
   }
 }
 
+/* Monthly playlists */
+.monthly-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.monthly-card {
+  background: var(--bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+.monthly-card.pending {
+  border: 1px dashed rgba(255,255,255,0.15);
+}
+.monthly-info h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.monthly-info p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.monthly-stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.monthly-badge {
+  background: rgba(255,255,255,0.08);
+  padding: 6px 10px;
+  border-radius: 500px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.monthly-badge.ok {
+  background: rgba(29,185,84,0.15);
+  color: var(--accent);
+}
+.monthly-badge.warn {
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+}
+.monthly-action a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 500px;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.monthly-action a:hover {
+  background: var(--accent-hover);
+}
+.monthly-action .disabled {
+  background: var(--bg-elevated-2);
+  color: var(--text-secondary);
+  padding: 10px 16px;
+  border-radius: 500px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.monthly-albums {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.monthly-album {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.04);
+  padding: 8px;
+  border-radius: var(--radius);
+  font-size: 12px;
+}
+.monthly-album img {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  object-fit: cover;
+  background: var(--bg-elevated-2);
+}
+.monthly-album .meta {
+  min-width: 0;
+}
+.monthly-album .meta .t {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.monthly-album .meta .a {
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Focus styles for accessibility */
 .search-box input:focus {
   outline: 2px solid var(--accent);

@@ -36,6 +36,14 @@
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
           Contributors
         </button>
+        <button class="nav-item" data-view="monthly">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9zM7 11h2v2H7z"/></svg>
+          Monthly
+        </button>
+        <button class="nav-item" data-view="pending">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          Pending
+        </button>
       </nav>
       <div class="stats-mini">
         <div><strong id="stat-albums">0</strong> albums</div>
@@ -85,6 +93,19 @@
       <section id="player-view" class="view hidden">
         <div class="player-view-frame" id="player-view-frame"></div>
       </section>
+
+      <section id="monthly-view" class="view hidden">
+        <h1 class="view-title">Monthly playlists</h1>
+        <p class="view-subtitle">Albums grouped by the month they were shared. Click a playlist to open it on Spotify. <span id="monthly-stats"></span></p>
+        <div id="monthly-list" class="monthly-list"></div>
+      </section>
+
+      <section id="pending-view" class="view hidden">
+        <h1 class="view-title">Pending — not yet in playlists</h1>
+        <p class="view-subtitle">Albums shared in the group that are not yet in their monthly Spotify playlist. <span id="pending-stats"></span></p>
+        <div id="pending-grid" class="album-grid"></div>
+        <div id="pending-note" class="view-subtitle" style="margin-top:16px;color:var(--text-secondary)"></div>
+      </section>
     </main>
 
     <nav class="bottom-nav" id="bottom-nav">
@@ -103,6 +124,14 @@
       <button class="bottom-nav-item" data-view="contributors">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
         <span>Charts</span>
+      </button>
+      <button class="bottom-nav-item" data-view="monthly">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9zM7 11h2v2H7z"/></svg>
+        <span>Monthly</span>
+      </button>
+      <button class="bottom-nav-item" data-view="pending">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <span>Pending</span>
       </button>
     </nav>
 
