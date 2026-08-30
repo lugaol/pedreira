@@ -13,6 +13,10 @@
     "build-web": "node scripts/build-web.js",
     "serve-web": "node scripts/serve-web.js",
     "web": "npm run build-web && npm run serve-web",
+    "update": "node scripts/update.js",
+    "spotify:auth": "node scripts/spotify-sync.js --auth",
+    "spotify:sync": "node scripts/spotify-sync.js",
+    "spotify:dry": "node scripts/spotify-sync.js --dry-run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

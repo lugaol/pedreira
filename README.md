@@ -167,10 +167,45 @@ This creates a `WhatsApp` folder with exported chats. You can then point `parse-
 
 For iOS/iCloud backups, use the `--ios` flag of `wtsexporter` and follow its documentation.
 
+## Quick update (recommended)
+
+After you have the latest WhatsApp export (see below), just run:
+
+```bash
+# 1. Export chat on your phone: Group info → Export chat → Without media → save as .txt or .zip
+# 2. Put it in Downloads or data/exported/, then:
+npm run update
+# or explicitly:
+npm run update -- /path/to/Conversa.txt
+```
+
+That single command does: parse → update albums (embed, no rate-limit) → fix covers → build web (271 albums, monthly recent-first, no imageless) → sync Spotify monthly playlists (dry-run if no token).
+
+For Spotify writes:
+```bash
+npm run spotify:auth   # one-time browser login (needs http://127.0.0.1:8888/callback in Spotify Dashboard)
+npm run update         # now creates/updates Maio/Junho/Julho/Agosto playlists for real
+```
+
+To also deploy to GitHub Pages in one go:
+```bash
+npm run update -- --deploy
+```
+
+Other options:
+```bash
+npm run update -- --no-playlists   # skip Spotify
+npm run spotify:dry                # just show what would be added
+```
+
 ## Available scripts
 
 | Script | Purpose |
 |--------|---------|
+| `npm run update` | **One-command update**: parse export → albums → web → Spotify (see above) |
+| `npm run spotify:auth` | Spotify OAuth (one-time) |
+| `npm run spotify:sync` | Sync monthly playlists (creates Agosto if needed) |
+| `npm run spotify:dry` | Dry-run — show missing without writing |
 | `npm start` | Live message monitoring |
 | `npm run list-groups` | List all groups and highlight the target |
 | `npm run fetch-history` | Attempt to collect synced history for a few minutes (rarely yields old messages) |
@@ -264,11 +299,14 @@ http://localhost:3000
 
 Open that URL in your browser. Features:
 
-- **All albums** grid, sorted alphabetically by artist by default.
-- **Sort** by artist/album name or recently shared.
+- **All albums** grid, **recently shared first by default** (August on top), with covers for all (YouTube/Spotify fetched, 3 imageless hidden).
+- **Sort** by recently shared / artist / album name.
 - **Search** albums, artists, or senders.
-- **Play** any album using the official Spotify embed player in the bottom bar.
+- **Play** any album using the official Spotify embed player in the bottom bar (auto-next random on end).
+- **Monthly** view — 4 cards recent-first (Agosto → Maio) with per-month counts and `Open playlist` links to Spotify.
+- **Pending** view — albums not yet in their monthly playlist (0 after sync, shows `No pending`).
 - **Contributors** view with a chart of members who shared the most unique albums.
+- **Social** view for non-Spotify/YouTube links.
 
 To rebuild the data without restarting the server:
 
