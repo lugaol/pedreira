@@ -331,12 +331,12 @@ function buildWebData() {
   const multiSenderAlbums = enrichedAlbums.filter((a) => a.senderCount > 1).length;
 
   // --- Monthly grouping + playlist status ---
-  // Playlists as shared in the group (from Conversa.txt + user message) — updated 30/08/2026
+  // Playlists as shared in the group — recent first (Agosto → Maio)
   const monthlyPlaylists = [
-    { month: '2026-05', label: 'Maio/26', playlistId: '2zengIQVFm8xh84uEseMtf', url: 'https://open.spotify.com/playlist/2zengIQVFm8xh84uEseMtf?si=SiKHE-q5QBe_PKJ6HhDcYQ&pi=zq4zmjp2TySyu' },
-    { month: '2026-06', label: 'Junho/26', playlistId: '6Cv3N0dVTbo5LwWi5mdCLM', url: 'https://open.spotify.com/playlist/6Cv3N0dVTbo5LwWi5mdCLM?si=280lpnhXSp2Ol3YGZif0LA&utm_source=copy-link&pi=kuXuyABNST2_x' },
-    { month: '2026-07', label: 'Julho/26', playlistId: '3O1TjSCSBjhfsGKSRjD9Bq', url: 'https://open.spotify.com/playlist/3O1TjSCSBjhfsGKSRjD9Bq?si=s3qPKYx0RtOEewrVJrrKWA&pi=mKNYYrSKRGKyH' },
     { month: '2026-08', label: 'Agosto/26', playlistId: '2r72Q5HpvfcGJls8ejoOqx', url: 'https://open.spotify.com/playlist/2r72Q5HpvfcGJls8ejoOqx' },
+    { month: '2026-07', label: 'Julho/26', playlistId: '3O1TjSCSBjhfsGKSRjD9Bq', url: 'https://open.spotify.com/playlist/3O1TjSCSBjhfsGKSRjD9Bq?si=s3qPKYx0RtOEewrVJrrKWA&pi=mKNYYrSKRGKyH' },
+    { month: '2026-06', label: 'Junho/26', playlistId: '6Cv3N0dVTbo5LwWi5mdCLM', url: 'https://open.spotify.com/playlist/6Cv3N0dVTbo5LwWi5mdCLM?si=280lpnhXSp2Ol3YGZif0LA&utm_source=copy-link&pi=kuXuyABNST2_x' },
+    { month: '2026-05', label: 'Maio/26', playlistId: '2zengIQVFm8xh84uEseMtf', url: 'https://open.spotify.com/playlist/2zengIQVFm8xh84uEseMtf?si=SiKHE-q5QBe_PKJ6HhDcYQ&pi=zq4zmjp2TySyu' },
   ];
 
   // Group albums by month of first share
