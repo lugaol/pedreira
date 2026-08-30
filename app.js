@@ -1,0 +1,783 @@
+(() => {
+  const state = {
+    albums: [],
+    stats: {},
+    monthly: [],
+    pending: { albums: [], byMonth: {}, totalPending: 0 },
+    playlists: [],
+    filtered: [],
+    currentAlbum: null,
+    sort: 'recent',
+    query: '',
+    view: 'albums',
+    expanded: false,
+  };
+
+ const elements = {
+     app: document.querySelector('.app'),
+     main: document.querySelector('.main'),
+     topBar: document.querySelector('.top-bar'),
+     grid: document.getElementById('album-grid'),
+     albumsSortNote: document.getElementById('albums-sort-note'),
+     search: document.getElementById('search-input'),
+     sort: document.getElementById('sort-select'),
+     albumsView: document.getElementById('albums-view'),
+     contributorsView: document.getElementById('contributors-view'),
+     playerView: document.getElementById('player-view'),
+     socialView: document.getElementById('social-view'),
+     socialList: document.getElementById('social-list'),
+     contributorsChart: document.getElementById('contributors-chart'),
+     contributorsList: document.getElementById('contributors-list'),
+     navItems: document.querySelectorAll('.nav-item'),
+     statAlbums: document.getElementById('stat-albums'),
+     statSenders: document.getElementById('stat-senders'),
+     playerBar: document.getElementById('player-bar'),
+     playerCover: document.getElementById('player-cover'),
+     playerTitle: document.getElementById('player-title'),
+     playerArtist: document.getElementById('player-artist'),
+     compactFrameContainer: document.getElementById('player-frame'),
+     playerExpand: document.getElementById('player-expand'),
+     playerOverlay: document.getElementById('player-overlay'),
+     playerOverlayBackdrop: document.getElementById('player-overlay-backdrop'),
+     playerOverlayClose: document.getElementById('player-overlay-close'),
+     playerOverlayFrame: document.getElementById('player-overlay-frame'),
+     playerOverlayCover: document.getElementById('player-overlay-cover'),
+     playerOverlayTitle: document.getElementById('player-overlay-title'),
+     playerOverlayArtist: document.getElementById('player-overlay-artist'),
+   };
+
+  async function init() {
+    try {
+      // Show loading state
+      elements.grid.innerHTML = '<p class="view-subtitle">Loading albums...</p>';
+      
+      const res = await fetch('data.json');
+      if (!res.ok) throw new Error('Could not load data.json');
+      const data = await res.json();
+      state.albums = data.albums || [];
+      state.socialLinks = data.socialLinks || [];
+      state.stats = data.stats || {};
+      state.monthly = data.monthly || [];
+      state.pending = data.pending || { albums: [], byMonth: {}, totalPending: 0 };
+      state.playlists = data.playlists || [];
+      state.filtered = [...state.albums];
+      updateStats();
+      bindEvents();
+      applySortAndFilter();
+    } catch (err) {
+      elements.grid.innerHTML = `<p class="view-subtitle">Failed to load albums: ${err.message}</p>`;
+      console.error('Failed to initialize app:', err);
+    }
+  }
+
+  function updateStats() {
+    elements.statAlbums.textContent = state.albums.length.toLocaleString();
+    elements.statSenders.textContent = (state.stats.topContributors?.length || 0).toLocaleString();
+  }
+
+  function updateNavState() {
+    // Update sidebar nav
+    elements.navItems.forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.view === state.view);
+    });
+    
+    // Update bottom nav
+    const bottomNavItems = document.querySelectorAll('.bottom-nav-item');
+    bottomNavItems.forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.view === state.view);
+    });
+  }
+
+  function bindEvents() {
+    elements.search.addEventListener('input', (e) => {
+      state.query = e.target.value.trim().toLowerCase();
+      applySortAndFilter();
+    });
+
+    elements.sort.addEventListener('change', (e) => {
+      state.sort = e.target.value;
+      applySortAndFilter();
+    });
+
+    elements.navItems.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        state.view = btn.dataset.view;
+        updateNavState();
+        renderView();
+      });
+    });
+
+    // Bottom navigation for mobile
+    const bottomNavItems = document.querySelectorAll('.bottom-nav-item');
+    bottomNavItems.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        state.view = btn.dataset.view;
+        updateNavState();
+        renderView();
+      });
+    });
+
+    elements.playerExpand.addEventListener('click', openPlayerOverlay);
+    elements.playerOverlayClose.addEventListener('click', closePlayerOverlay);
+    elements.playerOverlayBackdrop.addEventListener('click', closePlayerOverlay);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && state.expanded) closePlayerOverlay();
+    });
+  }
+
+  function renderView() {
+    // Re-query monthly/pending in case elements were cached before DOM ready (defensive)
+    const monthlyView = document.getElementById('monthly-view') || elements.monthlyView;
+    const pendingView = document.getElementById('pending-view') || elements.pendingView;
+    elements.albumsView.classList.toggle('hidden', state.view !== 'albums');
+    elements.contributorsView.classList.toggle('hidden', state.view !== 'contributors');
+    elements.playerView.classList.toggle('hidden', state.view !== 'player');
+    elements.socialView.classList.toggle('hidden', state.view !== 'social');
+    if (monthlyView) monthlyView.classList.toggle('hidden', state.view !== 'monthly');
+    if (pendingView) pendingView.classList.toggle('hidden', state.view !== 'pending');
+
+    // Search and sort only apply to the albums view
+    elements.topBar.classList.toggle('hidden', state.view !== 'albums');
+
+    // Reset scroll to top when switching sections
+    if (elements.main) elements.main.scrollTop = 0;
+
+    // Show loading states for views that need data
+    if (state.view === 'albums' && !state.albums.length) {
+      elements.grid.innerHTML = '<p class="view-subtitle">Loading albums...</p>';
+    } else if (state.view === 'contributors' && !(state.stats.topContributors || []).length) {
+      elements.contributorsChart.innerHTML = '<p class="view-subtitle">Loading contributors...</p>';
+      elements.contributorsList.innerHTML = '';
+    } else if (state.view === 'social' && !(state.socialLinks || []).length) {
+      elements.socialList.innerHTML = '<p class="view-subtitle">Loading social links...</p>';
+    } else if (state.view === 'monthly' && !(state.monthly || []).length) {
+      const el = document.getElementById('monthly-list') || elements.monthlyList;
+      if (el) el.innerHTML = '<p class="view-subtitle">Loading monthly playlists...</p>';
+    } else if (state.view === 'pending' && !(state.pending.albums || []).length) {
+      const el = document.getElementById('pending-grid') || elements.pendingGrid;
+      if (el) el.innerHTML = '<p class="view-subtitle">No pending albums — everything is in playlists!</p>';
+    }
+
+    // Player view transforms the bottom bar into a full-size player panel.
+    const isPlayerView = state.view === 'player';
+    elements.app.classList.toggle('player-view-active', isPlayerView);
+
+    // Reset player state when leaving player view
+    if (!isPlayerView && state.expanded) {
+      closePlayerOverlay();
+    }
+    
+    // Hide player bar when no album is selected and not in player view
+    if (!isPlayerView && !state.currentAlbum) {
+      elements.playerBar.classList.add('hidden');
+    }
+
+    if (state.view === 'contributors' && (state.stats.topContributors || []).length) {
+      renderContributors();
+    } else if (state.view === 'player') {
+      ensurePlayerFrameInBottomBar();
+    } else if (state.view === 'social' && (state.socialLinks || []).length) {
+      renderSocial();
+      ensurePlayerFrameInBottomBar();
+    } else if (state.view === 'monthly') {
+      renderMonthly();
+      ensurePlayerFrameInBottomBar();
+    } else if (state.view === 'pending') {
+      renderPending();
+      ensurePlayerFrameInBottomBar();
+    } else {
+      ensurePlayerFrameInBottomBar();
+    }
+  }
+
+  function ensurePlayerFrameInBottomBar() {
+    if (state.expanded || !state.currentAlbum) return;
+    if (state.activeMount !== elements.compactFrameContainer) {
+      renderPlayer(elements.compactFrameContainer, compactPlayerHeight());
+    }
+  }
+
+  function applySortAndFilter() {
+    const q = state.query;
+    let list = state.albums;
+
+    const sortLabels = {
+      'artist-asc': 'sorted by artist A–Z',
+      'artist-desc': 'sorted by artist Z–A',
+      'album-asc': 'sorted by album A–Z',
+      'album-desc': 'sorted by album Z–A',
+      'recent': 'sorted by recently shared',
+    };
+    if (elements.albumsSortNote) {
+      elements.albumsSortNote.textContent = `, ${sortLabels[state.sort] || sortLabels['artist-asc']}`;
+    }
+
+    if (q) {
+      list = list.filter(
+        (a) =>
+          (a.name || '').toLowerCase().includes(q) ||
+          (a.artist || '').toLowerCase().includes(q) ||
+          (a.senders || []).some((s) => s.toLowerCase().includes(q))
+      );
+    }
+
+    list = sortAlbums(list, state.sort);
+    state.filtered = list;
+    renderAlbums();
+  }
+
+  function sortAlbums(list, sort) {
+    const sorted = [...list];
+    switch (sort) {
+      case 'artist-asc':
+        return sorted.sort(cmpArtist);
+      case 'artist-desc':
+        return sorted.sort((a, b) => cmpArtist(b, a));
+      case 'album-asc':
+        return sorted.sort(cmpAlbum);
+      case 'album-desc':
+        return sorted.sort((a, b) => cmpAlbum(b, a));
+      case 'recent':
+        return sorted.sort((a, b) => new Date(b.lastSharedAt || 0) - new Date(a.lastSharedAt || 0));
+      default:
+        return sorted;
+    }
+  }
+
+  function cmpArtist(a, b) {
+    const artistA = (a.artist || '').toLowerCase();
+    const artistB = (b.artist || '').toLowerCase();
+    if (artistA !== artistB) return artistA.localeCompare(artistB);
+    return cmpAlbum(a, b);
+  }
+
+  function cmpAlbum(a, b) {
+    return (a.name || '').toLowerCase().localeCompare((b.name || '').toLowerCase());
+  }
+
+  function renderAlbums() {
+    const { filtered } = state;
+    if (!filtered.length) {
+      if (state.query) {
+        elements.grid.innerHTML = '<p class="view-subtitle">No albums match your search.</p>';
+      } else {
+        elements.grid.innerHTML = '<p class="view-subtitle">No albums found in the library.</p>';
+      }
+      return;
+    }
+
+    const html = filtered
+      .map((album) => {
+        const canPlay = !!(album.spotifyId || album.youtubeId || album.youtubeList);
+        const cover = album.image || 'stone.svg';
+        const actionLabel = canPlay ? `Play ${escapeHtml(album.name)}` : `Open ${escapeHtml(album.name)}`;
+        const actionIcon = canPlay
+          ? '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'
+          : '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>';
+        return `
+      <article class="album-card" data-id="${album.id}" tabindex="0" role="button" aria-label="${actionLabel}">
+        <div class="album-cover-wrap">
+          <img class="album-cover" src="${cover}" alt="${escapeHtml(album.name)}" loading="lazy" />
+          <button class="play-button ${canPlay ? '' : 'external'}" data-id="${album.id}" aria-label="${actionLabel}">
+            ${actionIcon}
+          </button>
+        </div>
+        <h3 class="album-title" title="${escapeHtml(album.name)}">${escapeHtml(album.name)}</h3>
+        <p class="album-artist" title="${escapeHtml(album.artist)}">${escapeHtml(album.artist)}</p>
+        <div class="album-meta">
+          <span>${album.releaseDate ? album.releaseDate.slice(0, 4) : '—'}</span>
+          <span class="dot"></span>
+          <span>${album.senderCount} sender${album.senderCount === 1 ? '' : 's'}</span>
+        </div>
+        ${renderSenderPills(album.senders)}
+      </article>
+    `;
+      })
+      .join('');
+
+    elements.grid.innerHTML = html;
+
+    elements.grid.querySelectorAll('.album-card').forEach((card) => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.play-button')) {
+          e.stopPropagation();
+          const id = e.target.closest('.play-button').dataset.id;
+          playAlbum(id);
+        } else {
+          const id = card.dataset.id;
+          playAlbum(id);
+        }
+      });
+      card.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter' || e.key === ' ') && !e.target.closest('.play-button')) {
+          e.preventDefault();
+          playAlbum(card.dataset.id);
+        }
+      });
+    });
+  }
+
+  function renderSenderPills(senders) {
+    if (!senders || !senders.length) return '';
+    const visible = senders.slice(0, 3);
+    const rest = senders.length - visible.length;
+    let html = visible.map((s) => `<span class="sender-pill" title="${escapeHtml(s)}">${escapeHtml(s)}</span>`).join('');
+    if (rest > 0) html += `<span class="sender-pill">+${rest}</span>`;
+    return `<div class="sender-pills">${html}</div>`;
+  }
+
+  function getSpotifyEmbedUrl(spotifyId, autoplay = true) {
+    // Put autoplay first; it is still subject to browser policies, but this is the most reliable URL format.
+    let url = `https://open.spotify.com/embed/album/${spotifyId}?autoplay=${autoplay ? '1' : '0'}`;
+    url += '&theme=0';
+    return url;
+  }
+
+  function getYoutubeEmbedUrl(album, autoplay = true) {
+    const autoplayParam = autoplay ? '1' : '0';
+    if (album.youtubeId) {
+      return `https://www.youtube-nocookie.com/embed/${album.youtubeId}?autoplay=${autoplayParam}&rel=0&enablejsapi=1`;
+    }
+    return `https://www.youtube-nocookie.com/embed/videoseries?list=${album.youtubeList}&autoplay=${autoplayParam}&rel=0&enablejsapi=1`;
+  }
+
+  function updatePlayerInfo(album) {
+    elements.playerTitle.textContent = album.name;
+    elements.playerArtist.textContent = album.artist;
+    elements.playerCover.src = album.image || 'stone.svg';
+
+    elements.playerOverlayCover.src = album.image || 'stone.svg';
+    elements.playerOverlayTitle.textContent = album.name;
+    elements.playerOverlayArtist.textContent = album.artist;
+
+    // YouTube embeds are 16:9 videos; Spotify fills the bar horizontally.
+    elements.playerBar.classList.toggle('youtube', !album.spotifyId);
+
+    // Show player bar when an album is selected
+    elements.playerBar.classList.remove('hidden');
+  }
+
+  // ---------- Playback engine ----------
+  // One player lives in the bottom bar or in the expanded overlay. Spotify
+  // uses the official IFrame API (playback events), YouTube a plain iframe
+  // with the JS API attached. Both report "ended" so a random album follows.
+
+  function compactPlayerHeight() {
+    return window.innerWidth <= 900 ? 152 : 200;
+  }
+
+  let spotifyApiPromise = null;
+  function loadSpotifyApi() {
+    if (spotifyApiPromise) return spotifyApiPromise;
+    spotifyApiPromise = new Promise((resolve) => {
+      const timeout = setTimeout(() => resolve(null), 8000);
+      window.onSpotifyIframeApiReady = (api) => {
+        clearTimeout(timeout);
+        resolve(api);
+      };
+      const s = document.createElement('script');
+      s.src = 'https://open.spotify.com/embed/iframe-api/v1';
+      s.onerror = () => { clearTimeout(timeout); resolve(null); };
+      document.head.appendChild(s);
+    });
+    return spotifyApiPromise;
+  }
+
+  let youtubeApiPromise = null;
+  function loadYoutubeApi() {
+    if (youtubeApiPromise) return youtubeApiPromise;
+    youtubeApiPromise = new Promise((resolve) => {
+      if (window.YT && window.YT.Player) return resolve(window.YT);
+      const timeout = setTimeout(() => resolve(null), 8000);
+      window.onYouTubeIframeAPIReady = () => {
+        clearTimeout(timeout);
+        resolve(window.YT);
+      };
+      const s = document.createElement('script');
+      s.src = 'https://www.youtube.com/iframe_api';
+      s.onerror = () => { clearTimeout(timeout); resolve(null); };
+      document.head.appendChild(s);
+    });
+    return youtubeApiPromise;
+  }
+
+  function clearEndTimer() {
+    if (state.endTimer) {
+      clearTimeout(state.endTimer);
+      state.endTimer = null;
+    }
+  }
+
+  // Debounced: at a track boundary the player briefly reports "ended" before
+  // advancing; only if nothing resumes within 3s is the album really over.
+  function scheduleAlbumEnd() {
+    clearEndTimer();
+    state.endTimer = setTimeout(playRandomAlbum, 3000);
+  }
+
+  function onSpotifyPlaybackUpdate(e) {
+    const { position = 0, duration = 0 } = (e && e.data) || {};
+    if (duration > 0 && position >= duration - 1) scheduleAlbumEnd();
+    else clearEndTimer();
+  }
+
+  function onYoutubeStateChange(e) {
+    if (window.YT && e.data === window.YT.PlayerState.ENDED) scheduleAlbumEnd();
+    else clearEndTimer();
+  }
+
+  function playRandomAlbum() {
+    clearEndTimer();
+    const currentId = state.currentAlbum ? state.currentAlbum.id : null;
+    const playable = state.albums.filter(
+      (a) => (a.spotifyId || a.youtubeId || a.youtubeList) && a.id !== currentId
+    );
+    if (!playable.length) return;
+    const next = playable[Math.floor(Math.random() * playable.length)];
+    playAlbum(next.id);
+  }
+
+  function destroyPlayer() {
+    clearEndTimer();
+    if (state.ytPlayer) {
+      try { state.ytPlayer.destroy(); } catch { /* ignore */ }
+      state.ytPlayer = null;
+    }
+    if (state.spotifyController) {
+      try { state.spotifyController.destroy(); } catch { /* ignore */ }
+      state.spotifyController = null;
+    }
+    [elements.compactFrameContainer, elements.playerOverlayFrame].forEach((c) => {
+      if (c) c.querySelectorAll('.player-mount').forEach((m) => m.remove());
+    });
+    state.activeMount = null;
+  }
+
+  function renderPlainIframe(mount, height, src) {
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.setAttribute('width', '100%');
+    if (height !== null) iframe.setAttribute('height', String(height));
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture');
+    mount.appendChild(iframe);
+    return iframe;
+  }
+
+  async function renderPlayer(container, height) {
+    const album = state.currentAlbum;
+    if (!album || !container) return;
+
+    destroyPlayer();
+    state.activeMount = container;
+    const seq = (state.renderSeq = (state.renderSeq || 0) + 1);
+
+    // The Spotify IFrame API replaces the element it is given, so never hand
+    // it a structural container — use a disposable mount inside it instead.
+    const mount = document.createElement('div');
+    mount.className = 'player-mount';
+    container.appendChild(mount);
+
+    if (album.spotifyId) {
+      const api = await loadSpotifyApi();
+      if (seq !== state.renderSeq) return;
+      if (!api) {
+        // API unavailable (blocked/offline): plain embed, no auto-advance.
+        renderPlainIframe(mount, height, getSpotifyEmbedUrl(album.spotifyId, true));
+        return;
+      }
+      api.createController(
+        mount,
+        { uri: `spotify:album:${album.spotifyId}`, width: '100%', height: height || compactPlayerHeight() },
+        (controller) => {
+          if (seq !== state.renderSeq) {
+            try { controller.destroy(); } catch { /* ignore */ }
+            return;
+          }
+          state.spotifyController = controller;
+          controller.addListener('playback_update', onSpotifyPlaybackUpdate);
+          controller.addListener('ready', () => controller.play());
+        }
+      );
+      return;
+    }
+
+    // YouTube video or album playlist.
+    const iframe = renderPlainIframe(mount, height, getYoutubeEmbedUrl(album, true));
+    const YT = await loadYoutubeApi();
+    if (!YT || seq !== state.renderSeq || !iframe.isConnected) return;
+    state.ytPlayer = new YT.Player(iframe, {
+      events: { onStateChange: onYoutubeStateChange },
+    });
+  }
+
+  // ---------- End playback engine ----------
+
+  function playAlbum(id) {
+    const album = state.albums.find((a) => a.id === id);
+    if (!album) return;
+
+    const canPlay = !!(album.spotifyId || album.youtubeId || album.youtubeList);
+    if (!canPlay) {
+      if (album.externalUrl) {
+        window.open(album.externalUrl, '_blank', 'noopener,noreferrer');
+      }
+      return;
+    }
+
+    state.currentAlbum = album;
+    updatePlayerInfo(album);
+
+    // The active layout (bottom bar or overlay) decides the player size.
+    if (state.expanded) {
+      renderPlayer(elements.playerOverlayFrame, 380);
+    } else {
+      renderPlayer(elements.compactFrameContainer, null); // CSS-sized compact player
+    }
+
+    // Scroll to player on mobile
+    if (window.innerWidth <= 900 && state.view !== 'player') {
+      elements.playerBar.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function openPlayerOverlay() {
+    if (!state.currentAlbum) return;
+    state.expanded = true;
+    elements.playerOverlay.classList.add('active');
+    elements.playerOverlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    renderPlayer(elements.playerOverlayFrame, 380);
+  }
+
+  function closePlayerOverlay() {
+    if (!state.expanded) return;
+    state.expanded = false;
+    elements.playerOverlay.classList.remove('active');
+    elements.playerOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+
+    // Return the player to the compact bottom bar.
+    renderPlayer(elements.compactFrameContainer, null);
+
+    // If we're not in player view, ensure the player bar is visible
+    if (state.view !== 'player') {
+      elements.playerBar.classList.remove('hidden');
+    }
+  }
+
+  function renderSocial() {
+    const links = state.socialLinks || [];
+    if (!links.length) {
+      elements.socialList.innerHTML = '<p class="view-subtitle">No social media links found.</p>';
+      return;
+    }
+
+    const platformIcon = (platform) => {
+      const icons = {
+        apple_music: '',
+        bandcamp: 'BC',
+        deezer: 'DZ',
+        tidal: 'T',
+        soundcloud: 'SC',
+        social: '🔗',
+      };
+      return icons[platform] || '🔗';
+    };
+
+    elements.socialList.innerHTML = links
+      .map(
+        (link) => `
+      <a class="social-item" href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">
+        <div class="social-icon" title="${escapeHtml(link.platform)}">${platformIcon(link.platform)}</div>
+        <div class="social-info">
+          <span class="social-url" title="${escapeHtml(link.url)}">${escapeHtml(link.url)}</span>
+          <div class="social-meta">Shared by ${escapeHtml(link.sender)}${link.sharedAt ? ' · ' + formatDate(link.sharedAt) : ''}</div>
+        </div>
+        <div class="social-arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+        </div>
+      </a>
+    `
+      )
+      .join('');
+  }
+
+  function renderMonthly() {
+    const monthly = state.monthly || [];
+    const listEl = document.getElementById('monthly-list') || elements.monthlyList;
+    if (!listEl) return;
+    if (!monthly.length) {
+      listEl.innerHTML = '<p class="view-subtitle">No monthly data.</p>';
+      return;
+    }
+    const pendingByMonth = (state.pending && state.pending.byMonth) || {};
+    (listEl || document.getElementById('monthly-list')).innerHTML = monthly
+      .map((m) => {
+        const count = m.totalAlbums || 0;
+        const pending = pendingByMonth[m.month];
+        const badgeClass = !pending ? 'ok' : pending.missing > 0 ? 'warn' : 'ok';
+        const badgeText = !m.playlistId ? 'No playlist yet' : pending ? `${pending.present}/${pending.total} in playlist` : `${count} albums`;
+        const note = pending && pending.note ? `<span class="monthly-badge warn">${escapeHtml(pending.note)}</span>` : '';
+        const albums = m.albums
+          .map((id) => state.albums.find((a) => a.id === id))
+          .filter(Boolean)
+          .slice(0, 8);
+        const albumsHtml = albums
+          .map(
+            (a) => `
+          <div class="monthly-album" title="${escapeHtml(a.artist)} - ${escapeHtml(a.name)}">
+            <img src="${a.image || 'stone.svg'}" alt="" loading="lazy" />
+            <div class="meta">
+              <div class="t">${escapeHtml(a.name)}</div>
+              <div class="a">${escapeHtml(a.artist)}</div>
+            </div>
+          </div>`
+          )
+          .join('');
+        const more = m.totalAlbums > 8 ? `<div class="monthly-album" style="justify-content:center;color:var(--text-secondary)">+${m.totalAlbums - 8} more</div>` : '';
+        const action = m.url
+          ? `<a href="${escapeHtml(m.url)}" target="_blank" rel="noopener noreferrer">Open playlist <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a>`
+          : `<span class="disabled">Not created yet — run spotify-oauth</span>`;
+        return `
+        <div class="monthly-card ${!m.playlistId ? 'pending' : ''}">
+          <div class="monthly-info">
+            <h3>${escapeHtml(m.label)} — ${escapeHtml(m.month)}</h3>
+            <p>${count} albums shared in ${escapeHtml(m.label)}</p>
+            <div class="monthly-stats">
+              <span class="monthly-badge ${badgeClass}">${escapeHtml(badgeText)}</span>
+              ${note}
+            </div>
+          </div>
+          <div class="monthly-action">${action}</div>
+          ${albums.length ? `<div class="monthly-albums">${albumsHtml}${more}</div>` : ''}
+        </div>`;
+      })
+      .join('');
+    const monthlyStatsEl = document.getElementById('monthly-stats') || elements.monthlyStats;
+    if (monthlyStatsEl) {
+      const totalPend = state.pending.totalPending || 0;
+      monthlyStatsEl.textContent = `— ${totalPend} pending overall`;
+    }
+  }
+
+  function renderPending() {
+    const pending = state.pending || { albums: [] };
+    const list = pending.albums || [];
+    const gridEl = document.getElementById('pending-grid') || elements.pendingGrid;
+    const statsEl = document.getElementById('pending-stats') || elements.pendingStats;
+    const noteEl = document.getElementById('pending-note') || elements.pendingNote;
+    if (!gridEl) return;
+    if (!list.length) {
+      gridEl.innerHTML = '<p class="view-subtitle">No pending albums — everything is in playlists!</p>';
+      if (statsEl) statsEl.textContent = '';
+      if (noteEl) noteEl.textContent = '';
+      return;
+    }
+    if (statsEl) statsEl.textContent = `— ${list.length} albums`;
+    const byMonth = pending.byMonth || {};
+    const notes = Object.entries(byMonth)
+      .map(([k, v]) => `${k}: ${v.missing} missing`)
+      .join(' · ');
+    if (noteEl) {
+      noteEl.textContent = `Verified via Spotify embed: ${notes}.`;
+    }
+    const html = list
+      .map((a) => {
+        const canPlay = !!(a.spotifyId || a.youtubeId);
+        const cover = a.image || 'stone.svg';
+        const actionLabel = canPlay ? `Play ${escapeHtml(a.name)}` : `Open ${escapeHtml(a.name)}`;
+        const actionIcon = canPlay
+          ? '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'
+          : '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>';
+        return `
+      <article class="album-card" data-id="${a.id}" tabindex="0" role="button" aria-label="${actionLabel}">
+        <div class="album-cover-wrap">
+          <img class="album-cover" src="${cover}" alt="${escapeHtml(a.name)}" loading="lazy" />
+          <button class="play-button ${canPlay ? '' : 'external'}" data-id="${a.id}" aria-label="${actionLabel}">
+            ${actionIcon}
+          </button>
+        </div>
+        <h3 class="album-title" title="${escapeHtml(a.name)}">${escapeHtml(a.name)}</h3>
+        <p class="album-artist" title="${escapeHtml(a.artist)}">${escapeHtml(a.artist)}</p>
+        <div class="album-meta">
+          <span>${a.month || ''}</span>
+          <span class="dot"></span>
+          <span>${escapeHtml(a.senders ? a.senders.join(', ').slice(0,20) : '')}</span>
+        </div>
+        <div class="sender-pills"><span class="sender-pill">pending</span></div>
+      </article>`;
+      })
+      .join('');
+    gridEl.innerHTML = html;
+    gridEl.querySelectorAll('.album-card').forEach((card) => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.play-button')) {
+          e.stopPropagation();
+          const id = e.target.closest('.play-button').dataset.id;
+          const full = state.albums.find((a) => a.id === id);
+          if (full && typeof playAlbum === 'function') playAlbum(id);
+        } else {
+          const id = card.dataset.id;
+          if (typeof playAlbum === 'function') playAlbum(id);
+        }
+      });
+    });
+  }
+
+  function formatDate(iso) {
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return '';
+    return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+  }
+
+  function renderContributors() {
+    const contributors = state.stats.topContributors || [];
+    if (!contributors.length) {
+      elements.contributorsChart.innerHTML = '<p class="view-subtitle">No contributor data.</p>';
+      elements.contributorsList.innerHTML = '';
+      return;
+    }
+
+    const max = contributors[0].uniqueAlbums || 1;
+
+    elements.contributorsChart.innerHTML = contributors
+      .map(
+        (c) => `
+      <div class="contributor-bar">
+        <div class="contributor-name" title="${escapeHtml(c.name)}">${escapeHtml(c.name)}</div>
+        <div class="contributor-track">
+          <div class="contributor-fill" style="width: ${(c.uniqueAlbums / max) * 100}%"></div>
+        </div>
+        <div class="contributor-count">${c.uniqueAlbums}</div>
+      </div>
+    `
+      )
+      .join('');
+
+    elements.contributorsList.innerHTML = contributors
+      .map(
+        (c) => `
+      <li>
+        <span class="name">${escapeHtml(c.name)}</span>
+        <span class="count">${c.uniqueAlbums}</span>
+      </li>
+    `
+      )
+      .join('');
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  init();
+})();
