@@ -7,7 +7,7 @@
     playlists: [],
     filtered: [],
     currentAlbum: null,
-    sort: 'artist-asc',
+    sort: 'recent',
     query: '',
     view: 'albums',
     expanded: false,
@@ -127,12 +127,15 @@
   }
 
   function renderView() {
+    // Re-query monthly/pending in case elements were cached before DOM ready (defensive)
+    const monthlyView = document.getElementById('monthly-view') || elements.monthlyView;
+    const pendingView = document.getElementById('pending-view') || elements.pendingView;
     elements.albumsView.classList.toggle('hidden', state.view !== 'albums');
     elements.contributorsView.classList.toggle('hidden', state.view !== 'contributors');
     elements.playerView.classList.toggle('hidden', state.view !== 'player');
     elements.socialView.classList.toggle('hidden', state.view !== 'social');
-    elements.monthlyView.classList.toggle('hidden', state.view !== 'monthly');
-    elements.pendingView.classList.toggle('hidden', state.view !== 'pending');
+    if (monthlyView) monthlyView.classList.toggle('hidden', state.view !== 'monthly');
+    if (pendingView) pendingView.classList.toggle('hidden', state.view !== 'pending');
 
     // Search and sort only apply to the albums view
     elements.topBar.classList.toggle('hidden', state.view !== 'albums');
@@ -149,9 +152,11 @@
     } else if (state.view === 'social' && !(state.socialLinks || []).length) {
       elements.socialList.innerHTML = '<p class="view-subtitle">Loading social links...</p>';
     } else if (state.view === 'monthly' && !(state.monthly || []).length) {
-      elements.monthlyList.innerHTML = '<p class="view-subtitle">Loading monthly playlists...</p>';
+      const el = document.getElementById('monthly-list') || elements.monthlyList;
+      if (el) el.innerHTML = '<p class="view-subtitle">Loading monthly playlists...</p>';
     } else if (state.view === 'pending' && !(state.pending.albums || []).length) {
-      elements.pendingGrid.innerHTML = '<p class="view-subtitle">No pending albums — everything is in playlists!</p>';
+      const el = document.getElementById('pending-grid') || elements.pendingGrid;
+      if (el) el.innerHTML = '<p class="view-subtitle">No pending albums — everything is in playlists!</p>';
     }
 
     // Player view transforms the bottom bar into a full-size player panel.
@@ -602,12 +607,14 @@
 
   function renderMonthly() {
     const monthly = state.monthly || [];
+    const listEl = document.getElementById('monthly-list') || elements.monthlyList;
+    if (!listEl) return;
     if (!monthly.length) {
-      elements.monthlyList.innerHTML = '<p class="view-subtitle">No monthly data.</p>';
+      listEl.innerHTML = '<p class="view-subtitle">No monthly data.</p>';
       return;
     }
     const pendingByMonth = (state.pending && state.pending.byMonth) || {};
-    elements.monthlyList.innerHTML = monthly
+    (listEl || document.getElementById('monthly-list')).innerHTML = monthly
       .map((m) => {
         const count = m.totalAlbums || 0;
         const pending = pendingByMonth[m.month];
@@ -649,28 +656,33 @@
         </div>`;
       })
       .join('');
-    if (elements.monthlyStats) {
+    const monthlyStatsEl = document.getElementById('monthly-stats') || elements.monthlyStats;
+    if (monthlyStatsEl) {
       const totalPend = state.pending.totalPending || 0;
-      elements.monthlyStats.textContent = `— ${totalPend} pending overall`;
+      monthlyStatsEl.textContent = `— ${totalPend} pending overall`;
     }
   }
 
   function renderPending() {
     const pending = state.pending || { albums: [] };
     const list = pending.albums || [];
+    const gridEl = document.getElementById('pending-grid') || elements.pendingGrid;
+    const statsEl = document.getElementById('pending-stats') || elements.pendingStats;
+    const noteEl = document.getElementById('pending-note') || elements.pendingNote;
+    if (!gridEl) return;
     if (!list.length) {
-      elements.pendingGrid.innerHTML = '<p class="view-subtitle">No pending albums — everything is in playlists!</p>';
-      if (elements.pendingStats) elements.pendingStats.textContent = '';
-      if (elements.pendingNote) elements.pendingNote.textContent = '';
+      gridEl.innerHTML = '<p class="view-subtitle">No pending albums — everything is in playlists!</p>';
+      if (statsEl) statsEl.textContent = '';
+      if (noteEl) noteEl.textContent = '';
       return;
     }
-    if (elements.pendingStats) elements.pendingStats.textContent = `— ${list.length} albums`;
+    if (statsEl) statsEl.textContent = `— ${list.length} albums`;
     const byMonth = pending.byMonth || {};
     const notes = Object.entries(byMonth)
       .map(([k, v]) => `${k}: ${v.missing} missing`)
       .join(' · ');
-    if (elements.pendingNote) {
-      elements.pendingNote.textContent = `Verified via Spotify embed: ${notes}.`;
+    if (noteEl) {
+      noteEl.textContent = `Verified via Spotify embed: ${notes}.`;
     }
     const html = list
       .map((a) => {
@@ -699,8 +711,8 @@
       </article>`;
       })
       .join('');
-    elements.pendingGrid.innerHTML = html;
-    elements.pendingGrid.querySelectorAll('.album-card').forEach((card) => {
+    gridEl.innerHTML = html;
+    gridEl.querySelectorAll('.album-card').forEach((card) => {
       card.addEventListener('click', (e) => {
         if (e.target.closest('.play-button')) {
           e.stopPropagation();
