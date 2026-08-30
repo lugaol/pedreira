@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T20:33:24.902Z",
+  "generatedAt": "2026-08-30T21:05:14.638Z",
   "totalAlbums": 274,
   "totalSenders": 42,
   "multiSenderAlbums": 0,
@@ -1128,7 +1128,7 @@
       "externalUrl": "https://open.spotify.com/album/5gYDZPi88CjRuPurFIkt7u",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273d8652e7f855738de43ef6c27",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:25.499711Z",
       "senders": [
@@ -1191,7 +1191,7 @@
       "externalUrl": "https://open.spotify.com/album/6odFB12JSFSvIF517Gj7Tc",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b2737bff318cbc6611225bb72874",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:26.115731Z",
       "senders": [
@@ -1275,7 +1275,7 @@
       "externalUrl": "https://open.spotify.com/album/4kkeQl5HYu57WfcrIBlSTr",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b2731cf97109b71eb30bc858e6b5",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:24.678886Z",
       "senders": [
@@ -1569,7 +1569,7 @@
       "externalUrl": "https://open.spotify.com/album/4GL9Ijmd9iImIp1gFxb5Fk",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b2732afa8fb0316d34a9bf7176db",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:24.063283Z",
       "senders": [
@@ -1632,7 +1632,7 @@
       "externalUrl": "https://open.spotify.com/album/4D1zUsXw30DbfOqY1gVsfT",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b2731356b24d48cbabc44384e753",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:23.652857Z",
       "senders": [
@@ -1695,7 +1695,7 @@
       "externalUrl": "https://open.spotify.com/album/17CT6ru3CyDXAi6xVaSUzg",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b2737fad1327fda63bea0e059072",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:22.630878Z",
       "senders": [
@@ -2031,7 +2031,7 @@
       "externalUrl": "https://open.spotify.com/album/00cEB8F0pxKdTz35WojR7A",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b2730120f9d553da2a141a6cfba8",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:21.810209Z",
       "senders": [
@@ -2136,7 +2136,7 @@
       "externalUrl": "https://open.spotify.com/album/4tinlrYCHycC4t8eCC9yIr",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b27330def30e2e09fe3110074f86",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:25.089265Z",
       "senders": [
@@ -2220,7 +2220,7 @@
       "externalUrl": "https://open.spotify.com/album/1fMl4mHJsmccGHebkNAdeV",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b27330386e8282d99d404e139905",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:23.037154Z",
       "senders": [
@@ -2514,7 +2514,7 @@
       "externalUrl": "https://open.spotify.com/album/6XJZInF8Eg8hLBGNKTeHEI",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b27387af363f9702e794f50682de",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:25.910483Z",
       "senders": [
@@ -2535,7 +2535,7 @@
       "externalUrl": "https://open.spotify.com/album/0nE9BOqbrDwOmDig2f4ASm",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273e1c9804532234bec15ce419e",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:22.425791Z",
       "senders": [
@@ -2577,7 +2577,7 @@
       "externalUrl": "https://open.spotify.com/album/1NDiIYFG9wXz1U1FUlegRl",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273e613f0b37e3b08b01079bd88",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:22.836065Z",
       "senders": [
@@ -2703,7 +2703,7 @@
       "externalUrl": "https://open.spotify.com/album/04tCM2W8CvOXQBy4bBHlXk",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b273f438a9db06b3c200e730feb6",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:22.015339Z",
       "senders": [
@@ -2892,7 +2892,7 @@
       "externalUrl": "https://open.spotify.com/album/1zRauBTmrTgG4jY5dJaJql",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b273e18595022ec31fc53018f58a",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:23.242392Z",
       "senders": [
@@ -2913,7 +2913,7 @@
       "externalUrl": "https://open.spotify.com/album/0de0VSMdg29Rwoe9MG4ck2",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273a2cab830efd2a509743ff230",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:22.220561Z",
       "senders": [
@@ -2976,7 +2976,7 @@
       "externalUrl": "https://open.spotify.com/album/6BUHWgMFloWZSefuxWE6zP",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273a862d8b854e3d763dd500f1e",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:25.704946Z",
       "senders": [
@@ -3186,7 +3186,7 @@
       "externalUrl": "https://open.spotify.com/album/4f2eRJXelRGjIu5i7Ow7Hz",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273dfa6701656d2c9669f6e5f14",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:24.473720Z",
       "senders": [
@@ -3543,7 +3543,7 @@
       "externalUrl": "https://open.spotify.com/album/7cMJfxkJwUAcxHCHQMNYYs",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b27313d0ed017d3ad35ed6bd1e90",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:26.525822Z",
       "senders": [
@@ -3627,7 +3627,7 @@
       "externalUrl": "https://open.spotify.com/album/7FRhh6PfQM1FtxrAwGcEBz",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b2739ed37ffc52e1b75eff8716e2",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:26.320595Z",
       "senders": [
@@ -3963,7 +3963,7 @@
       "externalUrl": "https://open.spotify.com/album/7kX8G6pVwUG3jXUzDQH27z",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273c68a2ea382699a21c3b2d2f3",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:26.731095Z",
       "senders": [
@@ -4026,7 +4026,7 @@
       "externalUrl": "https://open.spotify.com/album/2JhGGGE8xNMJW1i15dhpcX",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b273e80189a9cdfc6f72c6b884c9",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:23.447629Z",
       "senders": [
@@ -4362,7 +4362,7 @@
       "externalUrl": "https://open.spotify.com/album/4V7bEy8Wq977L3ePq9sRvH",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273237e090bf276d6acf087daa4",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:24.268501Z",
       "senders": [
@@ -4530,7 +4530,7 @@
       "externalUrl": "https://open.spotify.com/album/4DviUAlzSCZO1w0Sf6sPZT",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b2738cbad14f09a53a81b3843a6f",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:23.858094Z",
       "senders": [
@@ -4635,7 +4635,7 @@
       "externalUrl": "https://open.spotify.com/album/5DksO6hOezz6mTfYOctZ6f",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273c5dc595e66bccea1a5197697",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:25.294492Z",
       "senders": [
@@ -4719,7 +4719,7 @@
       "externalUrl": "https://open.spotify.com/album/4pWLQ312KAN43yhm3omkZo",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b27329975ac87ddb2cc8b225f383",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:24.884115Z",
       "senders": [

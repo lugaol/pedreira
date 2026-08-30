@@ -477,7 +477,7 @@ html, body {
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
 }
 
-#player-view {
+#player-view:not(.hidden) {
   display: flex;
   flex-direction: column;
   height: 100%;
