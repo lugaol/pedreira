@@ -2,6 +2,9 @@
   const state = {
     albums: [],
     stats: {},
+    monthly: [],
+    pending: { albums: [], byMonth: {}, totalPending: 0 },
+    playlists: [],
     filtered: [],
     currentAlbum: null,
     sort: 'artist-asc',
@@ -54,6 +57,9 @@
       state.albums = data.albums || [];
       state.socialLinks = data.socialLinks || [];
       state.stats = data.stats || {};
+      state.monthly = data.monthly || [];
+      state.pending = data.pending || { albums: [], byMonth: {}, totalPending: 0 };
+      state.playlists = data.playlists || [];
       state.filtered = [...state.albums];
       updateStats();
       bindEvents();
@@ -125,6 +131,8 @@
     elements.contributorsView.classList.toggle('hidden', state.view !== 'contributors');
     elements.playerView.classList.toggle('hidden', state.view !== 'player');
     elements.socialView.classList.toggle('hidden', state.view !== 'social');
+    elements.monthlyView.classList.toggle('hidden', state.view !== 'monthly');
+    elements.pendingView.classList.toggle('hidden', state.view !== 'pending');
 
     // Search and sort only apply to the albums view
     elements.topBar.classList.toggle('hidden', state.view !== 'albums');
@@ -140,6 +148,10 @@
       elements.contributorsList.innerHTML = '';
     } else if (state.view === 'social' && !(state.socialLinks || []).length) {
       elements.socialList.innerHTML = '<p class="view-subtitle">Loading social links...</p>';
+    } else if (state.view === 'monthly' && !(state.monthly || []).length) {
+      elements.monthlyList.innerHTML = '<p class="view-subtitle">Loading monthly playlists...</p>';
+    } else if (state.view === 'pending' && !(state.pending.albums || []).length) {
+      elements.pendingGrid.innerHTML = '<p class="view-subtitle">No pending albums — everything is in playlists!</p>';
     }
 
     // Player view transforms the bottom bar into a full-size player panel.
@@ -162,6 +174,12 @@
       ensurePlayerFrameInBottomBar();
     } else if (state.view === 'social' && (state.socialLinks || []).length) {
       renderSocial();
+      ensurePlayerFrameInBottomBar();
+    } else if (state.view === 'monthly') {
+      renderMonthly();
+      ensurePlayerFrameInBottomBar();
+    } else if (state.view === 'pending') {
+      renderPending();
       ensurePlayerFrameInBottomBar();
     } else {
       ensurePlayerFrameInBottomBar();
@@ -580,6 +598,121 @@
     `
       )
       .join('');
+  }
+
+  function renderMonthly() {
+    const monthly = state.monthly || [];
+    if (!monthly.length) {
+      elements.monthlyList.innerHTML = '<p class="view-subtitle">No monthly data.</p>';
+      return;
+    }
+    const pendingByMonth = (state.pending && state.pending.byMonth) || {};
+    elements.monthlyList.innerHTML = monthly
+      .map((m) => {
+        const count = m.totalAlbums || 0;
+        const pending = pendingByMonth[m.month];
+        const badgeClass = !pending ? 'ok' : pending.missing > 0 ? 'warn' : 'ok';
+        const badgeText = !m.playlistId ? 'No playlist yet' : pending ? `${pending.present}/${pending.total} in playlist` : `${count} albums`;
+        const note = pending && pending.note ? `<span class="monthly-badge warn">${escapeHtml(pending.note)}</span>` : '';
+        const albums = m.albums
+          .map((id) => state.albums.find((a) => a.id === id))
+          .filter(Boolean)
+          .slice(0, 8);
+        const albumsHtml = albums
+          .map(
+            (a) => `
+          <div class="monthly-album" title="${escapeHtml(a.artist)} - ${escapeHtml(a.name)}">
+            <img src="${a.image || 'stone.svg'}" alt="" loading="lazy" />
+            <div class="meta">
+              <div class="t">${escapeHtml(a.name)}</div>
+              <div class="a">${escapeHtml(a.artist)}</div>
+            </div>
+          </div>`
+          )
+          .join('');
+        const more = m.totalAlbums > 8 ? `<div class="monthly-album" style="justify-content:center;color:var(--text-secondary)">+${m.totalAlbums - 8} more</div>` : '';
+        const action = m.url
+          ? `<a href="${escapeHtml(m.url)}" target="_blank" rel="noopener noreferrer">Open playlist <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a>`
+          : `<span class="disabled">Not created yet — run spotify-oauth</span>`;
+        return `
+        <div class="monthly-card ${!m.playlistId ? 'pending' : ''}">
+          <div class="monthly-info">
+            <h3>${escapeHtml(m.label)} — ${escapeHtml(m.month)}</h3>
+            <p>${count} albums shared in ${escapeHtml(m.label)}</p>
+            <div class="monthly-stats">
+              <span class="monthly-badge ${badgeClass}">${escapeHtml(badgeText)}</span>
+              ${note}
+            </div>
+          </div>
+          <div class="monthly-action">${action}</div>
+          ${albums.length ? `<div class="monthly-albums">${albumsHtml}${more}</div>` : ''}
+        </div>`;
+      })
+      .join('');
+    if (elements.monthlyStats) {
+      const totalPend = state.pending.totalPending || 0;
+      elements.monthlyStats.textContent = `— ${totalPend} pending overall`;
+    }
+  }
+
+  function renderPending() {
+    const pending = state.pending || { albums: [] };
+    const list = pending.albums || [];
+    if (!list.length) {
+      elements.pendingGrid.innerHTML = '<p class="view-subtitle">No pending albums — everything is in playlists!</p>';
+      if (elements.pendingStats) elements.pendingStats.textContent = '';
+      if (elements.pendingNote) elements.pendingNote.textContent = '';
+      return;
+    }
+    if (elements.pendingStats) elements.pendingStats.textContent = `— ${list.length} albums`;
+    const byMonth = pending.byMonth || {};
+    const notes = Object.entries(byMonth)
+      .map(([k, v]) => `${k}: ${v.missing} missing`)
+      .join(' · ');
+    if (elements.pendingNote) {
+      elements.pendingNote.textContent = `Verified via Spotify embed: ${notes}.`;
+    }
+    const html = list
+      .map((a) => {
+        const canPlay = !!(a.spotifyId || a.youtubeId);
+        const cover = a.image || 'stone.svg';
+        const actionLabel = canPlay ? `Play ${escapeHtml(a.name)}` : `Open ${escapeHtml(a.name)}`;
+        const actionIcon = canPlay
+          ? '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'
+          : '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>';
+        return `
+      <article class="album-card" data-id="${a.id}" tabindex="0" role="button" aria-label="${actionLabel}">
+        <div class="album-cover-wrap">
+          <img class="album-cover" src="${cover}" alt="${escapeHtml(a.name)}" loading="lazy" />
+          <button class="play-button ${canPlay ? '' : 'external'}" data-id="${a.id}" aria-label="${actionLabel}">
+            ${actionIcon}
+          </button>
+        </div>
+        <h3 class="album-title" title="${escapeHtml(a.name)}">${escapeHtml(a.name)}</h3>
+        <p class="album-artist" title="${escapeHtml(a.artist)}">${escapeHtml(a.artist)}</p>
+        <div class="album-meta">
+          <span>${a.month || ''}</span>
+          <span class="dot"></span>
+          <span>${escapeHtml(a.senders ? a.senders.join(', ').slice(0,20) : '')}</span>
+        </div>
+        <div class="sender-pills"><span class="sender-pill">pending</span></div>
+      </article>`;
+      })
+      .join('');
+    elements.pendingGrid.innerHTML = html;
+    elements.pendingGrid.querySelectorAll('.album-card').forEach((card) => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.play-button')) {
+          e.stopPropagation();
+          const id = e.target.closest('.play-button').dataset.id;
+          const full = state.albums.find((a) => a.id === id);
+          if (full && typeof playAlbum === 'function') playAlbum(id);
+        } else {
+          const id = card.dataset.id;
+          if (typeof playAlbum === 'function') playAlbum(id);
+        }
+      });
+    });
   }
 
   function formatDate(iso) {

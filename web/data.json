@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-10T10:31:46.454Z",
-  "totalAlbums": 249,
+  "generatedAt": "2026-08-30T20:33:24.902Z",
+  "totalAlbums": 274,
   "totalSenders": 42,
   "multiSenderAlbums": 0,
   "albums": [
@@ -1118,6 +1118,27 @@
       "lastSharedAt": "2026-08-01T14:27:00.000Z"
     },
     {
+      "id": "album-299",
+      "name": "Noturna",
+      "artist": "Banda Eddie",
+      "spotifyUrl": "https://open.spotify.com/album/5gYDZPi88CjRuPurFIkt7u",
+      "spotifyId": "5gYDZPi88CjRuPurFIkt7u",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/5gYDZPi88CjRuPurFIkt7u",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:25.499711Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-15T18:13:00.000Z",
+      "lastSharedAt": "2026-08-15T18:13:00.000Z"
+    },
+    {
       "id": "album-16",
       "name": "Taxi Driver",
       "artist": "Bernard Herrmann, Taxi Driver Original Soundtrack",
@@ -1158,6 +1179,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-07-02T00:19:00.000Z",
       "lastSharedAt": "2026-07-02T00:19:00.000Z"
+    },
+    {
+      "id": "album-302",
+      "name": "Continental",
+      "artist": "Black Pantera",
+      "spotifyUrl": "https://open.spotify.com/album/6odFB12JSFSvIF517Gj7Tc",
+      "spotifyId": "6odFB12JSFSvIF517Gj7Tc",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/6odFB12JSFSvIF517Gj7Tc",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:26.115731Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-26T00:13:00.000Z",
+      "lastSharedAt": "2026-08-26T00:13:00.000Z"
     },
     {
       "id": "album-260",
@@ -1221,6 +1263,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-07-25T16:30:00.000Z",
       "lastSharedAt": "2026-07-25T16:30:00.000Z"
+    },
+    {
+      "id": "album-295",
+      "name": "Bossa Rio",
+      "artist": "Bossa Rio",
+      "spotifyUrl": "https://open.spotify.com/album/4kkeQl5HYu57WfcrIBlSTr",
+      "spotifyId": "4kkeQl5HYu57WfcrIBlSTr",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/4kkeQl5HYu57WfcrIBlSTr",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:24.678886Z",
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-11T18:23:00.000Z",
+      "lastSharedAt": "2026-08-11T18:23:00.000Z"
     },
     {
       "id": "album-106",
@@ -1496,6 +1559,27 @@
       "lastSharedAt": "2026-07-23T12:10:00.000Z"
     },
     {
+      "id": "album-292",
+      "name": "Banana Moon",
+      "artist": "Daevid Allen",
+      "spotifyUrl": "https://open.spotify.com/album/4GL9Ijmd9iImIp1gFxb5Fk",
+      "spotifyId": "4GL9Ijmd9iImIp1gFxb5Fk",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/4GL9Ijmd9iImIp1gFxb5Fk",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:24.063283Z",
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-10T11:58:00.000Z",
+      "lastSharedAt": "2026-08-10T11:58:00.000Z"
+    },
+    {
       "id": "album-127",
       "name": "Retrato Falado",
       "artist": "Dandara Manoela",
@@ -1538,6 +1622,27 @@
       "lastSharedAt": "2026-06-29T09:46:00.000Z"
     },
     {
+      "id": "album-290",
+      "name": "I Built You A Tower",
+      "artist": "Death Cab for Cutie",
+      "spotifyUrl": "https://open.spotify.com/album/4D1zUsXw30DbfOqY1gVsfT",
+      "spotifyId": "4D1zUsXw30DbfOqY1gVsfT",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/4D1zUsXw30DbfOqY1gVsfT",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:23.652857Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-08T23:06:00.000Z",
+      "lastSharedAt": "2026-08-08T23:06:00.000Z"
+    },
+    {
       "id": "album-238",
       "name": "Black Celebration (Deluxe)",
       "artist": "Depeche Mode",
@@ -1578,6 +1683,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-06-26T14:36:00.000Z",
       "lastSharedAt": "2026-06-26T14:36:00.000Z"
+    },
+    {
+      "id": "album-285",
+      "name": "Coat Of Many Colors",
+      "artist": "Dolly Parton",
+      "spotifyUrl": "https://open.spotify.com/album/17CT6ru3CyDXAi6xVaSUzg",
+      "spotifyId": "17CT6ru3CyDXAi6xVaSUzg",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/17CT6ru3CyDXAi6xVaSUzg",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:22.630878Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-27T17:32:00.000Z",
+      "lastSharedAt": "2026-08-27T17:32:00.000Z"
     },
     {
       "id": "album-89",
@@ -1895,6 +2021,27 @@
       "lastSharedAt": "2026-07-02T04:53:00.000Z"
     },
     {
+      "id": "album-281",
+      "name": "TAMBORES, CAFEZAIS, FUZIS, GUARANAS E OUTRAS BRASILIDADES",
+      "artist": "FBC",
+      "spotifyUrl": "https://open.spotify.com/album/00cEB8F0pxKdTz35WojR7A",
+      "spotifyId": "00cEB8F0pxKdTz35WojR7A",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/00cEB8F0pxKdTz35WojR7A",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:21.810209Z",
+      "senders": [
+        "Djalma"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-14T17:35:00.000Z",
+      "lastSharedAt": "2026-08-14T17:35:00.000Z"
+    },
+    {
       "id": "album-254",
       "name": "Afrodisiac",
       "artist": "Fela Kuti",
@@ -1979,6 +2126,27 @@
       "lastSharedAt": "2026-06-27T15:21:00.000Z"
     },
     {
+      "id": "album-297",
+      "name": "Even a Child Can Cover the Sun with a Finger",
+      "artist": "FORAGER",
+      "spotifyUrl": "https://open.spotify.com/album/4tinlrYCHycC4t8eCC9yIr",
+      "spotifyId": "4tinlrYCHycC4t8eCC9yIr",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/4tinlrYCHycC4t8eCC9yIr",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:25.089265Z",
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-10T11:53:00.000Z",
+      "lastSharedAt": "2026-08-10T11:53:00.000Z"
+    },
+    {
       "id": "album-37",
       "name": "Open Sesame (The Rudy Van Gelder Edition)",
       "artist": "Freddie Hubbard",
@@ -2040,6 +2208,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-08-01T11:41:00.000Z",
       "lastSharedAt": "2026-08-01T11:41:00.000Z"
+    },
+    {
+      "id": "album-287",
+      "name": "Eu Vejo Luz Em Maior Proporção Do Que Eu Vejo A Escuridão",
+      "artist": "Gilsons",
+      "spotifyUrl": "https://open.spotify.com/album/1fMl4mHJsmccGHebkNAdeV",
+      "spotifyId": "1fMl4mHJsmccGHebkNAdeV",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/1fMl4mHJsmccGHebkNAdeV",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:23.037154Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-26T00:09:00.000Z",
+      "lastSharedAt": "2026-08-26T00:09:00.000Z"
     },
     {
       "id": "album-78",
@@ -2315,6 +2504,48 @@
       "lastSharedAt": "2026-07-21T12:35:00.000Z"
     },
     {
+      "id": "album-301",
+      "name": "ファンキー・スタッフ",
+      "artist": "Jiro Inagaki and His Soul Media",
+      "spotifyUrl": "https://open.spotify.com/album/6XJZInF8Eg8hLBGNKTeHEI",
+      "spotifyId": "6XJZInF8Eg8hLBGNKTeHEI",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/6XJZInF8Eg8hLBGNKTeHEI",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:25.910483Z",
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-05-31T11:16:00.000Z",
+      "lastSharedAt": "2026-05-31T11:16:00.000Z"
+    },
+    {
+      "id": "album-284",
+      "name": "Acústico João Bosco",
+      "artist": "João Bosco",
+      "spotifyUrl": "https://open.spotify.com/album/0nE9BOqbrDwOmDig2f4ASm",
+      "spotifyId": "0nE9BOqbrDwOmDig2f4ASm",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/0nE9BOqbrDwOmDig2f4ASm",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:22.425791Z",
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-10T11:10:00.000Z",
+      "lastSharedAt": "2026-08-10T11:10:00.000Z"
+    },
+    {
       "id": "album-236",
       "name": "Bandalhismo",
       "artist": "João Bosco",
@@ -2334,6 +2565,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-07-30T19:16:00.000Z",
       "lastSharedAt": "2026-07-30T19:16:00.000Z"
+    },
+    {
+      "id": "album-286",
+      "name": "Viva Donato",
+      "artist": "João Donato",
+      "spotifyUrl": "https://open.spotify.com/album/1NDiIYFG9wXz1U1FUlegRl",
+      "spotifyId": "1NDiIYFG9wXz1U1FUlegRl",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/1NDiIYFG9wXz1U1FUlegRl",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:22.836065Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-29T16:54:00.000Z",
+      "lastSharedAt": "2026-08-29T16:54:00.000Z"
     },
     {
       "id": "album-234",
@@ -2439,6 +2691,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-07-02T09:40:00.000Z",
       "lastSharedAt": "2026-07-02T09:40:00.000Z"
+    },
+    {
+      "id": "album-282",
+      "name": "PLAY ME",
+      "artist": "Kim Gordon",
+      "spotifyUrl": "https://open.spotify.com/album/04tCM2W8CvOXQBy4bBHlXk",
+      "spotifyId": "04tCM2W8CvOXQBy4bBHlXk",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/04tCM2W8CvOXQBy4bBHlXk",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:22.015339Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-10T12:16:00.000Z",
+      "lastSharedAt": "2026-08-10T12:16:00.000Z"
     },
     {
       "id": "album-170",
@@ -2609,6 +2882,48 @@
       "lastSharedAt": "2026-07-22T19:24:00.000Z"
     },
     {
+      "id": "album-288",
+      "name": "Fluxo Natural",
+      "artist": "Maglore",
+      "spotifyUrl": "https://open.spotify.com/album/1zRauBTmrTgG4jY5dJaJql",
+      "spotifyId": "1zRauBTmrTgG4jY5dJaJql",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/1zRauBTmrTgG4jY5dJaJql",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:23.242392Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-18T14:05:00.000Z",
+      "lastSharedAt": "2026-08-18T14:05:00.000Z"
+    },
+    {
+      "id": "album-283",
+      "name": "Viva Tu",
+      "artist": "Manu Chao",
+      "spotifyUrl": "https://open.spotify.com/album/0de0VSMdg29Rwoe9MG4ck2",
+      "spotifyId": "0de0VSMdg29Rwoe9MG4ck2",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/0de0VSMdg29Rwoe9MG4ck2",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:22.220561Z",
+      "senders": [
+        "Clauber"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-27T16:59:00.000Z",
+      "lastSharedAt": "2026-08-27T16:59:00.000Z"
+    },
+    {
       "id": "album-250",
       "name": "Disparada Ao Vivo Em Búzios",
       "artist": "Mari Jasca",
@@ -2649,6 +2964,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-07-02T16:50:00.000Z",
       "lastSharedAt": "2026-07-02T16:50:00.000Z"
+    },
+    {
+      "id": "album-300",
+      "name": "O Dia da Girafa",
+      "artist": "Maurício Pereira",
+      "spotifyUrl": "https://open.spotify.com/album/6BUHWgMFloWZSefuxWE6zP",
+      "spotifyId": "6BUHWgMFloWZSefuxWE6zP",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/6BUHWgMFloWZSefuxWE6zP",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:25.704946Z",
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-25T11:49:00.000Z",
+      "lastSharedAt": "2026-08-25T11:49:00.000Z"
     },
     {
       "id": "album-130",
@@ -2838,6 +3174,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-07-07T18:56:00.000Z",
       "lastSharedAt": "2026-07-07T18:56:00.000Z"
+    },
+    {
+      "id": "album-294",
+      "name": "Thank You",
+      "artist": "Mike D",
+      "spotifyUrl": "https://open.spotify.com/album/4f2eRJXelRGjIu5i7Ow7Hz",
+      "spotifyId": "4f2eRJXelRGjIu5i7Ow7Hz",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/4f2eRJXelRGjIu5i7Ow7Hz",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:24.473720Z",
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-29T00:27:00.000Z",
+      "lastSharedAt": "2026-08-29T00:27:00.000Z"
     },
     {
       "id": "album-7",
@@ -3176,6 +3533,27 @@
       "lastSharedAt": "2026-07-29T14:41:00.000Z"
     },
     {
+      "id": "album-304",
+      "name": "Blackwater Park",
+      "artist": "Opeth",
+      "spotifyUrl": "https://open.spotify.com/album/7cMJfxkJwUAcxHCHQMNYYs",
+      "spotifyId": "7cMJfxkJwUAcxHCHQMNYYs",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/7cMJfxkJwUAcxHCHQMNYYs",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:26.525822Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-12T18:41:00.000Z",
+      "lastSharedAt": "2026-08-12T18:41:00.000Z"
+    },
+    {
       "id": "album-36",
       "name": "Orín, a Língua dos Anjos",
       "artist": "Orquestra Afrosinfônica",
@@ -3237,6 +3615,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-08-04T16:20:00.000Z",
       "lastSharedAt": "2026-08-04T16:20:00.000Z"
+    },
+    {
+      "id": "album-303",
+      "name": "Celestial",
+      "artist": "Papangu",
+      "spotifyUrl": "https://open.spotify.com/album/7FRhh6PfQM1FtxrAwGcEBz",
+      "spotifyId": "7FRhh6PfQM1FtxrAwGcEBz",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/7FRhh6PfQM1FtxrAwGcEBz",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:26.320595Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-14T17:03:00.000Z",
+      "lastSharedAt": "2026-08-14T17:03:00.000Z"
     },
     {
       "id": "album-210",
@@ -3554,6 +3953,27 @@
       "lastSharedAt": "2026-08-04T17:08:00.000Z"
     },
     {
+      "id": "album-305",
+      "name": "São Mateus Não É um Lugar Tão Longe",
+      "artist": "Rodrigo Campos",
+      "spotifyUrl": "https://open.spotify.com/album/7kX8G6pVwUG3jXUzDQH27z",
+      "spotifyId": "7kX8G6pVwUG3jXUzDQH27z",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/7kX8G6pVwUG3jXUzDQH27z",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:26.731095Z",
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-17T10:23:00.000Z",
+      "lastSharedAt": "2026-08-17T10:23:00.000Z"
+    },
+    {
       "id": "album-97",
       "name": "Passión",
       "artist": "Rodrigo Leão",
@@ -3594,6 +4014,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-07-16T19:34:00.000Z",
       "lastSharedAt": "2026-07-16T19:34:00.000Z"
+    },
+    {
+      "id": "album-289",
+      "name": "Samba Sem Você (Live at Copenhagen Jazzhouse 2001)",
+      "artist": "Rosa Passos",
+      "spotifyUrl": "https://open.spotify.com/album/2JhGGGE8xNMJW1i15dhpcX",
+      "spotifyId": "2JhGGGE8xNMJW1i15dhpcX",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/2JhGGGE8xNMJW1i15dhpcX",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:23.447629Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-11T12:44:00.000Z",
+      "lastSharedAt": "2026-08-11T12:44:00.000Z"
     },
     {
       "id": "album-161",
@@ -3911,6 +4352,27 @@
       "lastSharedAt": "2026-07-09T21:56:00.000Z"
     },
     {
+      "id": "album-293",
+      "name": "Pineal",
+      "artist": "Tagore",
+      "spotifyUrl": "https://open.spotify.com/album/4V7bEy8Wq977L3ePq9sRvH",
+      "spotifyId": "4V7bEy8Wq977L3ePq9sRvH",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/4V7bEy8Wq977L3ePq9sRvH",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:24.268501Z",
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-10T12:01:00.000Z",
+      "lastSharedAt": "2026-08-10T12:01:00.000Z"
+    },
+    {
       "id": "album-171",
       "name": "True Stories",
       "artist": "Talking Heads",
@@ -4058,6 +4520,27 @@
       "lastSharedAt": "2026-07-17T12:58:00.000Z"
     },
     {
+      "id": "album-291",
+      "name": "The Quiet Ones",
+      "artist": "The Quiet Ones",
+      "spotifyUrl": "https://open.spotify.com/album/4DviUAlzSCZO1w0Sf6sPZT",
+      "spotifyId": "4DviUAlzSCZO1w0Sf6sPZT",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/4DviUAlzSCZO1w0Sf6sPZT",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:23.858094Z",
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-14T17:10:00.000Z",
+      "lastSharedAt": "2026-08-14T17:10:00.000Z"
+    },
+    {
       "id": "album-120",
       "name": "Foreign Tongues",
       "artist": "The Rolling Stones",
@@ -4142,6 +4625,27 @@
       "lastSharedAt": "2026-07-16T18:03:00.000Z"
     },
     {
+      "id": "album-298",
+      "name": "Manifeste",
+      "artist": "Tigran Hamasyan",
+      "spotifyUrl": "https://open.spotify.com/album/5DksO6hOezz6mTfYOctZ6f",
+      "spotifyId": "5DksO6hOezz6mTfYOctZ6f",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/5DksO6hOezz6mTfYOctZ6f",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:25.294492Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-13T15:37:00.000Z",
+      "lastSharedAt": "2026-08-13T15:37:00.000Z"
+    },
+    {
       "id": "album-233",
       "name": "Lift Off (feat. Rocco Palladino) - [Live]",
       "artist": "Tom Misch & Yussef Dayes",
@@ -4203,6 +4707,27 @@
       "senderCount": 1,
       "firstSharedAt": "2026-07-02T17:21:00.000Z",
       "lastSharedAt": "2026-07-02T17:21:00.000Z"
+    },
+    {
+      "id": "album-296",
+      "name": "Maxinquaye (Deluxe Edition)",
+      "artist": "Tricky",
+      "spotifyUrl": "https://open.spotify.com/album/4pWLQ312KAN43yhm3omkZo",
+      "spotifyId": "4pWLQ312KAN43yhm3omkZo",
+      "youtubeId": null,
+      "youtubeList": null,
+      "externalUrl": "https://open.spotify.com/album/4pWLQ312KAN43yhm3omkZo",
+      "youtubeUrl": null,
+      "appleMusicUrl": null,
+      "image": null,
+      "releaseDate": null,
+      "discoveredAt": "2026-08-30T19:43:24.884115Z",
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-25T16:06:00.000Z",
+      "lastSharedAt": "2026-08-25T16:06:00.000Z"
     },
     {
       "id": "album-100",
@@ -5236,6 +5761,62 @@
   ],
   "socialLinks": [
     {
+      "url": "https://www.instagram.com/reel/Dcjx2o0TChQ/?igsi=NGNyZ2JiZzI1aTN1",
+      "platform": "social",
+      "domain": "instagram.com",
+      "sender": "Paulo Fanucci",
+      "sharedAt": "2026-08-28T10:59:00.000Z"
+    },
+    {
+      "url": "https://www.facebook.com/share/r/1QgdgHs8fP/",
+      "platform": "social",
+      "domain": "facebook.com",
+      "sender": "+55 19 98150-8137",
+      "sharedAt": "2026-08-26T16:13:00.000Z"
+    },
+    {
+      "url": "https://share.google/ma4KFsIdlEngqgg3U",
+      "platform": "social",
+      "domain": "share.google",
+      "sender": "+55 35 8889-8598",
+      "sharedAt": "2026-08-25T16:53:00.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/p/Dcd7OIthik2/?igsi=anpnZzFzaXZ0cHZl",
+      "platform": "social",
+      "domain": "instagram.com",
+      "sender": "Pablao Brisionarios",
+      "sharedAt": "2026-08-25T15:48:00.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/reel/Db3mRnOCeIQ/?igsh=OHVtY3lqeW5nbW9m&igsi=OHVtY3lqeW5nbW9m",
+      "platform": "social",
+      "domain": "instagram.com",
+      "sender": "Hugo Campanhola",
+      "sharedAt": "2026-08-20T17:44:00.000Z"
+    },
+    {
+      "url": "https://github.com/lugaol/pedreira",
+      "platform": "social",
+      "domain": "github.com",
+      "sender": "Gabriel Olivia",
+      "sharedAt": "2026-08-10T23:09:00.000Z"
+    },
+    {
+      "url": "https://lugaol.github.io/pedreira/",
+      "platform": "social",
+      "domain": "lugaol.github.io",
+      "sender": "Gabriel Olivia",
+      "sharedAt": "2026-08-10T23:01:00.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/reel/DbODkr7RW43/?igsh=MThqY2RuZG03NGRtcA==",
+      "platform": "social",
+      "domain": "instagram.com",
+      "sender": "Paulo Fanucci",
+      "sharedAt": "2026-08-09T12:23:00.000Z"
+    },
+    {
       "url": "https://www.instagram.com/reel/DZpvhT9yxDp/?igsh=MWppdXBuaGJrcGJ3aQ==",
       "platform": "social",
       "domain": "instagram.com",
@@ -5534,26 +6115,36 @@
     "topContributors": [
       {
         "name": "Gabriel Olivia",
-        "uniqueAlbums": 39,
-        "totalShares": 66
+        "uniqueAlbums": 41,
+        "totalShares": 68
       },
       {
         "name": "+55 12 98263-1847",
-        "uniqueAlbums": 28,
-        "totalShares": 28
+        "uniqueAlbums": 41,
+        "totalShares": 41
       },
       {
         "name": "+55 19 98150-8137",
+        "uniqueAlbums": 26,
+        "totalShares": 26
+      },
+      {
+        "name": "Pablao Brisionarios",
         "uniqueAlbums": 23,
         "totalShares": 23
       },
       {
-        "name": "Pablao Brisionarios",
-        "uniqueAlbums": 21,
-        "totalShares": 21
+        "name": "Taliba",
+        "uniqueAlbums": 11,
+        "totalShares": 11
       },
       {
         "name": "Lui Tiby",
+        "uniqueAlbums": 10,
+        "totalShares": 10
+      },
+      {
+        "name": "Clauber",
         "uniqueAlbums": 10,
         "totalShares": 10
       },
@@ -5568,19 +6159,9 @@
         "totalShares": 9
       },
       {
-        "name": "Clauber",
-        "uniqueAlbums": 9,
-        "totalShares": 9
-      },
-      {
         "name": "Ricardo Mantiqueira",
         "uniqueAlbums": 9,
         "totalShares": 9
-      },
-      {
-        "name": "Taliba",
-        "uniqueAlbums": 8,
-        "totalShares": 8
       },
       {
         "name": "Waldeck",
@@ -5688,6 +6269,11 @@
         "totalShares": 2
       },
       {
+        "name": "Djalma",
+        "uniqueAlbums": 2,
+        "totalShares": 2
+      },
+      {
         "name": "Antonio",
         "uniqueAlbums": 1,
         "totalShares": 1
@@ -5736,12 +6322,375 @@
         "name": "Mathias Merca",
         "uniqueAlbums": 1,
         "totalShares": 1
-      },
-      {
-        "name": "Djalma",
-        "uniqueAlbums": 1,
-        "totalShares": 1
       }
     ]
-  }
+  },
+  "monthly": [
+    {
+      "month": "2026-05",
+      "label": "Maio/26",
+      "playlistId": "2zengIQVFm8xh84uEseMtf",
+      "url": "https://open.spotify.com/playlist/2zengIQVFm8xh84uEseMtf?si=SiKHE-q5QBe_PKJ6HhDcYQ&pi=zq4zmjp2TySyu",
+      "totalAlbums": 19,
+      "albums": [
+        "album-1",
+        "album-2",
+        "album-3",
+        "album-4",
+        "album-5",
+        "album-6",
+        "album-7",
+        "album-8",
+        "album-10",
+        "album-11",
+        "album-12",
+        "album-13",
+        "album-14",
+        "album-15",
+        "album-16",
+        "album-301",
+        "album-17",
+        "album-18",
+        "album-19"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "label": "Junho/26",
+      "playlistId": "6Cv3N0dVTbo5LwWi5mdCLM",
+      "url": "https://open.spotify.com/playlist/6Cv3N0dVTbo5LwWi5mdCLM?si=280lpnhXSp2Ol3YGZif0LA&utm_source=copy-link&pi=kuXuyABNST2_x",
+      "totalAlbums": 62,
+      "albums": [
+        "album-20",
+        "album-21",
+        "album-22",
+        "album-23",
+        "album-24",
+        "album-25",
+        "album-26",
+        "album-27",
+        "album-28",
+        "album-29",
+        "album-30",
+        "album-31",
+        "album-32",
+        "album-33",
+        "album-34",
+        "album-35",
+        "album-36",
+        "album-37",
+        "album-38",
+        "album-39",
+        "album-40",
+        "album-41",
+        "album-42",
+        "album-43",
+        "album-44",
+        "album-45",
+        "album-46",
+        "album-47",
+        "album-48",
+        "album-49",
+        "album-50",
+        "album-51",
+        "album-52",
+        "album-53",
+        "album-54",
+        "album-55",
+        "album-56",
+        "album-57",
+        "album-58",
+        "album-59",
+        "album-60",
+        "album-61",
+        "album-62",
+        "album-63",
+        "album-64",
+        "album-65",
+        "album-66",
+        "album-67",
+        "album-68",
+        "album-69",
+        "album-70",
+        "album-71",
+        "album-72",
+        "album-73",
+        "album-74",
+        "album-75",
+        "album-76",
+        "album-77",
+        "album-78",
+        "album-79",
+        "album-80",
+        "album-81"
+      ]
+    },
+    {
+      "month": "2026-07",
+      "label": "Julho/26",
+      "playlistId": "3O1TjSCSBjhfsGKSRjD9Bq",
+      "url": "https://open.spotify.com/playlist/3O1TjSCSBjhfsGKSRjD9Bq?si=s3qPKYx0RtOEewrVJrrKWA&pi=mKNYYrSKRGKyH",
+      "totalAlbums": 138,
+      "albums": [
+        "album-82",
+        "album-83",
+        "album-84",
+        "album-85",
+        "album-86",
+        "album-87",
+        "album-88",
+        "album-89",
+        "album-90",
+        "album-91",
+        "album-92",
+        "album-93",
+        "album-94",
+        "album-95",
+        "album-96",
+        "album-97",
+        "album-98",
+        "album-99",
+        "album-100",
+        "album-101",
+        "album-102",
+        "album-103",
+        "album-104",
+        "album-105",
+        "album-106",
+        "album-107",
+        "album-108",
+        "album-109",
+        "album-110",
+        "album-111",
+        "album-112",
+        "album-113",
+        "album-114",
+        "album-115",
+        "album-116",
+        "album-117",
+        "album-118",
+        "album-119",
+        "album-120",
+        "album-121",
+        "album-122",
+        "album-123",
+        "album-124",
+        "album-125",
+        "album-126",
+        "album-127",
+        "album-129",
+        "album-130",
+        "album-131",
+        "album-132",
+        "album-133",
+        "album-135",
+        "album-137",
+        "album-140",
+        "album-142",
+        "album-145",
+        "album-146",
+        "album-149",
+        "album-150",
+        "album-151",
+        "album-152",
+        "album-153",
+        "album-155",
+        "album-156",
+        "album-157",
+        "album-159",
+        "album-160",
+        "album-161",
+        "album-162",
+        "album-163",
+        "album-165",
+        "album-164",
+        "album-166",
+        "album-167",
+        "album-169",
+        "album-170",
+        "album-171",
+        "album-172",
+        "album-178",
+        "album-179",
+        "album-180",
+        "album-181",
+        "album-182",
+        "album-185",
+        "album-186",
+        "album-187",
+        "album-188",
+        "album-192",
+        "album-193",
+        "album-194",
+        "album-196",
+        "album-199",
+        "album-200",
+        "album-201",
+        "album-202",
+        "album-203",
+        "album-204",
+        "album-205",
+        "album-206",
+        "album-209",
+        "album-210",
+        "album-211",
+        "album-212",
+        "album-213",
+        "album-214",
+        "album-215",
+        "album-216",
+        "album-217",
+        "album-218",
+        "album-219",
+        "album-220",
+        "album-221",
+        "album-222",
+        "album-223",
+        "album-224",
+        "album-225",
+        "album-226",
+        "album-227",
+        "album-228",
+        "album-229",
+        "album-230",
+        "album-231",
+        "album-232",
+        "album-233",
+        "album-234",
+        "album-235",
+        "album-236",
+        "album-237",
+        "album-238",
+        "album-239",
+        "album-240",
+        "album-242",
+        "album-243",
+        "album-244",
+        "album-245",
+        "album-246",
+        "album-247",
+        "album-248"
+      ]
+    },
+    {
+      "month": "2026-08",
+      "label": "Agosto/26",
+      "playlistId": "2r72Q5HpvfcGJls8ejoOqx",
+      "url": "https://open.spotify.com/playlist/2r72Q5HpvfcGJls8ejoOqx",
+      "totalAlbums": 55,
+      "albums": [
+        "album-249",
+        "album-250",
+        "album-251",
+        "album-252",
+        "album-253",
+        "album-254",
+        "album-255",
+        "album-256",
+        "album-257",
+        "album-258",
+        "album-259",
+        "album-260",
+        "album-261",
+        "album-262",
+        "album-263",
+        "album-264",
+        "album-265",
+        "album-266",
+        "album-267",
+        "album-268",
+        "album-269",
+        "album-270",
+        "album-271",
+        "album-272",
+        "album-274",
+        "album-275",
+        "album-276",
+        "album-277",
+        "album-278",
+        "album-279",
+        "album-280",
+        "album-290",
+        "album-284",
+        "album-297",
+        "album-292",
+        "album-293",
+        "album-282",
+        "album-289",
+        "album-295",
+        "album-304",
+        "album-298",
+        "album-303",
+        "album-291",
+        "album-281",
+        "album-299",
+        "album-305",
+        "album-288",
+        "album-300",
+        "album-296",
+        "album-287",
+        "album-302",
+        "album-283",
+        "album-285",
+        "album-294",
+        "album-286"
+      ]
+    }
+  ],
+  "pending": {
+    "byMonth": {
+      "2026-05": {
+        "total": 16,
+        "present": 16,
+        "missing": 0,
+        "missingIds": []
+      },
+      "2026-06": {
+        "total": 36,
+        "present": 36,
+        "missing": 0,
+        "note": "Synced 30/08 — added 380 tracks"
+      },
+      "2026-07": {
+        "total": 81,
+        "present": 81,
+        "missing": 0,
+        "note": "Synced 30/08 — added 1045 tracks"
+      },
+      "2026-08": {
+        "total": 46,
+        "present": 46,
+        "missing": 0,
+        "note": "Created 30/08 — 597 tracks"
+      }
+    },
+    "totalPending": 0,
+    "albums": []
+  },
+  "playlists": [
+    {
+      "month": "2026-05",
+      "label": "Maio/26",
+      "playlistId": "2zengIQVFm8xh84uEseMtf",
+      "url": "https://open.spotify.com/playlist/2zengIQVFm8xh84uEseMtf?si=SiKHE-q5QBe_PKJ6HhDcYQ&pi=zq4zmjp2TySyu"
+    },
+    {
+      "month": "2026-06",
+      "label": "Junho/26",
+      "playlistId": "6Cv3N0dVTbo5LwWi5mdCLM",
+      "url": "https://open.spotify.com/playlist/6Cv3N0dVTbo5LwWi5mdCLM?si=280lpnhXSp2Ol3YGZif0LA&utm_source=copy-link&pi=kuXuyABNST2_x"
+    },
+    {
+      "month": "2026-07",
+      "label": "Julho/26",
+      "playlistId": "3O1TjSCSBjhfsGKSRjD9Bq",
+      "url": "https://open.spotify.com/playlist/3O1TjSCSBjhfsGKSRjD9Bq?si=s3qPKYx0RtOEewrVJrrKWA&pi=mKNYYrSKRGKyH"
+    },
+    {
+      "month": "2026-08",
+      "label": "Agosto/26",
+      "playlistId": "2r72Q5HpvfcGJls8ejoOqx",
+      "url": "https://open.spotify.com/playlist/2r72Q5HpvfcGJls8ejoOqx"
+    }
+  ]
 }
