@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-30T21:08:07.629Z",
-  "totalAlbums": 274,
+  "generatedAt": "2026-08-30T21:11:20.774Z",
+  "totalAlbums": 271,
   "totalSenders": 42,
   "multiSenderAlbums": 0,
   "albums": [
@@ -15,7 +15,7 @@
       "externalUrl": "https://youtu.be/sklnGI8Y3pM",
       "youtubeUrl": "https://youtu.be/sklnGI8Y3pM",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/sklnGI8Y3pM/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:04.807Z",
       "senders": [
@@ -36,7 +36,7 @@
       "externalUrl": "https://youtu.be/sYCiFMMduVs?si=1cjVb8va9-4ukON8",
       "youtubeUrl": "https://youtu.be/sYCiFMMduVs?si=1cjVb8va9-4ukON8",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/sYCiFMMduVs/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2735b2bb4945695712681033e5b",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:42.363Z",
       "senders": [
@@ -57,7 +57,7 @@
       "externalUrl": "https://youtu.be/ihAsrta4acY",
       "youtubeUrl": "https://youtu.be/ihAsrta4acY",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/ihAsrta4acY/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273bfcc6cf52c8f01767f3e2338",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:32.248Z",
       "senders": [
@@ -78,7 +78,7 @@
       "externalUrl": "https://www.youtube.com/playlist?list=PLItd1GiqTiJSpa2BZvLyyCBVDmko2vwnX",
       "youtubeUrl": "https://www.youtube.com/playlist?list=PLItd1GiqTiJSpa2BZvLyyCBVDmko2vwnX",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/rDib4VDEeo4/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBFqN3Q7CS0QLx8KeHi-b_IJlHRTQ&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:51.491Z",
       "senders": [
@@ -99,7 +99,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLNhDdFCD5oB_PbBJhv2zf62VyZujgiDlF&si=_KspmBfgxvlgbc1i",
       "youtubeUrl": "https://youtube.com/playlist?list=PLNhDdFCD5oB_PbBJhv2zf62VyZujgiDlF&si=_KspmBfgxvlgbc1i",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/7bV22dJmmYM/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBeX7ueIXbP5pvVS6pzLj0MymvtdQ&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:51.978Z",
       "senders": [
@@ -120,7 +120,7 @@
       "externalUrl": "https://music.youtube.com/watch?v=DhP_BloIcnU&si=_djzv0Scbf-P4SvV",
       "youtubeUrl": "https://music.youtube.com/watch?v=DhP_BloIcnU&si=_djzv0Scbf-P4SvV",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/DhP_BloIcnU/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:30.407Z",
       "senders": [
@@ -141,7 +141,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLLCx7chs1o5X_zC6slX51wqCXlGAWqehG&si=KQnS1XXKOy1y8hbM",
       "youtubeUrl": "https://youtube.com/playlist?list=PLLCx7chs1o5X_zC6slX51wqCXlGAWqehG&si=KQnS1XXKOy1y8hbM",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/IDwpq3SBMrw/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCD5QFAchgrVRFUjgPuy0fZ3wjwwQ&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:52.486Z",
       "senders": [
@@ -162,7 +162,7 @@
       "externalUrl": "https://music.youtube.com/watch?v=JT3mDNF0AhI&si=9Li2h_64mBvgziaB",
       "youtubeUrl": "https://music.youtube.com/watch?v=JT3mDNF0AhI&si=9Li2h_64mBvgziaB",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/JT3mDNF0AhI/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:35.575Z",
       "senders": [
@@ -183,7 +183,7 @@
       "externalUrl": "https://youtu.be/dQK2U-KrhuA",
       "youtubeUrl": "https://youtu.be/dQK2U-KrhuA",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/dQK2U-KrhuA/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273017eb062be58097ec134eeb6",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:26.428Z",
       "senders": [
@@ -204,7 +204,7 @@
       "externalUrl": "https://music.youtube.com/watch?v=0ywMDvToUr8&si=LFkNcoZDwoIMUH47",
       "youtubeUrl": "https://music.youtube.com/watch?v=0ywMDvToUr8&si=LFkNcoZDwoIMUH47",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/0ywMDvToUr8/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273ef741cfc81ad5e86aeb0e783",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:32.151Z",
       "senders": [
@@ -225,7 +225,7 @@
       "externalUrl": "https://www.youtube.com/watch?v=8oRxnnDthVc",
       "youtubeUrl": "https://www.youtube.com/watch?v=8oRxnnDthVc",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/8oRxnnDthVc/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:37.964Z",
       "senders": [
@@ -246,7 +246,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLwd1GA8E_KI_67BgvQG6Q-vHPYCDTEQl3&si=C0F5-6FefLJEjA9z",
       "youtubeUrl": "https://youtube.com/playlist?list=PLwd1GA8E_KI_67BgvQG6Q-vHPYCDTEQl3&si=C0F5-6FefLJEjA9z",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/Aj-OnhSX9UE/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAbH5Dynb5L8EaTjSVNf8wo0sBCag&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:06.248Z",
       "senders": [
@@ -267,7 +267,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PL-4RXu503b1tcylIBeTX52YhL5qHHxKcT&si=HQ6Qrc-VDm982AnS",
       "youtubeUrl": "https://youtube.com/playlist?list=PL-4RXu503b1tcylIBeTX52YhL5qHHxKcT&si=HQ6Qrc-VDm982AnS",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/uPaYBI3igIM/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAHrLLOVS0GnFkt5eMXvro4l9CAXA&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:18.057Z",
       "senders": [
@@ -288,7 +288,7 @@
       "externalUrl": "https://www.youtube.com/watch?v=kfUAC90Aq30&list=RDkfUAC90Aq30",
       "youtubeUrl": "https://www.youtube.com/watch?v=kfUAC90Aq30&list=RDkfUAC90Aq30",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/kfUAC90Aq30/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273581a4412c8f826928e3cde31",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:08.815Z",
       "senders": [
@@ -309,7 +309,7 @@
       "externalUrl": "https://youtu.be/6_LOMEKa4yo?si=SPoQMNerfJahBb8q",
       "youtubeUrl": "https://youtu.be/6_LOMEKa4yo?si=SPoQMNerfJahBb8q",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/6_LOMEKa4yo/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273e996e95cca8ab60025e61e5c",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:34.261Z",
       "senders": [
@@ -330,7 +330,7 @@
       "externalUrl": "https://youtu.be/Fvmv7MCsCP0?si=1_rTf1S7BoJ53lJ_",
       "youtubeUrl": "https://youtu.be/Fvmv7MCsCP0?si=1_rTf1S7BoJ53lJ_",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/Fvmv7MCsCP0/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273cb6f92683ff9ad65f27a3f9f",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:12.158Z",
       "senders": [
@@ -351,7 +351,7 @@
       "externalUrl": "https://youtube.com/playlist?list=OLAK5uy_lvkCUFDG8OtMe3sg7QKcua94kRzrTssOM&si=vdBfR-L-F4HC7Anz",
       "youtubeUrl": "https://youtube.com/playlist?list=OLAK5uy_lvkCUFDG8OtMe3sg7QKcua94kRzrTssOM&si=vdBfR-L-F4HC7Anz",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i9.ytimg.com/s_p/OLAK5uy_lvkCUFDG8OtMe3sg7QKcua94kRzrTssOM/mqdefault.jpg?sqp=CKi40tQGir7X7AMICKPXlMQGEAE=&rs=AOn4CLANVbpFTEJrttFy-AOgRtTP1W1PAA&v=1753557923",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:10.687Z",
       "senders": [
@@ -372,7 +372,7 @@
       "externalUrl": "https://music.youtube.com/watch?v=v816OfpSOmE&si=16Sb6_dFSdPXSURl",
       "youtubeUrl": "https://music.youtube.com/watch?v=v816OfpSOmE&si=16Sb6_dFSdPXSURl",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/v816OfpSOmE/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273d87c375471ef17438bec956d",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:37.448Z",
       "senders": [
@@ -393,7 +393,7 @@
       "externalUrl": "https://www.youtube.com/watch?v=sYE2wbHPS7Y&list=PLlufAY8o8Xj0PtrfTHmOCteEieBWU1EBu",
       "youtubeUrl": "https://www.youtube.com/watch?v=sYE2wbHPS7Y&list=PLlufAY8o8Xj0PtrfTHmOCteEieBWU1EBu",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/sYE2wbHPS7Y/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b27316eb1e685e6bd37ab3228de6",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:51.297Z",
       "senders": [
@@ -414,7 +414,7 @@
       "externalUrl": "https://www.youtube.com/watch?v=FQlQud8pGpg&list=RDFQlQud8pGpg",
       "youtubeUrl": "https://www.youtube.com/watch?v=FQlQud8pGpg&list=RDFQlQud8pGpg",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/FQlQud8pGpg/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b27340033e480ebdcd772b72e1e4",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:43.787Z",
       "senders": [
@@ -435,7 +435,7 @@
       "externalUrl": "https://youtu.be/UvG1GotSeV8",
       "youtubeUrl": "https://youtu.be/UvG1GotSeV8",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/UvG1GotSeV8/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:26.954Z",
       "senders": [
@@ -456,7 +456,7 @@
       "externalUrl": "https://music.youtube.com/watch?v=2hT6P8m32Fs&si=L9CpBPNWAOSqlFYN",
       "youtubeUrl": "https://music.youtube.com/watch?v=2hT6P8m32Fs&si=L9CpBPNWAOSqlFYN",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/2hT6P8m32Fs/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b27319d41ba0e89a7c724f9e3cf2",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:11.254Z",
       "senders": [
@@ -477,7 +477,7 @@
       "externalUrl": "https://music.youtube.com/watch?v=U-8fTjnQwEc&si=bI-sJFo9R0upX4Xe",
       "youtubeUrl": "https://music.youtube.com/watch?v=U-8fTjnQwEc&si=bI-sJFo9R0upX4Xe",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/U-8fTjnQwEc/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:21.866Z",
       "senders": [
@@ -498,7 +498,7 @@
       "externalUrl": "https://youtu.be/yR0pyFp2nhg",
       "youtubeUrl": "https://youtu.be/yR0pyFp2nhg",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/yR0pyFp2nhg/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2733682ab3a1f6ee66814393098",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:47.909Z",
       "senders": [
@@ -519,7 +519,7 @@
       "externalUrl": "https://www.youtube.com/watch?v=TbVnjcXpppI",
       "youtubeUrl": "https://www.youtube.com/watch?v=TbVnjcXpppI",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/TbVnjcXpppI/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273a5ce236c22035a02cf87d4de",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:42.338Z",
       "senders": [
@@ -540,7 +540,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLspwtirOPuvVchjCioj4W_HjyNCuocwSh&si=nH-WoN3w9a1ctFcc",
       "youtubeUrl": "https://youtube.com/playlist?list=PLspwtirOPuvVchjCioj4W_HjyNCuocwSh&si=nH-WoN3w9a1ctFcc",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/vYC64oaFQfk/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLADrkrdRGNxenEgRrjGvQ7FAfvJdw&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:33.245Z",
       "senders": [
@@ -666,7 +666,7 @@
       "externalUrl": "https://music.youtube.com/playlist?list=OLAK5uy_mPASDCcv_i-KyzRlfG2PxhqDP8OH3tICM&si=Pat9V4WJSdzl8FPR",
       "youtubeUrl": "https://music.youtube.com/playlist?list=OLAK5uy_mPASDCcv_i-KyzRlfG2PxhqDP8OH3tICM&si=Pat9V4WJSdzl8FPR",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i9.ytimg.com/s_p/OLAK5uy_mPASDCcv_i-KyzRlfG2PxhqDP8OH3tICM/mqdefault.jpg?sqp=CKi40tQGir7X7AMICNX2s70GEAE=&rs=AOn4CLAO7anSPfLYwMecDHZk88aYxZ0A3g&v=1739389781",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:27.411Z",
       "senders": [
@@ -687,7 +687,7 @@
       "externalUrl": "https://music.youtube.com/playlist?list=OLAK5uy_n7jvZ-n7Av9PJbtb9fBeodhxechN8P0MA&si=8ZRE4mnjCnOdcsLf",
       "youtubeUrl": "https://music.youtube.com/playlist?list=OLAK5uy_n7jvZ-n7Av9PJbtb9fBeodhxechN8P0MA&si=8ZRE4mnjCnOdcsLf",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i9.ytimg.com/s_p/OLAK5uy_n7jvZ-n7Av9PJbtb9fBeodhxechN8P0MA/mqdefault.jpg?sqp=CKi40tQGir7X7AMICPH9vb0GEAE=&rs=AOn4CLBuN97jThnVj6eFm3VG4aXQcaRReA&v=1739554545",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:54.351Z",
       "senders": [
@@ -708,7 +708,7 @@
       "externalUrl": "https://music.youtube.com/playlist?list=OLAK5uy_lhyvYRaqkD7iko0nVl_aidIxlnL6rNX0o&si=kd47FUAXCHrK4nx2",
       "youtubeUrl": "https://music.youtube.com/playlist?list=OLAK5uy_lhyvYRaqkD7iko0nVl_aidIxlnL6rNX0o&si=kd47FUAXCHrK4nx2",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i9.ytimg.com/s_p/OLAK5uy_lhyvYRaqkD7iko0nVl_aidIxlnL6rNX0o/mqdefault.jpg?sqp=CKi40tQGir7X7AMICMXg68UGEAE=&rs=AOn4CLCU819ID3D67iqWP94PRNl1TYdXoQ&v=1757081669",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:05.836Z",
       "senders": [
@@ -729,7 +729,7 @@
       "externalUrl": "https://music.youtube.com/playlist?list=OLAK5uy_kP8s0IkDixkQfQOCWRSNIJWbO5ibsl0f4&si=D49wAy2MeFcEJhg5",
       "youtubeUrl": "https://music.youtube.com/playlist?list=OLAK5uy_kP8s0IkDixkQfQOCWRSNIJWbO5ibsl0f4&si=D49wAy2MeFcEJhg5",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i9.ytimg.com/s_p/OLAK5uy_kP8s0IkDixkQfQOCWRSNIJWbO5ibsl0f4/mqdefault.jpg?sqp=CKi40tQGir7X7AMICP2xw9IGEAE=&rs=AOn4CLB3rTbnPA4OF9jeuKRab9DisSU_Ow&v=1783683325",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:48.202Z",
       "senders": [
@@ -750,7 +750,7 @@
       "externalUrl": "https://music.youtube.com/playlist?list=OLAK5uy_k1naCKA4_rhg3CYIdOJw_PVDDfVqE_rY4&si=C-t0kwhJ7pYNVGmY",
       "youtubeUrl": "https://music.youtube.com/playlist?list=OLAK5uy_k1naCKA4_rhg3CYIdOJw_PVDDfVqE_rY4&si=C-t0kwhJ7pYNVGmY",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i9.ytimg.com/s_p/OLAK5uy_k1naCKA4_rhg3CYIdOJw_PVDDfVqE_rY4/mqdefault.jpg?sqp=CKi40tQGir7X7AMICMq_nr0GEAE=&rs=AOn4CLAW67nb1289QaF2YXkKdlLFxPMb5Q&v=1739038666",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:46.674Z",
       "senders": [
@@ -771,7 +771,7 @@
       "externalUrl": "https://music.youtube.com/playlist?list=OLAK5uy_lR6-DgTzL3BYMc4dyxksdFpsrpghkuW8k&si=sDrmqoa_piHxxU2F",
       "youtubeUrl": "https://music.youtube.com/playlist?list=OLAK5uy_lR6-DgTzL3BYMc4dyxksdFpsrpghkuW8k&si=sDrmqoa_piHxxU2F",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i9.ytimg.com/s_p/OLAK5uy_lR6-DgTzL3BYMc4dyxksdFpsrpghkuW8k/mqdefault.jpg?sqp=CKi40tQGir7X7AMICMKenb4GEAE=&rs=AOn4CLAgJ0vDZPhUjzCwv6TZU1dZv_0VPg&v=1741115202",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:57.967Z",
       "senders": [
@@ -792,7 +792,7 @@
       "externalUrl": "https://music.youtube.com/playlist?list=OLAK5uy_mKgaGdlVJarTxDdiVqwnJ2ydPjy70IctQ&si=9ACigXOmPVfiaI0n",
       "youtubeUrl": "https://music.youtube.com/playlist?list=OLAK5uy_mKgaGdlVJarTxDdiVqwnJ2ydPjy70IctQ&si=9ACigXOmPVfiaI0n",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i9.ytimg.com/s_p/OLAK5uy_mKgaGdlVJarTxDdiVqwnJ2ydPjy70IctQ/mqdefault.jpg?sqp=CKi40tQGir7X7AMICIWwzb0GEAE=&rs=AOn4CLDhR4QIKURyRZyTHzIctkLy3dAWkg&v=1739806725",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:31.539Z",
       "senders": [
@@ -960,7 +960,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLgD7XHVeP-OWPUfjrppN47opBJrZZ8gwS&si=F2eRgmgcqmG8Kw8y",
       "youtubeUrl": "https://youtube.com/playlist?list=PLgD7XHVeP-OWPUfjrppN47opBJrZZ8gwS&si=F2eRgmgcqmG8Kw8y",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/27_o7Yh77sI/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAIFOzio2p7QsJ-73x6zZUiKvZ4gg&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:33.753Z",
       "senders": [
@@ -1044,7 +1044,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLOZYbYEYUmcj7Jag8ehL1xa_dL1YHqEKE&si=sVEsj9ptvSv6dsdr",
       "youtubeUrl": "https://youtube.com/playlist?list=PLOZYbYEYUmcj7Jag8ehL1xa_dL1YHqEKE&si=sVEsj9ptvSv6dsdr",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/1C27T4k58zw/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBuyTQ0p-za7mcstOcvI6FIyY8x5Q&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:34.769Z",
       "senders": [
@@ -1086,7 +1086,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLVnkoLiLMTm4HS1nBO81gdrpUtOCr0Zkx&si=F-YiMApoY0L_qmqL",
       "youtubeUrl": "https://youtube.com/playlist?list=PLVnkoLiLMTm4HS1nBO81gdrpUtOCr0Zkx&si=F-YiMApoY0L_qmqL",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/7AL5ILRGfsk/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAnxakbC71LezdsGrCn_Iu8Cc80RA&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:00.441Z",
       "senders": [
@@ -1233,7 +1233,7 @@
       "externalUrl": "https://youtu.be/m3hPg-v4Eac",
       "youtubeUrl": "https://youtu.be/m3hPg-v4Eac",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/m3hPg-v4Eac/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273042761ee2c3ead0099edf00d",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:08.296Z",
       "senders": [
@@ -1254,7 +1254,7 @@
       "externalUrl": "https://youtu.be/wOeb1TQkIT4",
       "youtubeUrl": "https://youtu.be/wOeb1TQkIT4",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/wOeb1TQkIT4/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273faf1cf92416be4d75b2d7be5",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:05.326Z",
       "senders": [
@@ -1464,7 +1464,7 @@
       "externalUrl": "https://youtu.be/Ezns8Sb6VJM",
       "youtubeUrl": "https://youtu.be/Ezns8Sb6VJM",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/Ezns8Sb6VJM/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2731d3bde838b88b63683b60f2a",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:53.741Z",
       "senders": [
@@ -1884,7 +1884,7 @@
       "externalUrl": "https://youtu.be/c2zurZig4L8",
       "youtubeUrl": "https://youtu.be/c2zurZig4L8",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/c2zurZig4L8/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2734d844480eb8a8fc7d761b324",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:47.397Z",
       "senders": [
@@ -2178,7 +2178,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLC7FA325A9774FD6F&si=F8F8I0zAEdy3UPBK",
       "youtubeUrl": "https://youtube.com/playlist?list=PLC7FA325A9774FD6F&si=F8F8I0zAEdy3UPBK",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/9py-oPHf_0g/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBIsLZ5OhLXmD4mQJhQWK6lPtDUbw&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:26.898Z",
       "senders": [
@@ -2262,7 +2262,7 @@
       "externalUrl": "https://youtu.be/dvTaw9xkCbs",
       "youtubeUrl": "https://youtu.be/dvTaw9xkCbs",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/dvTaw9xkCbs/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2737a293e6787c6d200c5077cd0",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:11.076Z",
       "senders": [
@@ -2304,7 +2304,7 @@
       "externalUrl": "https://youtu.be/m5ISkaT0Gik",
       "youtubeUrl": "https://youtu.be/m5ISkaT0Gik",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/m5ISkaT0Gik/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273175e83829b2ff84adebeb88c",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:15.190Z",
       "senders": [
@@ -2472,7 +2472,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLruSe6UnfY-Iw15-m83RcLcMRgqxee638&si=fw5g8-7s8XUNhD6k",
       "youtubeUrl": "https://youtube.com/playlist?list=PLruSe6UnfY-Iw15-m83RcLcMRgqxee638&si=fw5g8-7s8XUNhD6k",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/x0tQc-ho3UA/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAo690nkR8D1MSmBJy1mUQtJklfIA&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:34.400Z",
       "senders": [
@@ -2787,7 +2787,7 @@
       "externalUrl": "https://youtube.com/shorts/f79JQAd9bk8?si=p7UdqDNF3WMPEAte",
       "youtubeUrl": "https://youtube.com/shorts/f79JQAd9bk8?si=p7UdqDNF3WMPEAte",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/f79JQAd9bk8/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b27345900b3e3e9c80f90e26e459",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:52.521Z",
       "senders": [
@@ -3102,7 +3102,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLUsFAMx2zemaqj9HFvoKpDRTB_dw4WNRd&si=o8k9ou5voapuE6bM",
       "youtubeUrl": "https://youtube.com/playlist?list=PLUsFAMx2zemaqj9HFvoKpDRTB_dw4WNRd&si=o8k9ou5voapuE6bM",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/LEGhpuIVZxE/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDUCJuTRe62mTG539-4kMrngmmKpg&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:42.875Z",
       "senders": [
@@ -3123,7 +3123,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLyJEeTwPq041GKLBJEEFv6tHUflawx8tt&si=4ghjMtIwjYXfqDKw",
       "youtubeUrl": "https://youtube.com/playlist?list=PLyJEeTwPq041GKLBJEEFv6tHUflawx8tt&si=4ghjMtIwjYXfqDKw",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/Lit6wcuwK7o/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBS5nTZ8Y6EcG_en5kgECJzGn0njw&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:43.385Z",
       "senders": [
@@ -3417,7 +3417,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLAQ9ucsJKMJ3pnapZ-j29jMRfDI3NlUPV&si=iBydUi7FK_PBquaZ",
       "youtubeUrl": "https://youtube.com/playlist?list=PLAQ9ucsJKMJ3pnapZ-j29jMRfDI3NlUPV&si=iBydUi7FK_PBquaZ",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/7nYG-aaq9X8/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA2a2_CLVbGrR6jD6jLWFz92Y1AgA&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:37:02.915Z",
       "senders": [
@@ -3648,7 +3648,7 @@
       "externalUrl": "https://youtu.be/S-W5wlk8QsI?si=BrdHhXixKbsfYZ0D",
       "youtubeUrl": "https://youtu.be/S-W5wlk8QsI?si=BrdHhXixKbsfYZ0D",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/S-W5wlk8QsI/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273bd5978f9c520fe61e8c7392f",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:04.200Z",
       "senders": [
@@ -3858,7 +3858,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PL9VVIjatiSNY81WMepq5oL9DnvTnXRDRX&si=gpVTd-dW51_qBPRT",
       "youtubeUrl": "https://youtube.com/playlist?list=PL9VVIjatiSNY81WMepq5oL9DnvTnXRDRX&si=gpVTd-dW51_qBPRT",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/Eyy0sX9HSBE/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC7kwF8R9YESXWUlI2vTAjy3heVZA&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:55.680Z",
       "senders": [
@@ -3921,7 +3921,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PLrkk5FH0yHsZr1mDBiqxvU4570R755LCg&si=9bs7YfMa4tvjJrmj",
       "youtubeUrl": "https://youtube.com/playlist?list=PLrkk5FH0yHsZr1mDBiqxvU4570R755LCg&si=9bs7YfMa4tvjJrmj",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/pl_c/PLrkk5FH0yHsZr1mDBiqxvU4570R755LCg/studio_square_thumbnail.jpg?sqp=CND60dQG-oaymwEICKoDEPABSFqi85f_AwYIvaa4zgY=&rs=AOn4CLD9h_K69ir-C1DdNUMy2nu7Spd_0w&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:37:03.416Z",
       "senders": [
@@ -3984,7 +3984,7 @@
       "externalUrl": "https://youtu.be/ALV9DhkPgBY",
       "youtubeUrl": "https://youtu.be/ALV9DhkPgBY",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/ALV9DhkPgBY/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b27339a12330c6ae09f8d03a8d97",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:32.769Z",
       "senders": [
@@ -4299,7 +4299,7 @@
       "externalUrl": "https://youtu.be/IU00OwqcDtQ?si=hPPla04EnrUeOAfo",
       "youtubeUrl": "https://youtu.be/IU00OwqcDtQ?si=hPPla04EnrUeOAfo",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/IU00OwqcDtQ/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273d74bc7e553de4198693dd824",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:57.544Z",
       "senders": [
@@ -4320,7 +4320,7 @@
       "externalUrl": "https://youtu.be/ztJ2C2GdjXM?si=9aIRq31Sdn0FxJxe",
       "youtubeUrl": "https://youtu.be/ztJ2C2GdjXM?si=9aIRq31Sdn0FxJxe",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/ztJ2C2GdjXM/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273833fb25d233f13a770021739",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:24.637Z",
       "senders": [
@@ -4656,7 +4656,7 @@
       "externalUrl": "https://youtu.be/O7GaK516Wkk?si=6Jbv5C1WwEzRzqT_",
       "youtubeUrl": "https://youtu.be/O7GaK516Wkk?si=6Jbv5C1WwEzRzqT_",
       "appleMusicUrl": null,
-      "image": "https://i.ytimg.com/vi/O7GaK516Wkk/hqdefault.jpg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273bd93bbf0c3df5e0242b84831",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:24.477Z",
       "senders": [
@@ -4782,7 +4782,7 @@
       "externalUrl": "https://open.spotify.com/track/5OMgA0PORzHm7HrshzRwHE?si=SQCzF2jSQtGiWIelQyvHXg",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273ff58c22d52fbe2ea9593f838",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:13.094Z",
       "senders": [
@@ -4866,7 +4866,7 @@
       "externalUrl": "https://open.spotify.com/artist/7zMXb70baAGbXXMX4D6Nzg?si=YedK4QK_Qn-wwmDHOAB67g",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:13.596Z",
       "senders": [
@@ -4971,7 +4971,7 @@
       "externalUrl": "https://open.spotify.com/track/0IjSyfUbYJWJiowsRiJLHB?si=QD4SOn9vR_mt5s-hQLZtEA",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:55.175Z",
       "senders": [
@@ -4992,7 +4992,7 @@
       "externalUrl": "https://open.spotify.com/playlist/6nUw2tflFyRlS2PmUSv8dl?si=SKahrG-1RYi6qnAneeB2vg",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b27316eb1e685e6bd37ab3228de6",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:29.768Z",
       "senders": [
@@ -5013,7 +5013,7 @@
       "externalUrl": "https://open.spotify.com/playlist/0rcvJIuW8sEFESyZq52q8H?si=5GcQLqT1SYiGpDztX5fhHw",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f2c3758667210457d73dc9ac",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:41.204Z",
       "senders": [
@@ -5034,7 +5034,7 @@
       "externalUrl": "https://open.spotify.com/track/4dKCmonYWqjAxuV8Ydu4Iv?si=Bm76aVyBQa6Lu4ob3lkY3A",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273da7f4c05101e2fc5d474acc1",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:49.250Z",
       "senders": [
@@ -5118,7 +5118,7 @@
       "externalUrl": "https://open.spotify.com/track/7pRxqZqxxl75Wa7LIPGStt?si=u9ce-dMNRN-1Om1KyBq7Ww",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:59.231Z",
       "senders": [
@@ -5127,27 +5127,6 @@
       "senderCount": 1,
       "firstSharedAt": "2026-06-21T12:53:00.000Z",
       "lastSharedAt": "2026-06-21T12:53:00.000Z"
-    },
-    {
-      "id": "album-264",
-      "name": "Nando Raio",
-      "artist": "Unknown",
-      "spotifyUrl": "https://open.spotify.com/artist/4Zvjxa70RcxC5w9tLsZMtF?si=hI-TutWlTHyaxkaDYdbiUw",
-      "spotifyId": null,
-      "youtubeId": null,
-      "youtubeList": null,
-      "externalUrl": "https://open.spotify.com/artist/4Zvjxa70RcxC5w9tLsZMtF?si=hI-TutWlTHyaxkaDYdbiUw",
-      "youtubeUrl": null,
-      "appleMusicUrl": null,
-      "image": null,
-      "releaseDate": null,
-      "discoveredAt": "2026-08-08T14:36:51.701Z",
-      "senders": [
-        "Gabriel Olivia"
-      ],
-      "senderCount": 1,
-      "firstSharedAt": "2026-08-05T11:19:00.000Z",
-      "lastSharedAt": "2026-08-05T11:19:00.000Z"
     },
     {
       "id": "album-265",
@@ -5160,7 +5139,7 @@
       "externalUrl": "https://open.spotify.com/track/7iLZpaNabTcUVrw2UTX39M?si=yH3MGE7BRgmxvdsvTrkh5w",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:52.736Z",
       "senders": [
@@ -5223,7 +5202,7 @@
       "externalUrl": "https://open.spotify.com/playlist/7vY0YMB3SW70DQnCzR0GlP?si=Ho-6d9gmTqWDcBwBLv7t5g",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b27327614437121de76620941c5e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:39.841Z",
       "senders": [
@@ -5244,7 +5223,7 @@
       "externalUrl": "https://open.spotify.com/track/76VqhP2B9ZnyqdyHmc8UEN?si=DMhWKOrpScGOpeszbwZf-g",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:14.541Z",
       "senders": [
@@ -5265,7 +5244,7 @@
       "externalUrl": "https://open.spotify.com/track/08AyxkYKSjlRc081TcJ6iK?si=GPm6D3_xQKW-EWi8o-yALA",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:23.505Z",
       "senders": [
@@ -5286,7 +5265,7 @@
       "externalUrl": "https://open.spotify.com/track/43OHVwl9uEl8G9n0ypADzH?si=4ZHXcswsSD6TmEIf4ZDScA",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:22.418Z",
       "senders": [
@@ -5307,7 +5286,7 @@
       "externalUrl": "https://open.spotify.com/playlist/7pxpDGRuyFPN9X3cNRxmCC?si=5783001741104e31",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:21.288Z",
       "senders": [
@@ -5316,27 +5295,6 @@
       "senderCount": 1,
       "firstSharedAt": "2026-07-01T14:06:00.000Z",
       "lastSharedAt": "2026-07-01T14:06:00.000Z"
-    },
-    {
-      "id": "album-266",
-      "name": "Samba Makossa",
-      "artist": "Unknown",
-      "spotifyUrl": "https://open.spotify.com/track/5Fk29rgfFiaH11EuJWMC2s?si=0lkIFAS4Qo-bob8hZ8rhCA",
-      "spotifyId": null,
-      "youtubeId": null,
-      "youtubeList": null,
-      "externalUrl": "https://open.spotify.com/track/5Fk29rgfFiaH11EuJWMC2s?si=0lkIFAS4Qo-bob8hZ8rhCA",
-      "youtubeUrl": null,
-      "appleMusicUrl": null,
-      "image": null,
-      "releaseDate": null,
-      "discoveredAt": "2026-08-08T14:36:53.294Z",
-      "senders": [
-        "Pablao Brisionarios"
-      ],
-      "senderCount": 1,
-      "firstSharedAt": "2026-08-05T14:52:00.000Z",
-      "lastSharedAt": "2026-08-05T14:52:00.000Z"
     },
     {
       "id": "album-99",
@@ -5370,7 +5328,7 @@
       "externalUrl": "https://open.spotify.com/playlist/3O1TjSCSBjhfsGKSRjD9Bq?si=s3qPKYx0RtOEewrVJrrKWA",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:37.586Z",
       "senders": [
@@ -5391,7 +5349,7 @@
       "externalUrl": "https://open.spotify.com/playlist/2zengIQVFm8xh84uEseMtf?si=SiKHE-q5QBe_PKJ6HhDcYQ",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:29.371Z",
       "senders": [
@@ -5444,27 +5402,6 @@
       "lastSharedAt": "2026-07-03T15:56:00.000Z"
     },
     {
-      "id": "album-79",
-      "name": "Terra Em Transe",
-      "artist": "Unknown",
-      "spotifyUrl": "https://open.spotify.com/track/68vvcDQhNxv2QTNr7cZu81?si=J3qdBU88S2CA2yCUf0ZR-g",
-      "spotifyId": null,
-      "youtubeId": null,
-      "youtubeList": null,
-      "externalUrl": "https://open.spotify.com/track/68vvcDQhNxv2QTNr7cZu81?si=J3qdBU88S2CA2yCUf0ZR-g",
-      "youtubeUrl": null,
-      "appleMusicUrl": null,
-      "image": null,
-      "releaseDate": null,
-      "discoveredAt": "2026-08-08T14:34:17.956Z",
-      "senders": [
-        "+55 19 98150-8137"
-      ],
-      "senderCount": 1,
-      "firstSharedAt": "2026-06-28T19:31:00.000Z",
-      "lastSharedAt": "2026-06-28T19:31:00.000Z"
-    },
-    {
       "id": "album-83",
       "name": "The Best of Hugh Laurie",
       "artist": "Unknown",
@@ -5475,7 +5412,7 @@
       "externalUrl": "https://open.spotify.com/playlist/3MXBUdI8h2DwqleH5ePLKQ?si=2KINZSfCT72DwgJdL60ikA",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273d763bf549cb95f620834cb73",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:20.456Z",
       "senders": [
@@ -5517,7 +5454,7 @@
       "externalUrl": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO2nidtl?si=Bp_nQKC_T2aLUqZXzrfvkA",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:39.443Z",
       "senders": [
@@ -5538,7 +5475,7 @@
       "externalUrl": "https://open.spotify.com/track/38ra3f5RPJn3qW03lFsL0t?si=GxJ4w0FESgmWcjARJ-w0VQ",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:26.184Z",
       "senders": [
@@ -5559,7 +5496,7 @@
       "externalUrl": "https://open.spotify.com/playlist/1P0yJvPLbdXUipnmcj6xrL?si=fIhG8stYQ6ivhBtXKZyhyQ",
       "youtubeUrl": null,
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.scdn.co/image/ab67616d0000b2735a9c9420f18a02cd2fd280c9",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:51.392Z",
       "senders": [
@@ -5643,7 +5580,7 @@
       "externalUrl": "https://youtube.com/playlist?list=PL1zjViKDPKWW93ej7JnH8DsBvnOAKAHiQ&si=EMljtSjAPTs_RKlC",
       "youtubeUrl": "https://youtube.com/playlist?list=PL1zjViKDPKWW93ej7JnH8DsBvnOAKAHiQ&si=EMljtSjAPTs_RKlC",
       "appleMusicUrl": null,
-      "image": null,
+      "image": "https://i.ytimg.com/vi/FhVYiTYnfn0/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBnEabZ4XbWSHUgrzUhegpx_bmuow&days_since_epoch=20695",
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:10.167Z",
       "senders": [
@@ -6331,7 +6268,7 @@
       "label": "Agosto/26",
       "playlistId": "2r72Q5HpvfcGJls8ejoOqx",
       "url": "https://open.spotify.com/playlist/2r72Q5HpvfcGJls8ejoOqx",
-      "totalAlbums": 55,
+      "totalAlbums": 53,
       "albums": [
         "album-249",
         "album-250",
@@ -6348,9 +6285,7 @@
         "album-261",
         "album-262",
         "album-263",
-        "album-264",
         "album-265",
-        "album-266",
         "album-267",
         "album-268",
         "album-269",
@@ -6542,7 +6477,7 @@
       "label": "Junho/26",
       "playlistId": "6Cv3N0dVTbo5LwWi5mdCLM",
       "url": "https://open.spotify.com/playlist/6Cv3N0dVTbo5LwWi5mdCLM?si=280lpnhXSp2Ol3YGZif0LA&utm_source=copy-link&pi=kuXuyABNST2_x",
-      "totalAlbums": 62,
+      "totalAlbums": 61,
       "albums": [
         "album-20",
         "album-21",
@@ -6603,7 +6538,6 @@
         "album-76",
         "album-77",
         "album-78",
-        "album-79",
         "album-80",
         "album-81"
       ]

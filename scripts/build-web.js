@@ -263,7 +263,8 @@ function buildWebData() {
 
       if (!hasDirectSpotify) {
         // Prefer real shared metadata over search-guessed Spotify metadata.
-        image = null;
+        // Keep existing image if we already fetched it (e.g., YouTube playlist thumbnail from data/albums.json)
+        // instead of nulling it.
         releaseDate = null;
         const sourceTitle = bestSource?.title;
         if (sourceTitle && sourceTitle !== 'Unknown') {
@@ -286,6 +287,8 @@ function buildWebData() {
       if (!image && youtubeId) {
         image = `https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`;
       }
+      // For YouTube playlists, the thumbnail was already fetched and stored in data/albums.json
+      // so keep album.image if present (don't null it). No extra fallback needed.
 
       // External link to open for albums that cannot be played in the embed player.
       const externalUrl =
@@ -325,6 +328,15 @@ function buildWebData() {
       const artistB = (b.artist || '').toLowerCase();
       if (artistA !== artistB) return artistA.localeCompare(artistB);
       return (a.name || '').toLowerCase().localeCompare((b.name || '').toLowerCase());
+    })
+    .filter((a) => {
+      // User requested: don't show albums without image.
+      // After fixing 44/47, only 3 remain without image (Nando Raio etc.) — hide them.
+      if (!a.image) {
+        console.log(`Skipping ${a.artist} - ${a.name} (no image)`);
+        return false;
+      }
+      return true;
     });
 
   const totalSenders = topContributors.length;
