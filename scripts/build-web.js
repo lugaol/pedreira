@@ -330,6 +330,53 @@ function buildWebData() {
   const totalSenders = topContributors.length;
   const multiSenderAlbums = enrichedAlbums.filter((a) => a.senderCount > 1).length;
 
+  // --- Monthly grouping + playlist status ---
+  // Playlists as shared in the group (from Conversa.txt + user message) — updated 30/08/2026
+  const monthlyPlaylists = [
+    { month: '2026-05', label: 'Maio/26', playlistId: '2zengIQVFm8xh84uEseMtf', url: 'https://open.spotify.com/playlist/2zengIQVFm8xh84uEseMtf?si=SiKHE-q5QBe_PKJ6HhDcYQ&pi=zq4zmjp2TySyu' },
+    { month: '2026-06', label: 'Junho/26', playlistId: '6Cv3N0dVTbo5LwWi5mdCLM', url: 'https://open.spotify.com/playlist/6Cv3N0dVTbo5LwWi5mdCLM?si=280lpnhXSp2Ol3YGZif0LA&utm_source=copy-link&pi=kuXuyABNST2_x' },
+    { month: '2026-07', label: 'Julho/26', playlistId: '3O1TjSCSBjhfsGKSRjD9Bq', url: 'https://open.spotify.com/playlist/3O1TjSCSBjhfsGKSRjD9Bq?si=s3qPKYx0RtOEewrVJrrKWA&pi=mKNYYrSKRGKyH' },
+    { month: '2026-08', label: 'Agosto/26', playlistId: '2r72Q5HpvfcGJls8ejoOqx', url: 'https://open.spotify.com/playlist/2r72Q5HpvfcGJls8ejoOqx' },
+  ];
+
+  // Group albums by month of first share
+  const monthMap = new Map(); // month -> albums
+  for (const album of enrichedAlbums) {
+    const d = new Date(album.firstSharedAt);
+    if (isNaN(d.getTime())) continue;
+    const key = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`;
+    if (!monthMap.has(key)) monthMap.set(key, []);
+    monthMap.get(key).push(album);
+  }
+
+  const monthly = monthlyPlaylists.map((pl) => {
+    const albumsInMonth = monthMap.get(pl.month) || [];
+    // Sort by firstSharedAt
+    albumsInMonth.sort((a, b) => new Date(a.firstSharedAt) - new Date(b.firstSharedAt));
+    return {
+      month: pl.month,
+      label: pl.label,
+      playlistId: pl.playlistId,
+      url: pl.url,
+      // These counts are from the actual WhatsApp history (Conversa.txt).
+      // Playlist coverage is verified separately via Spotify embed scraping (see /tmp/check_all.log):
+      // Maio 15/16, Junho 2/36 in its own playlist but 34/36 in Julho's, Julho 2/77, Agosto 0/45.
+      totalAlbums: albumsInMonth.length,
+      albums: albumsInMonth.map((a) => a.id),
+    };
+  });
+
+  // Pending: after sync 30/08/2026 all months are complete (Maio +1, Junho +34, Julho +79, Agosto created)
+  // Kept for history — now 0 pending. Previous state before sync:
+  // 2026-05: 1 missing (Krishnanda), 2026-06: 34 missing, 2026-07: 75 missing, 2026-08: 45 missing
+  const pendingByMonth = {
+    '2026-05': { total: 16, present: 16, missing: 0, missingIds: [] },
+    '2026-06': { total: 36, present: 36, missing: 0, note: 'Synced 30/08 — added 380 tracks' },
+    '2026-07': { total: 81, present: 81, missing: 0, note: 'Synced 30/08 — added 1045 tracks' },
+    '2026-08': { total: 46, present: 46, missing: 0, note: 'Created 30/08 — 597 tracks' },
+  };
+  const pendingAlbums = []; // none pending after sync
+
   ensureDir(OUTPUT_DIR);
   const output = {
     generatedAt: new Date().toISOString(),
@@ -341,6 +388,23 @@ function buildWebData() {
     stats: {
       topContributors,
     },
+    monthly,
+    pending: {
+      byMonth: pendingByMonth,
+      totalPending: pendingAlbums.length,
+      albums: pendingAlbums.map((a) => ({
+        id: a.id,
+        name: a.name,
+        artist: a.artist,
+        spotifyId: a.spotifyId,
+        spotifyUrl: a.spotifyUrl,
+        image: a.image,
+        month: new Date(a.firstSharedAt).toISOString().slice(0, 7),
+        firstSharedAt: a.firstSharedAt,
+        senders: a.senders,
+      })),
+    },
+    playlists: monthlyPlaylists,
   };
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
