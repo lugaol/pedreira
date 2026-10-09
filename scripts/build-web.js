@@ -345,6 +345,8 @@ function buildWebData() {
   // --- Monthly grouping + playlist status ---
   // Playlists as shared in the group — recent first (Agosto → Maio)
   const monthlyPlaylists = [
+    { month: '2026-10', label: 'Outubro/26', playlistId: '1oIyxKllXgxnMiU30jL1gy', url: 'https://open.spotify.com/playlist/1oIyxKllXgxnMiU30jL1gy' },
+    { month: '2026-09', label: 'Setembro/26', playlistId: '3ga59o8zOODp5V3EbIvCAc', url: 'https://open.spotify.com/playlist/3ga59o8zOODp5V3EbIvCAc' },
     { month: '2026-08', label: 'Agosto/26', playlistId: '2r72Q5HpvfcGJls8ejoOqx', url: 'https://open.spotify.com/playlist/2r72Q5HpvfcGJls8ejoOqx' },
     { month: '2026-07', label: 'Julho/26', playlistId: '3O1TjSCSBjhfsGKSRjD9Bq', url: 'https://open.spotify.com/playlist/3O1TjSCSBjhfsGKSRjD9Bq?si=s3qPKYx0RtOEewrVJrrKWA&pi=mKNYYrSKRGKyH' },
     { month: '2026-06', label: 'Junho/26', playlistId: '6Cv3N0dVTbo5LwWi5mdCLM', url: 'https://open.spotify.com/playlist/6Cv3N0dVTbo5LwWi5mdCLM?si=280lpnhXSp2Ol3YGZif0LA&utm_source=copy-link&pi=kuXuyABNST2_x' },
