@@ -141,9 +141,8 @@ Steps:
     // Commit main
     const hasChanges = spawnSync('git', ['status', '--porcelain'], { cwd: ROOT }).stdout.toString().trim();
     if (hasChanges) {
-      run('git', ['add', 'web/data.json', 'web/app.js', 'web/index.html', 'web/styles.css', 'scripts/build-web.js', 'data/albums.json']);
-      // data/albums.json is gitignored, so force add if needed
-      spawnSync('git', ['add', '-f', 'data/albums.json'], { cwd: ROOT });
+      // data/ is gitignored — add tracked web files only, never -A
+      run('git', ['add', 'web/data.json', 'web/app.js', 'web/index.html', 'web/styles.css', 'scripts/build-web.js']);
       run('git', ['commit', '-m', 'chore: update from Conversa (auto)']);
     } else {
       console.log('   (no changes to commit on main)');
