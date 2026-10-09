@@ -218,6 +218,33 @@ function readZipTextEntry(filePath) {
   return null; // unsupported compression method
 }
 
+function countLines(filePath) {
+  if (!fs.existsSync(filePath)) return 0;
+  return fs.readFileSync(filePath, 'utf8').split('\n').filter((l) => l.trim()).length;
+}
+
+// Number of messages currently stored in messages.jsonl.
+function readExistingCount() {
+  return countLines(OUTPUT_FILE);
+}
+
+// Newest timestamp currently stored in messages.jsonl, or 0 if the file is absent.
+function readExistingMaxTimestamp() {
+  if (!fs.existsSync(OUTPUT_FILE)) return 0;
+  let max = 0;
+  const lines = fs.readFileSync(OUTPUT_FILE, 'utf8').split('\n');
+  for (const line of lines) {
+    if (!line.trim()) continue;
+    try {
+      const ts = JSON.parse(line).timestamp;
+      if (typeof ts === 'number' && ts > max) max = ts;
+    } catch {
+      // Ignore unparseable lines rather than failing the guard.
+    }
+  }
+  return max;
+}
+
 function readExportText(filePath) {
   if (/\.zip$/i.test(filePath)) {
     const text = readZipTextEntry(filePath);
@@ -242,10 +269,13 @@ function parseExport() {
 
   console.log(`Parsing ${path.resolve(INPUT_FILE)}...`);
 
-  // Remove old output to avoid duplicates
-  if (fs.existsSync(OUTPUT_FILE)) {
-    fs.rmSync(OUTPUT_FILE);
-  }
+  // Guard: never replace messages.jsonl with older history.
+  // parse-export truncates the output, so parsing a stale export (e.g. `npm run update
+  // -- --deploy` falling back to an old data/exported/chat.txt) silently deletes newer
+  // messages. Downstream, albums.json keeps its albums but their shareEvents vanish, so
+  // monthly grouping shows 0 albums for the affected months. Fail closed instead.
+  const previousMaxTs = readExistingMaxTimestamp();
+  const previousCount = readExistingCount();
 
   const raw = readExportText(INPUT_FILE);
   const lines = raw.split(/\r?\n/);
@@ -253,6 +283,7 @@ function parseExport() {
   let parsedCount = 0;
   let skippedCount = 0;
   let currentMessage = null;
+  const entries = [];
 
   function flushCurrent() {
     if (!currentMessage) return;
@@ -270,7 +301,7 @@ function parseExport() {
       receivedAt: currentMessage.date ? currentMessage.date.toISOString() : null,
     };
 
-    appendMessage(entry);
+    entries.push(entry);
     parsedCount++;
     currentMessage = null;
   }
@@ -299,6 +330,29 @@ function parseExport() {
   }
 
   flushCurrent();
+
+  // Only now, with the incoming export fully parsed, is it safe to compare.
+  const incomingMaxTs = entries.reduce((max, e) => Math.max(max, e.timestamp || 0), 0);
+  const staleByDate = previousMaxTs && incomingMaxTs < previousMaxTs;
+  // A stale export can share the same newest timestamp as the good one (both end at the
+  // same message), so the date check alone is not enough — count regressions too.
+  const staleByCount = previousCount && entries.length < previousCount;
+  if ((staleByDate || staleByCount) && !process.env.FORCE_STALE) {
+    console.error(
+      `\nRefusing to overwrite ${path.resolve(OUTPUT_FILE)} with older history.`
+    );
+    console.error(`  existing: ${previousCount} messages, newest ${new Date(previousMaxTs * 1000).toISOString()}`);
+    console.error(`  export:   ${entries.length} messages, newest ${incomingMaxTs ? new Date(incomingMaxTs * 1000).toISOString() : '(none)'}`);
+    console.error(`  file:     ${path.resolve(INPUT_FILE)}`);
+    console.error('\nPass the newer export explicitly, or set FORCE_STALE=1 to override.');
+    process.exit(1);
+  }
+
+  // Remove old output only after the guard passed, then write the new messages.
+  if (fs.existsSync(OUTPUT_FILE)) {
+    fs.rmSync(OUTPUT_FILE);
+  }
+  for (const entry of entries) appendMessage(entry);
 
   console.log(`\nParsed ${parsedCount} message(s).`);
   console.log(`Skipped ${skippedCount} line(s).`);

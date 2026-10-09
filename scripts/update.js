@@ -101,7 +101,11 @@ Steps:
     if (exists(updater)) {
       run('python3', [updater]);
     } else {
-      console.log('   (no updater script, assuming albums up-to-date — run npm run extract-albums if needed)');
+      // Without the python updater, albums.json only advances if extract-albums runs.
+      // Skipping it silently leaves albums.json stale after a fresh parse — which makes
+      // monthly grouping show 0 albums for months whose share events are in the new messages.
+      console.log('   no python updater — running node src/extract-albums.js');
+      run('node', ['src/extract-albums.js']);
     }
   } catch (e) {
     console.log(`   (check failed: ${e.message}, continuing)`);

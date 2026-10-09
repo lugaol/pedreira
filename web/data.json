@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-09T22:12:18.041Z",
+  "generatedAt": "2026-10-09T22:30:12.763Z",
   "totalAlbums": 350,
-  "totalSenders": 42,
-  "multiSenderAlbums": 0,
+  "totalSenders": 48,
+  "multiSenderAlbums": 1,
   "albums": [
     {
       "id": "album-133",
@@ -60,10 +60,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:19.306Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:19.306Z",
-      "lastSharedAt": "2026-10-08T13:13:19.306Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T23:44:00.000Z",
+      "lastSharedAt": "2026-10-01T23:44:00.000Z"
     },
     {
       "id": "album-376",
@@ -79,10 +81,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27319d474677938c20d33a7494a",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:20.681Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:20.681Z",
-      "lastSharedAt": "2026-10-08T13:13:20.681Z"
+      "senders": [
+        "Lui Kiki"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-02T17:49:00.000Z",
+      "lastSharedAt": "2026-10-02T17:49:00.000Z"
     },
     {
       "id": "album-96",
@@ -162,7 +166,7 @@
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:30.407Z",
       "senders": [
-        "Lui Tiby"
+        "Lui Kiki"
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-07-18T23:05:00.000Z",
@@ -182,10 +186,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2738f8ff6d8ef7aae18379fe275",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:03.110Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:03.110Z",
-      "lastSharedAt": "2026-10-08T13:13:03.110Z"
+      "senders": [
+        "+55 11 97573-6405"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-16T16:22:00.000Z",
+      "lastSharedAt": "2026-09-16T16:22:00.000Z"
     },
     {
       "id": "album-370",
@@ -201,10 +207,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273e662ee7aaed07bedec85e564",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:18.078Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:18.078Z",
-      "lastSharedAt": "2026-10-08T13:13:18.078Z"
+      "senders": [
+        "Lui Kiki"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T21:55:00.000Z",
+      "lastSharedAt": "2026-10-01T21:55:00.000Z"
     },
     {
       "id": "album-123",
@@ -241,10 +249,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27326110f06ccf587b0a465f873",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:12:51.966Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:51.966Z",
-      "lastSharedAt": "2026-10-08T13:12:51.966Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-01T00:53:00.000Z",
+      "lastSharedAt": "2026-09-01T00:53:00.000Z"
     },
     {
       "id": "album-169",
@@ -281,10 +291,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:10.397Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:10.397Z",
-      "lastSharedAt": "2026-10-08T13:13:10.397Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-24T00:51:00.000Z",
+      "lastSharedAt": "2026-09-24T00:51:00.000Z"
     },
     {
       "id": "album-343",
@@ -300,10 +312,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:06.330Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:06.330Z",
-      "lastSharedAt": "2026-10-08T13:13:06.330Z"
+      "senders": [
+        "Waldeck"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-20T15:24:00.000Z",
+      "lastSharedAt": "2026-09-20T15:24:00.000Z"
     },
     {
       "id": "album-155",
@@ -341,7 +355,7 @@
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:32.151Z",
       "senders": [
-        "Lui Tiby"
+        "Lui Kiki"
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-07-19T00:31:00.000Z",
@@ -362,7 +376,7 @@
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:37.964Z",
       "senders": [
-        "Lui Tiby"
+        "Lui Kiki"
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-07-03T00:49:00.000Z",
@@ -445,10 +459,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:20.227Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:20.227Z",
-      "lastSharedAt": "2026-10-08T13:13:20.227Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-02T17:38:00.000Z",
+      "lastSharedAt": "2026-10-02T17:38:00.000Z"
     },
     {
       "id": "album-24",
@@ -485,10 +501,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:08.375Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:08.375Z",
-      "lastSharedAt": "2026-10-08T13:13:08.375Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-22T03:26:00.000Z",
+      "lastSharedAt": "2026-09-22T03:26:00.000Z"
     },
     {
       "id": "album-219",
@@ -525,10 +543,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27344d94ab14132664e55436af5",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:05.566Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:05.566Z",
-      "lastSharedAt": "2026-10-08T13:13:05.566Z"
+      "senders": [
+        "Lui Kiki"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-20T15:08:00.000Z",
+      "lastSharedAt": "2026-09-20T15:08:00.000Z"
     },
     {
       "id": "album-69",
@@ -566,7 +586,7 @@
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:37.448Z",
       "senders": [
-        "Lui Tiby"
+        "Lui Kiki"
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-07-03T00:41:00.000Z",
@@ -650,7 +670,7 @@
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:11.254Z",
       "senders": [
-        "Lui Tiby"
+        "Lui Kiki"
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-06-25T16:54:00.000Z",
@@ -670,10 +690,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273f00d7b59c44147fcc3d9529e",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:12:55.650Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:55.650Z",
-      "lastSharedAt": "2026-10-08T13:12:55.650Z"
+      "senders": [
+        "Lui Kiki"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-05T15:51:00.000Z",
+      "lastSharedAt": "2026-09-05T15:51:00.000Z"
     },
     {
       "id": "album-85",
@@ -690,7 +712,7 @@
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:21.866Z",
       "senders": [
-        "Lui Tiby"
+        "Lui Kiki"
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-07-01T14:09:00.000Z",
@@ -773,10 +795,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27387f1440270c12c0e7b566b18",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:23.545Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:23.545Z",
-      "lastSharedAt": "2026-10-08T13:13:23.545Z"
+      "senders": [
+        "+55 35 8892-8215"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-05T11:04:00.000Z",
+      "lastSharedAt": "2026-10-05T11:04:00.000Z"
     },
     {
       "id": "album-2",
@@ -876,10 +900,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273400cef779a4cd24ebe742e9c",
       "releaseDate": "1975-05-29",
       "discoveredAt": "2026-10-08T13:13:03.919Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:03.919Z",
-      "lastSharedAt": "2026-10-08T13:13:03.919Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-19T14:23:00.000Z",
+      "lastSharedAt": "2026-09-19T14:23:00.000Z"
     },
     {
       "id": "album-21",
@@ -917,7 +943,7 @@
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:34:27.411Z",
       "senders": [
-        "Lui Tiby"
+        "Lui Kiki"
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-07-02T03:36:00.000Z",
@@ -959,7 +985,7 @@
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:36:05.836Z",
       "senders": [
-        "Lui Tiby"
+        "Lui Kiki"
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-07-26T00:04:00.000Z",
@@ -1022,7 +1048,7 @@
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:33:57.967Z",
       "senders": [
-        "Lui Tiby"
+        "Lui Kiki"
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-06-21T07:15:00.000Z",
@@ -1043,7 +1069,7 @@
       "releaseDate": null,
       "discoveredAt": "2026-08-08T14:35:31.539Z",
       "senders": [
-        "Lui Tiby"
+        "Lui Kiki"
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-07-18T23:34:00.000Z",
@@ -1084,10 +1110,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273eb94bab521f013968c5f458e",
       "releaseDate": "1971",
       "discoveredAt": "2026-10-08T13:12:52.286Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:52.286Z",
-      "lastSharedAt": "2026-10-08T13:12:52.286Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-01T10:41:00.000Z",
+      "lastSharedAt": "2026-09-01T10:41:00.000Z"
     },
     {
       "id": "album-258",
@@ -1229,10 +1257,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2735cb898057304dc0d0892229b",
       "releaseDate": "1993",
       "discoveredAt": "2026-10-08T13:13:02.375Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:02.375Z",
-      "lastSharedAt": "2026-10-08T13:13:02.375Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-13T21:11:00.000Z",
+      "lastSharedAt": "2026-09-13T21:11:00.000Z"
     },
     {
       "id": "album-360",
@@ -1248,10 +1278,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273b84710745f55e8595f820fe2",
       "releaseDate": "2024-05-29",
       "discoveredAt": "2026-10-08T13:13:13.403Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:13.403Z",
-      "lastSharedAt": "2026-10-08T13:13:13.403Z"
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-28T15:07:00.000Z",
+      "lastSharedAt": "2026-09-28T15:07:00.000Z"
     },
     {
       "id": "album-317",
@@ -1267,10 +1299,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2731786e8a6b1ec1b813f7d055d",
       "releaseDate": "2007-03-05",
       "discoveredAt": "2026-10-08T13:12:54.848Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:54.848Z",
-      "lastSharedAt": "2026-10-08T13:12:54.848Z"
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-03T22:37:00.000Z",
+      "lastSharedAt": "2026-09-03T22:37:00.000Z"
     },
     {
       "id": "album-23",
@@ -1391,10 +1425,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273eed3a25a9007e9f5bf3501d2",
       "releaseDate": "1964-01-01",
       "discoveredAt": "2026-10-08T13:12:51.463Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:51.463Z",
-      "lastSharedAt": "2026-10-08T13:12:51.463Z"
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-31T12:50:00.000Z",
+      "lastSharedAt": "2026-08-31T12:50:00.000Z"
     },
     {
       "id": "album-193",
@@ -1456,8 +1492,8 @@
         "+55 12 98263-1847"
       ],
       "senderCount": 1,
-      "firstSharedAt": "2026-08-01T14:27:00.000Z",
-      "lastSharedAt": "2026-08-01T14:27:00.000Z"
+      "firstSharedAt": "2026-08-01T14:26:00.000Z",
+      "lastSharedAt": "2026-08-01T14:26:00.000Z"
     },
     {
       "id": "album-299",
@@ -1473,10 +1509,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273d8652e7f855738de43ef6c27",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:25.499711Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:25.499711Z",
-      "lastSharedAt": "2026-08-30T19:43:25.499711Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-15T18:13:00.000Z",
+      "lastSharedAt": "2026-08-15T18:13:00.000Z"
     },
     {
       "id": "album-344",
@@ -1532,10 +1570,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273e9cd6441f5c6665cbb9706b7",
       "releaseDate": "2006-02-01",
       "discoveredAt": "2026-10-08T13:13:18.431Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:18.431Z",
-      "lastSharedAt": "2026-10-08T13:13:18.431Z"
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T22:04:00.000Z",
+      "lastSharedAt": "2026-10-01T22:04:00.000Z"
     },
     {
       "id": "album-326",
@@ -1551,10 +1591,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27369ea37238ccefe6b923e4273",
       "releaseDate": "1992",
       "discoveredAt": "2026-10-08T13:12:58.947Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:58.947Z",
-      "lastSharedAt": "2026-10-08T13:12:58.947Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-10T18:41:00.000Z",
+      "lastSharedAt": "2026-09-10T18:41:00.000Z"
     },
     {
       "id": "album-88",
@@ -1591,10 +1633,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b2737bff318cbc6611225bb72874",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:26.115731Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:26.115731Z",
-      "lastSharedAt": "2026-08-30T19:43:26.115731Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-26T00:13:00.000Z",
+      "lastSharedAt": "2026-08-26T00:13:00.000Z"
     },
     {
       "id": "album-260",
@@ -1631,10 +1675,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273e992eda3bc64b59979db7ca4",
       "releaseDate": "2026-09-25",
       "discoveredAt": "2026-10-08T13:13:25.685Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:25.685Z",
-      "lastSharedAt": "2026-10-08T13:13:25.685Z"
+      "senders": [
+        "+55 35 8892-8215"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-08T11:43:00.000Z",
+      "lastSharedAt": "2026-10-08T11:43:00.000Z"
     },
     {
       "id": "album-214",
@@ -1671,10 +1717,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273369ff184a8413ab7baf476bd",
       "releaseDate": "2015-10-05",
       "discoveredAt": "2026-10-08T13:13:04.245Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:04.245Z",
-      "lastSharedAt": "2026-10-08T13:13:04.245Z"
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-20T00:34:00.000Z",
+      "lastSharedAt": "2026-09-20T00:34:00.000Z"
     },
     {
       "id": "album-212",
@@ -1711,10 +1759,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b2731cf97109b71eb30bc858e6b5",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:24.678886Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:24.678886Z",
-      "lastSharedAt": "2026-08-30T19:43:24.678886Z"
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-11T18:23:00.000Z",
+      "lastSharedAt": "2026-08-11T18:23:00.000Z"
     },
     {
       "id": "album-106",
@@ -1751,10 +1801,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273aa39eccc464731a91746632d",
       "releaseDate": "1970-01-01",
       "discoveredAt": "2026-10-08T13:12:56.799Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:56.799Z",
-      "lastSharedAt": "2026-10-08T13:12:56.799Z"
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-06T11:43:00.000Z",
+      "lastSharedAt": "2026-09-06T11:43:00.000Z"
     },
     {
       "id": "album-59",
@@ -1812,10 +1864,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2730ef5cf2e0cc5034de240b292",
       "releaseDate": "1987-09-07",
       "discoveredAt": "2026-10-08T13:13:05.190Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:05.190Z",
-      "lastSharedAt": "2026-10-08T13:13:05.190Z"
+      "senders": [
+        "Reizao"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-20T13:41:00.000Z",
+      "lastSharedAt": "2026-09-20T13:41:00.000Z"
     },
     {
       "id": "album-328",
@@ -1875,8 +1929,8 @@
         "Pedrão"
       ],
       "senderCount": 1,
-      "firstSharedAt": "2026-05-29T23:06:00.000Z",
-      "lastSharedAt": "2026-05-29T23:06:00.000Z"
+      "firstSharedAt": "2026-05-29T23:05:00.000Z",
+      "lastSharedAt": "2026-05-29T23:05:00.000Z"
     },
     {
       "id": "album-270",
@@ -1976,10 +2030,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273dd95cdf7371a3eb8ccca3799",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:08.814Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:08.814Z",
-      "lastSharedAt": "2026-10-08T13:13:08.814Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-22T03:55:00.000Z",
+      "lastSharedAt": "2026-09-22T03:55:00.000Z"
     },
     {
       "id": "album-109",
@@ -2016,10 +2072,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2737eb0ac3ea44b58392f339f3a",
       "releaseDate": "1973-03-07",
       "discoveredAt": "2026-10-08T13:13:01.319Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:01.319Z",
-      "lastSharedAt": "2026-10-08T13:13:01.319Z"
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-12T17:13:00.000Z",
+      "lastSharedAt": "2026-09-12T17:13:00.000Z"
     },
     {
       "id": "album-232",
@@ -2098,10 +2156,12 @@
       "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b2732afa8fb0316d34a9bf7176db",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:24.063283Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:24.063283Z",
-      "lastSharedAt": "2026-08-30T19:43:24.063283Z"
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-10T11:58:00.000Z",
+      "lastSharedAt": "2026-08-10T11:58:00.000Z"
     },
     {
       "id": "album-127",
@@ -2159,10 +2219,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b2731356b24d48cbabc44384e753",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:23.652857Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:23.652857Z",
-      "lastSharedAt": "2026-08-30T19:43:23.652857Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-08T23:06:00.000Z",
+      "lastSharedAt": "2026-08-08T23:06:00.000Z"
     },
     {
       "id": "album-342",
@@ -2178,10 +2240,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27357b7d18077f4f2b0bc0c233a",
       "releaseDate": "1992-09-01",
       "discoveredAt": "2026-10-08T13:13:05.940Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:05.940Z",
-      "lastSharedAt": "2026-10-08T13:13:05.940Z"
+      "senders": [
+        "Karin"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-20T15:16:00.000Z",
+      "lastSharedAt": "2026-09-20T15:16:00.000Z"
     },
     {
       "id": "album-238",
@@ -2239,10 +2303,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27339bd63767a88e358019290a1",
       "releaseDate": "2026-08-31",
       "discoveredAt": "2026-10-08T13:12:54.041Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:54.041Z",
-      "lastSharedAt": "2026-10-08T13:12:54.041Z"
+      "senders": [
+        "Dimas"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-02T21:46:00.000Z",
+      "lastSharedAt": "2026-09-02T21:46:00.000Z"
     },
     {
       "id": "album-285",
@@ -2258,10 +2324,12 @@
       "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b2737fad1327fda63bea0e059072",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:22.630878Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:22.630878Z",
-      "lastSharedAt": "2026-08-30T19:43:22.630878Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-27T17:32:00.000Z",
+      "lastSharedAt": "2026-08-27T17:32:00.000Z"
     },
     {
       "id": "album-89",
@@ -2340,10 +2408,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27346e64981befe3ee507af73c2",
       "releaseDate": "2026-07-31",
       "discoveredAt": "2026-10-08T13:13:22.069Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:22.069Z",
-      "lastSharedAt": "2026-10-08T13:13:22.069Z"
+      "senders": [
+        "+55 35 8892-8215"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-02T21:43:00.000Z",
+      "lastSharedAt": "2026-10-02T21:43:00.000Z"
     },
     {
       "id": "album-378",
@@ -2359,10 +2429,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273897a29734241e0da6081aa8d",
       "releaseDate": "2026-08-14",
       "discoveredAt": "2026-10-08T13:13:21.626Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:21.626Z",
-      "lastSharedAt": "2026-10-08T13:13:21.626Z"
+      "senders": [
+        "+55 35 8892-8215"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-02T21:39:00.000Z",
+      "lastSharedAt": "2026-10-02T21:39:00.000Z"
     },
     {
       "id": "album-345",
@@ -2378,10 +2450,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2733bd77b6b6b09c2fd932c7e50",
       "releaseDate": "1980-07-18",
       "discoveredAt": "2026-10-08T13:13:07.001Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:07.001Z",
-      "lastSharedAt": "2026-10-08T13:13:07.001Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-21T15:26:00.000Z",
+      "lastSharedAt": "2026-09-21T15:26:00.000Z"
     },
     {
       "id": "album-359",
@@ -2397,10 +2471,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273b45f09f361be967accae025f",
       "releaseDate": "2026-09-25",
       "discoveredAt": "2026-10-08T13:13:13.082Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:13.082Z",
-      "lastSharedAt": "2026-10-08T13:13:13.082Z"
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-27T12:10:00.000Z",
+      "lastSharedAt": "2026-09-27T12:10:00.000Z"
     },
     {
       "id": "album-229",
@@ -2668,10 +2744,12 @@
       "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b2730120f9d553da2a141a6cfba8",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:21.810209Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:21.810209Z",
-      "lastSharedAt": "2026-08-30T19:43:21.810209Z"
+      "senders": [
+        "Djalma"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-14T17:35:00.000Z",
+      "lastSharedAt": "2026-08-14T17:35:00.000Z"
     },
     {
       "id": "album-254",
@@ -2771,10 +2849,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b27330def30e2e09fe3110074f86",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:25.089265Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:25.089265Z",
-      "lastSharedAt": "2026-08-30T19:43:25.089265Z"
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-10T11:53:00.000Z",
+      "lastSharedAt": "2026-08-10T11:53:00.000Z"
     },
     {
       "id": "album-37",
@@ -2832,10 +2912,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2737a68bb1034ca43250185b3b5",
       "releaseDate": "2023-08-15",
       "discoveredAt": "2026-10-08T13:13:16.308Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:16.308Z",
-      "lastSharedAt": "2026-10-08T13:13:16.308Z"
+      "senders": [
+        "Sarita Maria Ribeiro"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T12:32:00.000Z",
+      "lastSharedAt": "2026-10-01T12:32:00.000Z"
     },
     {
       "id": "album-251",
@@ -2872,10 +2954,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b27330386e8282d99d404e139905",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:23.037154Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:23.037154Z",
-      "lastSharedAt": "2026-08-30T19:43:23.037154Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-26T00:09:00.000Z",
+      "lastSharedAt": "2026-08-26T00:09:00.000Z"
     },
     {
       "id": "album-78",
@@ -2954,10 +3038,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2739323907649546c0c666770c2",
       "releaseDate": "2026-09-18",
       "discoveredAt": "2026-10-08T13:13:25.325Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:25.325Z",
-      "lastSharedAt": "2026-10-08T13:13:25.325Z"
+      "senders": [
+        "Ricardo Mantiqueira"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-07T23:18:00.000Z",
+      "lastSharedAt": "2026-10-07T23:18:00.000Z"
     },
     {
       "id": "album-324",
@@ -2973,10 +3059,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2734ba3baba8671b61df389e549",
       "releaseDate": "2016-04-01",
       "discoveredAt": "2026-10-08T13:12:57.481Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:57.481Z",
-      "lastSharedAt": "2026-10-08T13:12:57.481Z"
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-07T09:42:00.000Z",
+      "lastSharedAt": "2026-09-07T09:42:00.000Z"
     },
     {
       "id": "album-224",
@@ -3034,10 +3122,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2739d0dff0d314ed83c40db3937",
       "releaseDate": "2018-10-19",
       "discoveredAt": "2026-10-08T13:13:24.994Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:24.994Z",
-      "lastSharedAt": "2026-10-08T13:13:24.994Z"
+      "senders": [
+        "+55 35 8892-8215"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-06T11:41:00.000Z",
+      "lastSharedAt": "2026-10-06T11:41:00.000Z"
     },
     {
       "id": "album-385",
@@ -3053,10 +3143,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273d028a4a929a3fa2cc4917785",
       "releaseDate": "2025-01-31",
       "discoveredAt": "2026-10-08T13:13:24.287Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:24.287Z",
-      "lastSharedAt": "2026-10-08T13:13:24.287Z"
+      "senders": [
+        "+55 35 8892-8215"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-06T11:33:00.000Z",
+      "lastSharedAt": "2026-10-06T11:33:00.000Z"
     },
     {
       "id": "album-386",
@@ -3072,10 +3164,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273173843487e5a2d134f1a9111",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:24.667Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:24.667Z",
-      "lastSharedAt": "2026-10-08T13:13:24.667Z"
+      "senders": [
+        "+55 35 8892-8215"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-06T11:35:00.000Z",
+      "lastSharedAt": "2026-10-06T11:35:00.000Z"
     },
     {
       "id": "album-29",
@@ -3112,10 +3206,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2731ec373b7db4616cc67b91170",
       "releaseDate": "1969",
       "discoveredAt": "2026-10-08T13:13:18.779Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:18.779Z",
-      "lastSharedAt": "2026-10-08T13:13:18.779Z"
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T22:47:00.000Z",
+      "lastSharedAt": "2026-10-01T22:47:00.000Z"
     },
     {
       "id": "album-384",
@@ -3131,10 +3227,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273e6ce8e6eef21f524fa6ca4ca",
       "releaseDate": "2005",
       "discoveredAt": "2026-10-08T13:13:23.927Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:23.927Z",
-      "lastSharedAt": "2026-10-08T13:13:23.927Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-05T11:18:00.000Z",
+      "lastSharedAt": "2026-10-05T11:18:00.000Z"
     },
     {
       "id": "album-30",
@@ -3318,10 +3416,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273e1c9804532234bec15ce419e",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:22.425791Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:22.425791Z",
-      "lastSharedAt": "2026-08-30T19:43:22.425791Z"
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-10T11:10:00.000Z",
+      "lastSharedAt": "2026-08-10T11:10:00.000Z"
     },
     {
       "id": "album-236",
@@ -3358,10 +3458,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27355da1afca6e96013aff26592",
       "releaseDate": "1975-01-01",
       "discoveredAt": "2026-10-08T13:13:15.985Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:15.985Z",
-      "lastSharedAt": "2026-10-08T13:13:15.985Z"
+      "senders": [
+        "Sarita Maria Ribeiro"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T09:47:00.000Z",
+      "lastSharedAt": "2026-10-01T09:47:00.000Z"
     },
     {
       "id": "album-286",
@@ -3377,10 +3479,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273e613f0b37e3b08b01079bd88",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:22.836065Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:22.836065Z",
-      "lastSharedAt": "2026-08-30T19:43:22.836065Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-29T16:54:00.000Z",
+      "lastSharedAt": "2026-08-29T16:54:00.000Z"
     },
     {
       "id": "album-369",
@@ -3396,10 +3500,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2733092aa344e739886145ae016",
       "releaseDate": "1969",
       "discoveredAt": "2026-10-08T13:13:17.564Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:17.564Z",
-      "lastSharedAt": "2026-10-08T13:13:17.564Z"
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T21:53:00.000Z",
+      "lastSharedAt": "2026-10-01T21:53:00.000Z"
     },
     {
       "id": "album-234",
@@ -3436,10 +3542,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27381122e86f290b19c0a68330d",
       "releaseDate": "1979-01-01",
       "discoveredAt": "2026-10-08T13:13:03.601Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:03.601Z",
-      "lastSharedAt": "2026-10-08T13:13:03.601Z"
+      "senders": [
+        "+55 21 96760-0467"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-18T14:39:00.000Z",
+      "lastSharedAt": "2026-09-18T14:39:00.000Z"
     },
     {
       "id": "album-350",
@@ -3455,10 +3563,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273ea42191f549dce4d9c8ecd1a",
       "releaseDate": "1965-02",
       "discoveredAt": "2026-10-08T13:13:09.477Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:09.477Z",
-      "lastSharedAt": "2026-10-08T13:13:09.477Z"
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-23T23:24:00.000Z",
+      "lastSharedAt": "2026-09-23T23:24:00.000Z"
     },
     {
       "id": "album-221",
@@ -3495,10 +3605,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273439961e87d83c03874244c5b",
       "releaseDate": "1965",
       "discoveredAt": "2026-10-08T13:13:09.132Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:09.132Z",
-      "lastSharedAt": "2026-10-08T13:13:09.132Z"
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-23T23:22:00.000Z",
+      "lastSharedAt": "2026-09-23T23:22:00.000Z"
     },
     {
       "id": "album-220",
@@ -3577,10 +3689,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27354ab617bc2d4974ab6ffbece",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:01.935Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:01.935Z",
-      "lastSharedAt": "2026-10-08T13:13:01.935Z"
+      "senders": [
+        "Pablão Floripa"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-12T17:58:00.000Z",
+      "lastSharedAt": "2026-09-12T17:58:00.000Z"
     },
     {
       "id": "album-282",
@@ -3596,10 +3710,12 @@
       "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b273f438a9db06b3c200e730feb6",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:22.015339Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:22.015339Z",
-      "lastSharedAt": "2026-08-30T19:43:22.015339Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-10T12:16:00.000Z",
+      "lastSharedAt": "2026-08-10T12:16:00.000Z"
     },
     {
       "id": "album-170",
@@ -3783,10 +3899,12 @@
       "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b273e18595022ec31fc53018f58a",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:23.242392Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:23.242392Z",
-      "lastSharedAt": "2026-08-30T19:43:23.242392Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-18T14:05:00.000Z",
+      "lastSharedAt": "2026-08-18T14:05:00.000Z"
     },
     {
       "id": "album-283",
@@ -3802,10 +3920,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273a2cab830efd2a509743ff230",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:22.220561Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:22.220561Z",
-      "lastSharedAt": "2026-08-30T19:43:22.220561Z"
+      "senders": [
+        "Clauber"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-27T16:59:00.000Z",
+      "lastSharedAt": "2026-08-27T16:59:00.000Z"
     },
     {
       "id": "album-250",
@@ -3863,10 +3983,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2736ee1c19dbd7327fadbf5aeac",
       "releaseDate": "2026-03-17",
       "discoveredAt": "2026-10-08T13:13:16.738Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:16.738Z",
-      "lastSharedAt": "2026-10-08T13:13:16.738Z"
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T20:55:00.000Z",
+      "lastSharedAt": "2026-10-01T20:55:00.000Z"
     },
     {
       "id": "album-300",
@@ -3882,10 +4004,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273a862d8b854e3d763dd500f1e",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:25.704946Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:25.704946Z",
-      "lastSharedAt": "2026-08-30T19:43:25.704946Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-25T11:49:00.000Z",
+      "lastSharedAt": "2026-08-25T11:49:00.000Z"
     },
     {
       "id": "album-130",
@@ -4090,10 +4214,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273dfa6701656d2c9669f6e5f14",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:24.473720Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:24.473720Z",
-      "lastSharedAt": "2026-08-30T19:43:24.473720Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-29T00:27:00.000Z",
+      "lastSharedAt": "2026-08-29T00:27:00.000Z"
     },
     {
       "id": "album-7",
@@ -4445,10 +4571,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273e6f4db9a7aab09252e8d5743",
       "releaseDate": "2026-08-30",
       "discoveredAt": "2026-10-08T13:12:55.228Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:55.228Z",
-      "lastSharedAt": "2026-10-08T13:12:55.228Z"
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-04T23:52:00.000Z",
+      "lastSharedAt": "2026-09-04T23:52:00.000Z"
     },
     {
       "id": "album-304",
@@ -4464,10 +4592,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b27313d0ed017d3ad35ed6bd1e90",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:26.525822Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:26.525822Z",
-      "lastSharedAt": "2026-08-30T19:43:26.525822Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-12T18:41:00.000Z",
+      "lastSharedAt": "2026-08-12T18:41:00.000Z"
     },
     {
       "id": "album-353",
@@ -4483,10 +4613,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2739b756fb0f459fcfeb060337e",
       "releaseDate": "1960",
       "discoveredAt": "2026-10-08T13:13:11.027Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:11.027Z",
-      "lastSharedAt": "2026-10-08T13:13:11.027Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-24T13:29:00.000Z",
+      "lastSharedAt": "2026-09-24T13:29:00.000Z"
     },
     {
       "id": "album-36",
@@ -4565,10 +4697,13 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2739ed37ffc52e1b75eff8716e2",
       "releaseDate": "2026-08-07",
       "discoveredAt": "2026-08-30T19:43:26.320595Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:26.320595Z",
-      "lastSharedAt": "2026-08-30T19:43:26.320595Z"
+      "senders": [
+        "+55 12 98263-1847",
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 2,
+      "firstSharedAt": "2026-08-14T17:03:00.000Z",
+      "lastSharedAt": "2026-10-01T00:04:00.000Z"
     },
     {
       "id": "album-354",
@@ -4584,10 +4719,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2731c8a8c45fe4eeb0b21f461a1",
       "releaseDate": "2016-09-23",
       "discoveredAt": "2026-10-08T13:13:11.347Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:11.347Z",
-      "lastSharedAt": "2026-10-08T13:13:11.347Z"
+      "senders": [
+        "Karin"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-25T13:57:00.000Z",
+      "lastSharedAt": "2026-09-25T13:57:00.000Z"
     },
     {
       "id": "album-210",
@@ -4729,10 +4866,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2734d7f54c06db5f2d30ebc1c76",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:09.988Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:09.988Z",
-      "lastSharedAt": "2026-10-08T13:13:09.988Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-24T00:49:00.000Z",
+      "lastSharedAt": "2026-09-24T00:49:00.000Z"
     },
     {
       "id": "album-227",
@@ -4811,10 +4950,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273db793e7d9cd98b7642bfb661",
       "releaseDate": "2023-01-12",
       "discoveredAt": "2026-10-08T13:13:22.841Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:22.841Z",
-      "lastSharedAt": "2026-10-08T13:13:22.841Z"
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-03T23:29:00.000Z",
+      "lastSharedAt": "2026-10-03T23:29:00.000Z"
     },
     {
       "id": "album-43",
@@ -4851,10 +4992,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2733d916873fc3831d3f7d5e306",
       "releaseDate": "1989-01-01",
       "discoveredAt": "2026-10-08T13:13:00.875Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:00.875Z",
-      "lastSharedAt": "2026-10-08T13:13:00.875Z"
+      "senders": [
+        "+55 11 97573-6405"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-12T16:05:00.000Z",
+      "lastSharedAt": "2026-09-12T16:05:00.000Z"
     },
     {
       "id": "album-311",
@@ -4870,10 +5013,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2737dfd99be5e181cd1bc8375ff",
       "releaseDate": "2007-06-19",
       "discoveredAt": "2026-10-08T13:12:52.618Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:52.618Z",
-      "lastSharedAt": "2026-10-08T13:12:52.618Z"
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-01T10:50:00.000Z",
+      "lastSharedAt": "2026-09-01T10:50:00.000Z"
     },
     {
       "id": "album-50",
@@ -4910,10 +5055,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273d7f23692b5bbf440dc5bd690",
       "releaseDate": "1992-07-01",
       "discoveredAt": "2026-10-08T13:13:15.673Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:15.673Z",
-      "lastSharedAt": "2026-10-08T13:13:15.673Z"
+      "senders": [
+        "Antonio"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T01:04:00.000Z",
+      "lastSharedAt": "2026-10-01T01:04:00.000Z"
     },
     {
       "id": "album-75",
@@ -5013,10 +5160,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2733bcd1849d72fd6d81bd69142",
       "releaseDate": "1982-09-16",
       "discoveredAt": "2026-10-08T13:12:57.130Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:57.130Z",
-      "lastSharedAt": "2026-10-08T13:12:57.130Z"
+      "senders": [
+        "+55 11 97573-6405"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-06T15:20:00.000Z",
+      "lastSharedAt": "2026-09-06T15:20:00.000Z"
     },
     {
       "id": "album-305",
@@ -5032,10 +5181,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273c68a2ea382699a21c3b2d2f3",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:26.731095Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:26.731095Z",
-      "lastSharedAt": "2026-08-30T19:43:26.731095Z"
+      "senders": [
+        "Gabriel Olivia"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-17T10:23:00.000Z",
+      "lastSharedAt": "2026-08-17T10:23:00.000Z"
     },
     {
       "id": "album-97",
@@ -5093,10 +5244,12 @@
       "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000b273e80189a9cdfc6f72c6b884c9",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:23.447629Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:23.447629Z",
-      "lastSharedAt": "2026-08-30T19:43:23.447629Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-11T12:44:00.000Z",
+      "lastSharedAt": "2026-08-11T12:44:00.000Z"
     },
     {
       "id": "album-161",
@@ -5154,10 +5307,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2736a0201e4f3a8c49143e42de0",
       "releaseDate": "1973-11-09",
       "discoveredAt": "2026-10-08T13:13:00.264Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:00.264Z",
-      "lastSharedAt": "2026-10-08T13:13:00.264Z"
+      "senders": [
+        "+55 11 97573-6405"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-12T16:03:00.000Z",
+      "lastSharedAt": "2026-09-12T16:03:00.000Z"
     },
     {
       "id": "album-334",
@@ -5173,10 +5328,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2730bab08e67b3856cf9a35be9e",
       "releaseDate": "1993-10-19",
       "discoveredAt": "2026-10-08T13:13:02.722Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:02.722Z",
-      "lastSharedAt": "2026-10-08T13:13:02.722Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-15T17:02:00.000Z",
+      "lastSharedAt": "2026-09-15T17:02:00.000Z"
     },
     {
       "id": "album-314",
@@ -5192,10 +5349,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2739ea544269595f1875c71187f",
       "releaseDate": "2020-08-21",
       "discoveredAt": "2026-10-08T13:12:53.721Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:53.721Z",
-      "lastSharedAt": "2026-10-08T13:12:53.721Z"
+      "senders": [
+        "+55 11 97573-6405"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-02T13:36:00.000Z",
+      "lastSharedAt": "2026-09-02T13:36:00.000Z"
     },
     {
       "id": "album-274",
@@ -5442,10 +5601,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27353e10b63c25c7f7a3d7e0f9d",
       "releaseDate": "1980-11-21",
       "discoveredAt": "2026-10-08T13:12:53.399Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:53.399Z",
-      "lastSharedAt": "2026-10-08T13:12:53.399Z"
+      "senders": [
+        "+55 11 97573-6405"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-02T13:34:00.000Z",
+      "lastSharedAt": "2026-09-02T13:34:00.000Z"
     },
     {
       "id": "album-14",
@@ -5482,10 +5643,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273231d908d7ec4cffc5dafb088",
       "releaseDate": "1961",
       "discoveredAt": "2026-10-08T13:13:17.125Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:17.125Z",
-      "lastSharedAt": "2026-10-08T13:13:17.125Z"
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T21:51:00.000Z",
+      "lastSharedAt": "2026-10-01T21:51:00.000Z"
     },
     {
       "id": "album-118",
@@ -5522,10 +5685,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273237e090bf276d6acf087daa4",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:24.268501Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:24.268501Z",
-      "lastSharedAt": "2026-08-30T19:43:24.268501Z"
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-10T12:01:00.000Z",
+      "lastSharedAt": "2026-08-10T12:01:00.000Z"
     },
     {
       "id": "album-171",
@@ -5566,8 +5731,8 @@
         "Taliba"
       ],
       "senderCount": 1,
-      "firstSharedAt": "2026-08-02T00:30:00.000Z",
-      "lastSharedAt": "2026-08-02T00:30:00.000Z"
+      "firstSharedAt": "2026-08-02T00:29:00.000Z",
+      "lastSharedAt": "2026-08-02T00:29:00.000Z"
     },
     {
       "id": "album-187",
@@ -5688,10 +5853,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b2738cbad14f09a53a81b3843a6f",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:23.858094Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:23.858094Z",
-      "lastSharedAt": "2026-08-30T19:43:23.858094Z"
+      "senders": [
+        "+55 19 98150-8137"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-14T17:10:00.000Z",
+      "lastSharedAt": "2026-08-14T17:10:00.000Z"
     },
     {
       "id": "album-120",
@@ -5791,10 +5958,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273e426e407b93c4d43cddf4bff",
       "releaseDate": "2024-12-25",
       "discoveredAt": "2026-10-08T13:13:07.397Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:07.397Z",
-      "lastSharedAt": "2026-10-08T13:13:07.397Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-22T01:03:00.000Z",
+      "lastSharedAt": "2026-09-22T01:03:00.000Z"
     },
     {
       "id": "album-298",
@@ -5810,10 +5979,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273c5dc595e66bccea1a5197697",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:25.294492Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:25.294492Z",
-      "lastSharedAt": "2026-08-30T19:43:25.294492Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-13T15:37:00.000Z",
+      "lastSharedAt": "2026-08-13T15:37:00.000Z"
     },
     {
       "id": "album-320",
@@ -5829,10 +6000,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273118294a4b273075824e52550",
       "releaseDate": "1979-06-01",
       "discoveredAt": "2026-10-08T13:12:56.022Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:56.022Z",
-      "lastSharedAt": "2026-10-08T13:12:56.022Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-05T16:07:00.000Z",
+      "lastSharedAt": "2026-09-05T16:07:00.000Z"
     },
     {
       "id": "album-312",
@@ -5848,10 +6021,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2738023f8b2b30d981038167c21",
       "releaseDate": "1972-01-03",
       "discoveredAt": "2026-10-08T13:12:52.941Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:52.941Z",
-      "lastSharedAt": "2026-10-08T13:12:52.941Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-02T13:30:00.000Z",
+      "lastSharedAt": "2026-09-02T13:30:00.000Z"
     },
     {
       "id": "album-316",
@@ -5867,10 +6042,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273c5ba65ef4043539374a3de16",
       "releaseDate": "1973-01-08",
       "discoveredAt": "2026-10-08T13:12:54.509Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:54.509Z",
-      "lastSharedAt": "2026-10-08T13:12:54.509Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-03T20:44:00.000Z",
+      "lastSharedAt": "2026-09-03T20:44:00.000Z"
     },
     {
       "id": "album-325",
@@ -5886,10 +6063,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2732ad8bdef75802a12a452ff64",
       "releaseDate": "1990",
       "discoveredAt": "2026-10-08T13:12:58.540Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:12:58.540Z",
-      "lastSharedAt": "2026-10-08T13:12:58.540Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-08T13:25:00.000Z",
+      "lastSharedAt": "2026-09-08T13:25:00.000Z"
     },
     {
       "id": "album-382",
@@ -5905,10 +6084,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b273b5a7cac5f838dcd77512037d",
       "releaseDate": "2005-08-31",
       "discoveredAt": "2026-10-08T13:13:23.166Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:23.166Z",
-      "lastSharedAt": "2026-10-08T13:13:23.166Z"
+      "senders": [
+        "+55 35 8892-8215"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-05T10:59:00.000Z",
+      "lastSharedAt": "2026-10-05T10:59:00.000Z"
     },
     {
       "id": "album-233",
@@ -5987,10 +6168,12 @@
       "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b27329975ac87ddb2cc8b225f383",
       "releaseDate": null,
       "discoveredAt": "2026-08-30T19:43:24.884115Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-08-30T19:43:24.884115Z",
-      "lastSharedAt": "2026-08-30T19:43:24.884115Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-08-25T16:06:00.000Z",
+      "lastSharedAt": "2026-08-25T16:06:00.000Z"
     },
     {
       "id": "album-100",
@@ -6027,10 +6210,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27337cd18af5725b9cad0a5ab53",
       "releaseDate": "1991-11-18",
       "discoveredAt": "2026-10-08T13:13:13.830Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:13.830Z",
-      "lastSharedAt": "2026-10-08T13:13:13.830Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-30T20:03:00.000Z",
+      "lastSharedAt": "2026-09-30T20:03:00.000Z"
     },
     {
       "id": "album-64",
@@ -6214,10 +6399,12 @@
       "image": "https://yt3.googleusercontent.com/D1k0_w8vRsxKdHIyFHVJXtmy71I0MXleh37gL5zO-R3453QwgSI_8NgW9RxKWbHimT-RifBGpuFt44Q=w544-h544-l90-rj",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:04.766Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:04.766Z",
-      "lastSharedAt": "2026-10-08T13:13:04.766Z"
+      "senders": [
+        "Taliba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-20T11:44:00.000Z",
+      "lastSharedAt": "2026-09-20T11:44:00.000Z"
     },
     {
       "id": "album-126",
@@ -6254,10 +6441,12 @@
       "image": "https://yt3.googleusercontent.com/wDpRmVgwcC2ZBC-9CqiyQcde7HGTaWj24Kf-LzxfM58zJlYC450dqoVNLpBf-AVFPBuTI38g9_qSf-hQ=w544-h544-l90-rj",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:22.493Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:22.493Z",
-      "lastSharedAt": "2026-10-08T13:13:22.493Z"
+      "senders": [
+        "Tiba"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-03T13:55:00.000Z",
+      "lastSharedAt": "2026-10-03T13:55:00.000Z"
     },
     {
       "id": "album-66",
@@ -6525,10 +6714,12 @@
       "image": "https://yt3.googleusercontent.com/5qLr7e8Nl2PC9LavustEuVkMu2LJiPP19H_jGKSAh7eclBN6JagR41gLxmdLIdcdCrhrnWsJnMMdM09RZQ=w544-h544-l90-rj",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:15.315Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:15.315Z",
-      "lastSharedAt": "2026-10-08T13:13:15.315Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T00:21:00.000Z",
+      "lastSharedAt": "2026-10-01T00:21:00.000Z"
     },
     {
       "id": "album-249",
@@ -6607,10 +6798,12 @@
       "image": "https://yt3.googleusercontent.com/zLphPrYVc5VCwAsWvU21obVwRkmYhuloXsgODXreaAztNfTX0EDywmHnen3IfZHcweeNCAcayhq7jQTP=w544-h544-l90-rj",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:21.118Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:21.118Z",
-      "lastSharedAt": "2026-10-08T13:13:21.118Z"
+      "senders": [
+        "+55 35 8892-8215"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-02T21:25:00.000Z",
+      "lastSharedAt": "2026-10-02T21:25:00.000Z"
     },
     {
       "id": "album-230",
@@ -6694,7 +6887,7 @@
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-06-04T11:29:00.000Z",
-      "lastSharedAt": "2026-07-30T01:16:00.000Z"
+      "lastSharedAt": "2026-09-20T00:42:00.000Z"
     },
     {
       "id": "album-17",
@@ -6715,7 +6908,7 @@
       ],
       "senderCount": 1,
       "firstSharedAt": "2026-05-31T11:19:00.000Z",
-      "lastSharedAt": "2026-07-30T01:16:00.000Z"
+      "lastSharedAt": "2026-09-20T00:42:00.000Z"
     },
     {
       "id": "album-71",
@@ -6878,10 +7071,12 @@
       "image": "https://yt3.googleusercontent.com/EgMVajPDwOQ7ltmbGdjZ1EUZcK_oJr9xoyle1OgYrNRokemnErHHhSliJjTb0wAw3jm1MncUCvUnPQMi=w544-h544-l90-rj",
       "releaseDate": null,
       "discoveredAt": "2026-10-08T13:13:14.804Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:14.804Z",
-      "lastSharedAt": "2026-10-08T13:13:14.804Z"
+      "senders": [
+        "Pablao Brisionarios"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-10-01T00:20:00.000Z",
+      "lastSharedAt": "2026-10-01T00:20:00.000Z"
     },
     {
       "id": "album-129",
@@ -7086,10 +7281,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2730f2860aa9bc0ebc55e6551f2",
       "releaseDate": "1980-03-15",
       "discoveredAt": "2026-10-08T13:13:12.418Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:12.418Z",
-      "lastSharedAt": "2026-10-08T13:13:12.418Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-26T14:43:00.000Z",
+      "lastSharedAt": "2026-09-26T14:43:00.000Z"
     },
     {
       "id": "album-356",
@@ -7105,10 +7302,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b27317cdaf01ffa3274308f3b7bf",
       "releaseDate": "1979",
       "discoveredAt": "2026-10-08T13:13:12.018Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:12.018Z",
-      "lastSharedAt": "2026-10-08T13:13:12.018Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-26T14:42:00.000Z",
+      "lastSharedAt": "2026-09-26T14:42:00.000Z"
     },
     {
       "id": "album-355",
@@ -7124,10 +7323,12 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2739902a25b546bc89c0fa217ab",
       "releaseDate": "1989-08-15",
       "discoveredAt": "2026-10-08T13:13:11.683Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:11.683Z",
-      "lastSharedAt": "2026-10-08T13:13:11.683Z"
+      "senders": [
+        "Gabriel Lídio"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-26T13:31:00.000Z",
+      "lastSharedAt": "2026-09-26T13:31:00.000Z"
     },
     {
       "id": "album-358",
@@ -7143,13 +7344,92 @@
       "image": "https://i.scdn.co/image/ab67616d0000b2739f0c80dac224c790a1d1d0cc",
       "releaseDate": "1981",
       "discoveredAt": "2026-10-08T13:13:12.763Z",
-      "senders": [],
-      "senderCount": 0,
-      "firstSharedAt": "2026-10-08T13:13:12.763Z",
-      "lastSharedAt": "2026-10-08T13:13:12.763Z"
+      "senders": [
+        "+55 12 98263-1847"
+      ],
+      "senderCount": 1,
+      "firstSharedAt": "2026-09-26T14:43:00.000Z",
+      "lastSharedAt": "2026-09-26T14:43:00.000Z"
     }
   ],
   "socialLinks": [
+    {
+      "url": "https://www.instagram.com/reel/DcZti-UTg8Z/?stkn=YmNsa3A0dWk0djU2",
+      "platform": "social",
+      "domain": "instagram.com",
+      "sender": "Clauber",
+      "sharedAt": "2026-09-22T02:29:00.000Z"
+    },
+    {
+      "url": "https://duomanolera.bandcamp.com/track/arauc-ria",
+      "platform": "bandcamp",
+      "domain": "duomanolera.bandcamp.com",
+      "sender": "Gabriel Olivia",
+      "sharedAt": "2026-09-10T20:52:00.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/reel/Dc_RNTuRZU8/?stkn=MTNmcHJocnJwaXdnag==",
+      "platform": "social",
+      "domain": "instagram.com",
+      "sender": "Pablao Brisionarios",
+      "sharedAt": "2026-09-07T14:33:00.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/reel/Dcjx2o0TChQ/?igsi=NGNyZ2JiZzI1aTN1",
+      "platform": "social",
+      "domain": "instagram.com",
+      "sender": "Paulo Fanucci",
+      "sharedAt": "2026-08-28T10:59:00.000Z"
+    },
+    {
+      "url": "https://www.facebook.com/share/r/1QgdgHs8fP/",
+      "platform": "social",
+      "domain": "facebook.com",
+      "sender": "+55 19 98150-8137",
+      "sharedAt": "2026-08-26T16:13:00.000Z"
+    },
+    {
+      "url": "https://share.google/ma4KFsIdlEngqgg3U",
+      "platform": "social",
+      "domain": "share.google",
+      "sender": "+55 35 8889-8598",
+      "sharedAt": "2026-08-25T16:53:00.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/p/Dcd7OIthik2/?igsi=anpnZzFzaXZ0cHZl",
+      "platform": "social",
+      "domain": "instagram.com",
+      "sender": "Pablao Brisionarios",
+      "sharedAt": "2026-08-25T15:48:00.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/reel/Db3mRnOCeIQ/?igsh=OHVtY3lqeW5nbW9m&igsi=OHVtY3lqeW5nbW9m",
+      "platform": "social",
+      "domain": "instagram.com",
+      "sender": "Hugo Campanhola",
+      "sharedAt": "2026-08-20T17:44:00.000Z"
+    },
+    {
+      "url": "https://github.com/lugaol/pedreira",
+      "platform": "social",
+      "domain": "github.com",
+      "sender": "Gabriel Olivia",
+      "sharedAt": "2026-08-10T23:09:00.000Z"
+    },
+    {
+      "url": "https://lugaol.github.io/pedreira/",
+      "platform": "social",
+      "domain": "lugaol.github.io",
+      "sender": "Gabriel Olivia",
+      "sharedAt": "2026-08-10T23:00:00.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/reel/DbODkr7RW43/?igsh=MThqY2RuZG03NGRtcA==",
+      "platform": "social",
+      "domain": "instagram.com",
+      "sender": "Paulo Fanucci",
+      "sharedAt": "2026-08-09T12:23:00.000Z"
+    },
     {
       "url": "https://www.instagram.com/reel/DZpvhT9yxDp/?igsh=MWppdXBuaGJrcGJ3aQ==",
       "platform": "social",
@@ -7274,7 +7554,7 @@
       "platform": "social",
       "domain": "share.google",
       "sender": "+55 35 8889-8598",
-      "sharedAt": "2026-07-20T16:58:00.000Z"
+      "sharedAt": "2026-07-20T16:57:00.000Z"
     },
     {
       "url": "https://share.google/J5iRa4uL2heMhtjWh",
@@ -7448,34 +7728,49 @@
   "stats": {
     "topContributors": [
       {
-        "name": "Gabriel Olivia",
-        "uniqueAlbums": 40,
-        "totalShares": 67
-      },
-      {
         "name": "+55 12 98263-1847",
-        "uniqueAlbums": 28,
-        "totalShares": 28
+        "uniqueAlbums": 57,
+        "totalShares": 57
       },
       {
-        "name": "+55 19 98150-8137",
-        "uniqueAlbums": 23,
-        "totalShares": 23
+        "name": "Gabriel Olivia",
+        "uniqueAlbums": 51,
+        "totalShares": 89
       },
       {
         "name": "Pablao Brisionarios",
-        "uniqueAlbums": 21,
-        "totalShares": 21
+        "uniqueAlbums": 35,
+        "totalShares": 35
       },
       {
-        "name": "Lui Tiby",
+        "name": "+55 19 98150-8137",
+        "uniqueAlbums": 31,
+        "totalShares": 31
+      },
+      {
+        "name": "Taliba",
+        "uniqueAlbums": 16,
+        "totalShares": 16
+      },
+      {
+        "name": "Lui Kiki",
+        "uniqueAlbums": 14,
+        "totalShares": 14
+      },
+      {
+        "name": "Sarita Maria Ribeiro",
+        "uniqueAlbums": 11,
+        "totalShares": 11
+      },
+      {
+        "name": "Clauber",
         "uniqueAlbums": 10,
         "totalShares": 10
       },
       {
-        "name": "Sarita Maria Ribeiro",
-        "uniqueAlbums": 9,
-        "totalShares": 9
+        "name": "Ricardo Mantiqueira",
+        "uniqueAlbums": 10,
+        "totalShares": 10
       },
       {
         "name": "Guto Meyer",
@@ -7483,34 +7778,24 @@
         "totalShares": 9
       },
       {
-        "name": "Clauber",
-        "uniqueAlbums": 9,
-        "totalShares": 9
-      },
-      {
-        "name": "Ricardo Mantiqueira",
-        "uniqueAlbums": 9,
-        "totalShares": 9
-      },
-      {
-        "name": "Taliba",
-        "uniqueAlbums": 8,
-        "totalShares": 8
-      },
-      {
         "name": "Waldeck",
-        "uniqueAlbums": 8,
-        "totalShares": 8
+        "uniqueAlbums": 9,
+        "totalShares": 9
+      },
+      {
+        "name": "+55 35 8892-8215",
+        "uniqueAlbums": 9,
+        "totalShares": 9
       },
       {
         "name": "Paulo Fanucci",
-        "uniqueAlbums": 6,
-        "totalShares": 6
+        "uniqueAlbums": 7,
+        "totalShares": 7
       },
       {
         "name": "+55 21 96760-0467",
-        "uniqueAlbums": 6,
-        "totalShares": 6
+        "uniqueAlbums": 7,
+        "totalShares": 7
       },
       {
         "name": "+55 35 9210-4373",
@@ -7518,9 +7803,19 @@
         "totalShares": 6
       },
       {
+        "name": "+55 11 97573-6405",
+        "uniqueAlbums": 6,
+        "totalShares": 6
+      },
+      {
         "name": "Henrique",
         "uniqueAlbums": 5,
         "totalShares": 5
+      },
+      {
+        "name": "Reizao",
+        "uniqueAlbums": 4,
+        "totalShares": 4
       },
       {
         "name": "Total Morais",
@@ -7539,11 +7834,6 @@
       },
       {
         "name": "Pedrão",
-        "uniqueAlbums": 3,
-        "totalShares": 3
-      },
-      {
-        "name": "Reizao",
         "uniqueAlbums": 3,
         "totalShares": 3
       },
@@ -7568,6 +7858,11 @@
         "totalShares": 2
       },
       {
+        "name": "Antonio",
+        "uniqueAlbums": 2,
+        "totalShares": 2
+      },
+      {
         "name": "Hugo Campanhola",
         "uniqueAlbums": 2,
         "totalShares": 2
@@ -7579,6 +7874,11 @@
       },
       {
         "name": "+351 966 814 994",
+        "uniqueAlbums": 2,
+        "totalShares": 2
+      },
+      {
+        "name": "Tiba",
         "uniqueAlbums": 2,
         "totalShares": 2
       },
@@ -7603,9 +7903,14 @@
         "totalShares": 2
       },
       {
-        "name": "Antonio",
-        "uniqueAlbums": 1,
-        "totalShares": 1
+        "name": "Djalma",
+        "uniqueAlbums": 2,
+        "totalShares": 2
+      },
+      {
+        "name": "Karin",
+        "uniqueAlbums": 2,
+        "totalShares": 2
       },
       {
         "name": "Bea Fanucci",
@@ -7633,11 +7938,6 @@
         "totalShares": 1
       },
       {
-        "name": "Tiba",
-        "uniqueAlbums": 1,
-        "totalShares": 1
-      },
-      {
         "name": "Bandaid",
         "uniqueAlbums": 1,
         "totalShares": 1
@@ -7653,7 +7953,17 @@
         "totalShares": 1
       },
       {
-        "name": "Djalma",
+        "name": "Dimas",
+        "uniqueAlbums": 1,
+        "totalShares": 1
+      },
+      {
+        "name": "Pablão Floripa",
+        "uniqueAlbums": 1,
+        "totalShares": 1
+      },
+      {
+        "name": "Gabriel Lídio",
         "uniqueAlbums": 1,
         "totalShares": 1
       }
@@ -7665,60 +7975,8 @@
       "label": "Outubro/26",
       "playlistId": "1oIyxKllXgxnMiU30jL1gy",
       "url": "https://open.spotify.com/playlist/1oIyxKllXgxnMiU30jL1gy",
-      "totalAlbums": 79,
+      "totalAlbums": 29,
       "albums": [
-        "album-308",
-        "album-309",
-        "album-310",
-        "album-311",
-        "album-312",
-        "album-313",
-        "album-314",
-        "album-315",
-        "album-316",
-        "album-317",
-        "album-318",
-        "album-319",
-        "album-320",
-        "album-322",
-        "album-323",
-        "album-324",
-        "album-325",
-        "album-326",
-        "album-328",
-        "album-329",
-        "album-330",
-        "album-331",
-        "album-332",
-        "album-333",
-        "album-334",
-        "album-335",
-        "album-336",
-        "album-337",
-        "album-338",
-        "album-339",
-        "album-340",
-        "album-341",
-        "album-342",
-        "album-343",
-        "album-344",
-        "album-345",
-        "album-346",
-        "album-347",
-        "album-348",
-        "album-349",
-        "album-350",
-        "album-351",
-        "album-352",
-        "album-353",
-        "album-354",
-        "album-355",
-        "album-356",
-        "album-357",
-        "album-358",
-        "album-359",
-        "album-360",
-        "album-361",
         "album-362",
         "album-363",
         "album-364",
@@ -7745,7 +8003,9 @@
         "album-386",
         "album-387",
         "album-388",
-        "album-389"
+        "album-389",
+        "album-328",
+        "album-344"
       ]
     },
     {
@@ -7753,15 +8013,65 @@
       "label": "Setembro/26",
       "playlistId": "3ga59o8zOODp5V3EbIvCAc",
       "url": "https://open.spotify.com/playlist/3ga59o8zOODp5V3EbIvCAc",
-      "totalAlbums": 0,
-      "albums": []
+      "totalAlbums": 49,
+      "albums": [
+        "album-309",
+        "album-310",
+        "album-311",
+        "album-312",
+        "album-313",
+        "album-314",
+        "album-315",
+        "album-316",
+        "album-317",
+        "album-318",
+        "album-319",
+        "album-320",
+        "album-322",
+        "album-323",
+        "album-324",
+        "album-325",
+        "album-326",
+        "album-329",
+        "album-330",
+        "album-331",
+        "album-332",
+        "album-333",
+        "album-334",
+        "album-335",
+        "album-336",
+        "album-337",
+        "album-338",
+        "album-339",
+        "album-340",
+        "album-341",
+        "album-342",
+        "album-343",
+        "album-345",
+        "album-346",
+        "album-347",
+        "album-348",
+        "album-349",
+        "album-350",
+        "album-351",
+        "album-352",
+        "album-353",
+        "album-354",
+        "album-355",
+        "album-356",
+        "album-357",
+        "album-358",
+        "album-359",
+        "album-360",
+        "album-361"
+      ]
     },
     {
       "month": "2026-08",
       "label": "Agosto/26",
       "playlistId": "2r72Q5HpvfcGJls8ejoOqx",
       "url": "https://open.spotify.com/playlist/2r72Q5HpvfcGJls8ejoOqx",
-      "totalAlbums": 53,
+      "totalAlbums": 54,
       "albums": [
         "album-249",
         "album-250",
@@ -7792,30 +8102,31 @@
         "album-278",
         "album-279",
         "album-280",
-        "album-281",
-        "album-282",
-        "album-283",
-        "album-284",
-        "album-285",
-        "album-286",
-        "album-287",
-        "album-288",
-        "album-289",
         "album-290",
-        "album-291",
+        "album-284",
+        "album-297",
         "album-292",
         "album-293",
-        "album-294",
+        "album-282",
+        "album-289",
         "album-295",
-        "album-296",
-        "album-297",
-        "album-298",
-        "album-299",
-        "album-300",
-        "album-302",
-        "album-303",
         "album-304",
-        "album-305"
+        "album-298",
+        "album-303",
+        "album-291",
+        "album-281",
+        "album-299",
+        "album-305",
+        "album-288",
+        "album-300",
+        "album-296",
+        "album-287",
+        "album-302",
+        "album-283",
+        "album-285",
+        "album-294",
+        "album-286",
+        "album-308"
       ]
     },
     {
